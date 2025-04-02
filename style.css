@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --primary-color: #002D71;
+    --secondary-color: #0056B3; /* Example secondary color */
+    --background-color: #F7F7F7;
+}
+
+* {
+   
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    width: 100%;
+}
+.content{
+    transition: all ease-in-out 0.3s;
+   
+}
+   /* Custom styles */
+
+.mega-menu {
+    transition: all 0.3s ease;
+    transform-origin: top center;
+    transform: scaleY(0);
+    opacity: 0;
+    max-height: 0;
+}
+.mega-menu.active {
+    transform: scaleY(1);
+    opacity: 1;
+    max-height: 500px;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.hamburger {
+    transition: all 0.3s ease;
+}
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(40deg) translate(0px, -2px);
+}
+.hamburger.active .hamburger-line:nth-child(2) {
+    transform: rotate(-40deg) translate(4px, -5px);
+}
+.hamburger.active .hamburger-line:nth-child(3) {
+    opacity: 0;
+}
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.mobile-menu.active {
+    max-height: 1000px;
+}
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+}
+.hero-image {
+    transition:  500ms ease-in-out;
+}
+.heronext,.heroprev{
+    position: absolute;
+    z-index: 100;
+}
+
+
+
+.Gallery {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.Gallery.fade-out {
+    opacity: 0;
+}
+
+/* Gallery image transitions */
+.gallery-image {
+    transition: opacity 0.9s ease;
+}
+
+.gallery-image.fade-out {
+    opacity: 0;
+}
+
+/* Navigation buttons */
+.nav-button {
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
+/* Custom animation classes */
+.text-reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dot indicators */
+.dot {
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: rgb(0, 113, 165);
+    transform: scale(1.2);
+}
+.gradient-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.text-reveal span {
+    opacity: 0;
+    transform: translateY(20px);
+    display: inline-block;
+    animation: reveal 0.8s forwards;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mega-menu {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.group:hover .mega-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Preload animation styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #2563eb;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
