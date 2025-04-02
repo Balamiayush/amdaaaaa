@@ -19,10 +19,11 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb', // blue-600
+                        primary: '#3b82f6', // blue-600
                         secondary: '#059669', // emerald-600
                         dark: '#1f2937', // gray-800
-                        light: '#f3f4f6' // gray-100
+                        light: '#f3f4f6', // gray-100
+                        card: '#727272'
                     },
                     animation: {
                         'count-up': 'count-up 1s ease-out forwards'
@@ -335,23 +336,25 @@
 
 
     <!-- Stats Section -->
-    <div class="container mx-auto text-center mb-12">
+    <div class="container mx-auto text-center mb-12 ">
         <h2 class="text-3xl font-bold text-dark mb-4">What We Do</h2>
         <p class="text-gray-600 max-w-2xl mx-auto text-lg">
             Our comprehensive range of services aimed at improving healthcare accessibility and quality in
             underserved communities.
         </p>
     </div>
-    <div class="container mx-auto grid md:grid-cols-3 gap-8">
+    </section>
+
+    <div class="container mx-auto grid md:grid-cols-3 gap-8 ">
         <!-- Card 1 -->
-        <div class=" p-8 rounded-xl text-center bg-blue-400 card-hover transition-all duration-300">
+        <div class=" p-8 rounded-xl text-center bg-card card-hover transition-all duration-300">
             <div class="flex justify-center mb-6">
-                <div class="bg-primary bg-opacity-10 p-4 rounded-full">
+                <div class="bg-black bg-opacity-8 p-4 rounded-full">
                     <i class="fas fa-hospital text-3xl text-primary"></i>
                 </div>
             </div>
-            <h3 class="text-xl font-semibold text-dark mb-4">Hospitals & Clinics</h3>
-            <p class="text-gray-600 mb-6">
+            <h3 class="text-xl font-semibold  mb-4">Hospitals & Clinics</h3>
+            <p class=" mb-6">
                 Access to quality healthcare services through our network of hospitals and clinics across the
                 region.
             </p>
@@ -392,63 +395,59 @@
             </a>
         </div>
     </div>
-    </section>
-    <section class="py-16 px-4 md:px-16 bg-gray-50">
-        <div class="container mx-auto grid md:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="bg-blue-400 p-8 rounded-xl text-center card-hover transition-all duration-300">
-                <div class="flex justify-center mb-6">
-                    <div class="bg-primary bg-opacity-10 p-4 rounded-full">
-                        <i class="fas fa-file-signature text-3xl text-primary"></i>
-                    </div>
+    <div class="container mx-auto grid md:grid-cols-3 gap-8 mt-5 lg:mt-10">
+        <!-- Card 1 -->
+        <div class="bg-blue-400 p-8 rounded-xl text-center card-hover transition-all duration-300">
+            <div class="flex justify-center mb-6">
+                <div class="bg-primary bg-opacity-10 p-4 rounded-full">
+                    <i class="fas fa-file-signature text-3xl text-primary"></i>
                 </div>
-                <h3 class="text-xl font-semibold text-dark mb-4">Citizen Charter</h3>
-                <p class="text-gray-600 mb-6">
-                    Commitment to transparency and accountability in our service delivery to the community.
-                </p>
-                <a href="#"
-                    class="inline-flex items-center text-primary font-medium hover:text-blue-700 transition-colors">
-                    Learn more <i class="fas fa-arrow-right ml-2"></i>
-                </a>
             </div>
-
-            <!-- Card 2 -->
-            <div class="bg-blue-400 p-8 rounded-xl text-center card-hover transition-all duration-300">
-                <div class="flex justify-center mb-6">
-                    <div class="bg-primary bg-opacity-10 p-4 rounded-full">
-                        <i class="fas fa-ambulance text-3xl text-primary"></i>
-                    </div>
-                </div>
-                <h3 class="text-xl font-semibold text-dark mb-4">Emergency Relief</h3>
-                <p class="text-gray-600 mb-6">
-                    Rapid response to disasters and emergencies, providing critical healthcare support when needed.
-                </p>
-                <a href="#"
-                    class="inline-flex items-center text-primary font-medium hover:text-blue-700 transition-colors">
-                    Learn more <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-blue-400 p-8 rounded-xl text-center card-hover transition-all duration-300">
-                <div class="flex justify-center mb-6">
-                    <div class="bg-primary bg-opacity-10 p-4 rounded-full">
-                        <i class="fas fa-users text-3xl text-primary"></i>
-                    </div>
-                </div>
-                <h3 class="text-xl font-semibold text-dark mb-4">Social Responsibility</h3>
-                <p class="text-gray-600 mb-6">
-                    Initiatives focused on community well-being, preventive healthcare, and social determinants of
-                    health.
-                </p>
-                <a href="#"
-                    class="inline-flex items-center text-primary font-medium hover:text-blue-700 transition-colors">
-                    Learn more <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
+            <h3 class="text-xl font-semibold text-dark mb-4">Citizen Charter</h3>
+            <p class="text-gray-600 mb-6">
+                Commitment to transparency and accountability in our service delivery to the community.
+            </p>
+            <a href="#"
+                class="inline-flex items-center text-primary font-medium hover:text-blue-700 transition-colors">
+                Learn more <i class="fas fa-arrow-right ml-2"></i>
+            </a>
         </div>
-    </section>
 
+        <!-- Card 2 -->
+        <div class="bg-blue-400 p-8 rounded-xl text-center card-hover transition-all duration-300">
+            <div class="flex justify-center mb-6">
+                <div class="bg-primary bg-opacity-10 p-4 rounded-full">
+                    <i class="fas fa-ambulance text-3xl text-primary"></i>
+                </div>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-4">Emergency Relief</h3>
+            <p class="text-gray-600 mb-6">
+                Rapid response to disasters and emergencies, providing critical healthcare support when needed.
+            </p>
+            <a href="#"
+                class="inline-flex items-center text-primary font-medium hover:text-blue-700 transition-colors">
+                Learn more <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-blue-400 p-8 rounded-xl text-center card-hover transition-all duration-300">
+            <div class="flex justify-center mb-6">
+                <div class="bg-primary bg-opacity-10 p-4 rounded-full">
+                    <i class="fas fa-users text-3xl text-primary"></i>
+                </div>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-4">Social Responsibility</h3>
+            <p class="text-gray-600 mb-6">
+                Initiatives focused on community well-being, preventive healthcare, and social determinants of
+                health.
+            </p>
+            <a href="#"
+                class="inline-flex items-center text-primary font-medium hover:text-blue-700 transition-colors">
+                Learn more <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
 
 
     <!-- Additional Services -->
