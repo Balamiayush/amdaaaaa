@@ -6,6 +6,8 @@
 }
 
 * {
+    text-decoration: none;
+    list-style: none;
    
     font-family: "Poppins", sans-serif;
 }
@@ -193,3 +195,18 @@ html {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.mainmarquee div{
+    gap:20px
+}
+.animate-marquee {
+    animation: marquee 25s linear infinite;
+}.animate-marquee:hover {
+    animation-play-state: paused;
+}
+@keyframes marquee {
+                
+    to{
+         transform: translateX(calc(-100% - 20px));
+    }
+ }
