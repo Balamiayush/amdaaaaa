@@ -142,3 +142,19 @@ function initializeImageGallery() {
         }, 4000);
     });
 }
+const searchButton = document.getElementById("mobile-search-button");
+const searchBox = document.getElementById("search-box");
+
+let isOpen = false; // Track the state
+
+searchButton.addEventListener("click", () => {
+    console.log("Search button clicked!");
+    
+    if (!isOpen) {
+        console.log("Opening search box...");
+        gsap.to(searchBox, { x: 0, opacity: 1, duration: 0.3, pointerEvents: "auto" });
+    } else {
+        gsap.to(searchBox, { x: 20, opacity: 0, duration: 0.3, pointerEvents: "none" });
+    }
+    isOpen = !isOpen;
+});

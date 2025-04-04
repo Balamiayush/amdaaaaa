@@ -47,7 +47,7 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50 px-4 py-3 flex justify-between items-center">
         <div class="flex items-center space-x-4">
-            <img src="https://www.amda.org.np/image/logo.png" class="w-[10vw] sm:w-48 md:w-[20vw] max-w-[200px]"
+            <img src="https://www.amda.org.np/image/logo.png" class="w-[25vw]  md:w-[20vw] max-w-[200px]"
                 alt="AMDA-Nepal Logo">
         </div>
 
@@ -136,15 +136,25 @@
             <input type="search" id="default-search"
                 class="block w-[300px] h-[50px] text-sm text-white p-3 border border-gray-300 rounded-lg bg-blue-700 placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500 outline-none"
                 placeholder="Search..." required />
-                <button id="mobile-search-button" class="text-gray-700 focus:outline-none absolute right-2">
-                    <i class="fas fa-search text-lg"></i>
-                </button>
+            <button id="mobile-search-button" class="text-gray-700 focus:outline-none absolute right-2">
+                <i class="fas fa-search text-lg"></i>
+            </button>
         </div>
 
         <!-- Mobile Menu Button -->
         <div class="lg:hidden flex items-center space-x-4">
-            <button id="mobile-search-button" class="text-gray-700 focus:outline-none">
-                <i class="fas fa-search text-lg"></i>
+            <div class="relative">
+                <!-- Search Button -->
+                <button id="mobile-search-button" class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-all z-[100] ">
+                    <i class="fas fa-search text-gray-600  text-lg"></i>
+                </button>
+        
+                <!-- Hidden Input Field -->
+                <div id="search-box" class="absolute top-0 right-0 translate-x-5 opacity-0 pointer-events-none">
+                    <input type="text" id="search-input" placeholder="Search..." 
+                        class="px-4 py-2 border rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-48">
+                </div>
+            </div>
             </button>
             <button id="mobile-menu-button" class="hamburger focus:outline-none">
                 <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
@@ -153,19 +163,6 @@
             </button>
         </div>
     </nav>
-
-    <!-- Mobile Search Bar (Hidden by default) -->
-    <div id="mobile-search" class="fixed top-16 left-0 w-full bg-white shadow-md p-4 hidden z-40">
-        <div class="relative">
-            <input type="search"
-                class="w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Search..." required>
-            <button type="submit"
-                class="absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-white">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
-    </div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu fixed top-16 left-0 w-full bg-white shadow-lg z-40 lg:hidden ">
