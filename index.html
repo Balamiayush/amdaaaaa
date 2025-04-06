@@ -339,9 +339,13 @@
                 </li>
             </div>
         </div>
+        <div class="px-4  py-1 bg-red-500">
+
+        </div>
         <div
             class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap  bg-white text-black top-[12%]   w-full">
             <div aria-hidden="true" class="animate-marquee flex ">
+               
                 <li>
                     Weekly News(W13_20250331_102_AH)
                 </li>
@@ -489,7 +493,7 @@
 
     <div class="container mx-auto grid md:grid-cols-3 gap-8 ">
         <!-- Card 1 -->
-        <div class=" p-8 rounded-xl text-center bg-card card-hover transition-all duration-300">
+        <div id="card" class=" p-8  rounded-xl text-center bg-card card-hover transition-all duration-300">
             <div class="flex justify-center mb-6">
                 <div class="bg-black bg-opacity-8 p-4 rounded-full">
                     <i class="fas fa-hospital text-3xl text-primary"></i>
@@ -503,7 +507,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
+        <div id="card" class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
             <div class="flex justify-center mb-6">
                 <div class="bg-black  p-4 rounded-full">
                     <i class="fas fa-graduation-cap text-3xl text-primary"></i>
@@ -516,7 +520,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
+        <div id="card" class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
             <div class="flex justify-center mb-6">
                 <div class=" bg-black p-4 rounded-full">
                     <i class="fas fa-handshake text-3xl text-primary"></i>
@@ -529,45 +533,41 @@
         </div>
     </div>
     <div class="container mx-auto grid md:grid-cols-3 gap-8 mt-5 lg:mt-10">
-        <!-- Card 1 -->
-        <div class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
-            <div class="flex justify-center mb-6">
-                <div class="bg-black p-4 rounded-full">
-                    <i class="fas fa-file-signature text-3xl text-primary"></i>
-                </div>
-            </div>
-            <h3 class="text-xl font-semibold text-dark mb-4">Citizen Charter</h3>
-            <p class="text-black mb-6">
-                Commitment to transparency and accountability in our service delivery to the community.
-            </p>
+     <div id="card" class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
+    <div class="flex justify-center mb-6">
+        <div class="bg-black p-4 rounded-full">
+            <i class="fas fa-file-signature text-3xl text-primary"></i>
         </div>
+    </div>
+    <h3 class="text-xl font-semibold text-dark mb-4">Citizen Charter</h3>
+    <p class="text-black mb-6">
+        Commitment to transparency and accountability in our service delivery to the community.
+    </p>
+</div>
 
-        <!-- Card 2 -->
-        <div class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
-            <div class="flex justify-center mb-6">
-                <div class="bg-black  p-4 rounded-full">
-                    <i class="fas fa-ambulance text-3xl text-primary"></i>
-                </div>
-            </div>
-            <h3 class="text-xl font-semibold text-dark mb-4">Emergency Relief</h3>
-            <p class="text-black mb-6">
-                Rapid response to disasters and emergencies, providing critical healthcare support when needed.
-            </p>
+<div id="card" class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
+    <div class="flex justify-center mb-6">
+        <div class="bg-black  p-4 rounded-full">
+            <i class="fas fa-ambulance text-3xl text-primary"></i>
         </div>
+    </div>
+    <h3 class="text-xl font-semibold text-dark mb-4">Emergency Relief</h3>
+    <p class="text-black mb-6">
+        Rapid response to disasters and emergencies, providing critical healthcare support when needed.
+    </p>
+</div>
 
-        <!-- Card 3 -->
-        <div class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
-            <div class="flex justify-center mb-6">
-                <div class="bg-black  p-4 rounded-full">
-                    <i class="fas fa-users text-3xl text-primary"></i>
-                </div>
-            </div>
-            <h3 class="text-xl font-semibold text-dark mb-4">Social Responsibility</h3>
-            <p class="text-black mb-6">
-                Initiatives focused on community well-being, preventive healthcare, and social determinants of
-                health.
-            </p>
+<div id="card" class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
+    <div class="flex justify-center mb-6">
+        <div class="bg-black  p-4 rounded-full">
+            <i class="fas fa-users text-3xl text-primary"></i>
         </div>
+    </div>
+    <h3 class="text-xl font-semibold text-dark mb-4">Social Responsibility</h3>
+    <p class="text-black mb-6">
+        Initiatives focused on community well-being, preventive healthcare, and social determinants of health.
+    </p>
+</div>
     </div>
 
 
@@ -643,7 +643,7 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="py-16 px-4 md:px-16 bg-primary text-white">
+    <section class="py-16 px-4 md:px-16 bg-card ">
         <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-3xl font-bold mb-6">Stay updated with our latest news</h2>
@@ -760,7 +760,7 @@
                 <p class="text-gray-400 text-sm mb-4 md:mb-0">
                     © 2025 Association of Medical Doctors of Asia-Nepal. All Rights Reserved.
                 </p>
-                <hr>
+                <hr class="">
                 <div class="space-x-4">
                     <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
                     <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>

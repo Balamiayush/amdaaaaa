@@ -13,6 +13,7 @@
 }
 
 html, body {
+    
     width: 100%;
 }
 .content{
@@ -210,4 +211,23 @@ html {
          transform: translateX(calc(-100% - 20px));
     }
  }
- 
+ #card{
+    animation: hranim 1s ease-in-out;
+    animation-timeline: view();
+    animation-fill-mode: forwards;
+    animation-range:entry 0;
+ }
+ @keyframes hranim{
+    0%{
+      opacity: 0.5;
+        transform: translateY(20px);
+
+    
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+      
+        
+    }
+ }
