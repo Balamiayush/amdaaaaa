@@ -19,50 +19,29 @@
 </head>
 
 <body class="bg-white">
-    <!-- Navbar -->
+
 
     <!-- Mobile Menu Button -->
-    <div class="lg:hidden flex items-center space-x-4">
-        <div class="relative">
-            <!-- Search Button -->
-            <button id="mobile-search-button"
-                class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-all z-[100] ">
-                <i class="fas fa-search text-gray-600  text-lg"></i>
-            </button>
 
-            <!-- Hidden Input Field -->
-            <div id="search-box" class="absolute top-0 right-0 translate-x-5 opacity-0 pointer-events-none">
-                <input type="text" id="search-input" placeholder="Search..."
-                    class="px-4 py-2 border rounded-full shadow-lg  focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-48">
-            </div>
-        </div>
-        </button>
-        <button id="mobile-menu-button" class="hamburger focus:outline-none">
-            <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
-            <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
-            <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
-        </button>
-    </div>
-    </nav>
-
+    
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu fixed top-16 left-0 w-full bg-white shadow-lg z-40 lg:hidden ">
-
+    <div id="mobile-menu" class="mobile-menu fixed top-16 left-0 w-full bg-white shadow-lg z-40 lg:hidden hidden">
         <div class="px-4 py-3 space-y-4">
             <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">Home</a>
             <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">About Us</a>
-
+    
             <!-- Mobile Mega Menu Trigger -->
             <div class="relative">
                 <button id="mobile-mega-menu-button"
-                    class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary transition-colors focus:outline-none">
+                    class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary transition-colors focus:outline-none"
+                    aria-expanded="false"
+                    aria-controls="mobile-mega-menu">
                     <span>What We Do</span>
-                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-
+    
                 <!-- Mobile Mega Menu Content -->
                 <div id="mobile-mega-menu" class="pl-4 overflow-hidden max-h-0 transition-all duration-300">
                     <div class="py-2 space-y-3">
@@ -70,53 +49,43 @@
                             <i class="fas fa-hospital mr-2 text-primary text-sm"></i> Health Services
                         </h3>
                         <ul class="space-y-2 pl-4">
-                            <li><a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                        class="fas fa-medkit mr-2 text-secondary text-xs"></i> Medical Camps</a></li>
-                            <li><a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                        class="fas fa-clinic-medical mr-2 text-secondary text-xs"></i> Hospitals</a>
-                            </li>
-                            <li><a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                        class="fas fa-graduation-cap mr-2 text-secondary text-xs"></i> Training</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                <i class="fas fa-medkit mr-2 text-secondary text-xs"></i> Medical Camps</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                <i class="fas fa-clinic-medical mr-2 text-secondary text-xs"></i> Hospitals</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                <i class="fas fa-graduation-cap mr-2 text-secondary text-xs"></i> Training</a></li>
                         </ul>
                     </div>
-
+    
                     <div class="py-2 space-y-3">
                         <h3 class="font-semibold text-dark mb-2 flex items-center">
                             <i class="fas fa-hands-helping mr-2 text-primary text-sm"></i> Community Programs
                         </h3>
                         <ul class="space-y-2 pl-4">
-                            <li><a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                        class="fas fa-book-open mr-2 text-secondary text-xs"></i> Education</a></li>
-                            <li><a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                        class="fas fa-ambulance mr-2 text-secondary text-xs"></i> Disaster Relief</a>
-                            </li>
-                            <li><a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                        class="fas fa-people-carry mr-2 text-secondary text-xs"></i> Outreach</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                <i class="fas fa-book-open mr-2 text-secondary text-xs"></i> Education</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                <i class="fas fa-ambulance mr-2 text-secondary text-xs"></i> Disaster Relief</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                <i class="fas fa-people-carry mr-2 text-secondary text-xs"></i> Outreach</a></li>
                         </ul>
                     </div>
-
+    
                     <div class="py-2 space-y-3">
                         <h3 class="font-semibold text-dark mb-2 flex items-center">
                             <i class="fas fa-hand-holding-heart mr-2 text-primary text-sm"></i> Support
                         </h3>
                         <ul class="space-y-2 pl-4">
-                            <li><a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                        class="fas fa-hands mr-2 text-secondary text-xs"></i> Volunteering</a></li>
-                            <li><a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                        class="fas fa-handshake mr-2 text-secondary text-xs"></i> Partnerships</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                <i class="fas fa-hands mr-2 text-secondary text-xs"></i> Volunteering</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                <i class="fas fa-handshake mr-2 text-secondary text-xs"></i> Partnerships</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
+    
             <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">Resources</a>
             <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">Publications</a>
             <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">Gallery</a>
@@ -319,7 +288,7 @@
 
         <div class="relative">
             <input type="text" placeholder="Search..."
-                class="py-3 px-4 w-[300px] bg-white  pr-10 rounded-[5px] border  border-gray-900 focus:outline focus:ring-2 focus:ring-primary focus:border-transparent text-sm" />
+                class="py-2 w-[200px] lg:py-3 lg:px-4  lg:w-[300px] bg-white  pr-10 rounded-[5px] border  border-gray-900 focus:outline focus:ring-2 focus:ring-primary focus:border-transparent text-sm" />
             <div class="absolute right-3 top-2.5 w-5 h-5 flex items-center justify-center text-gray-800">
                 <i class="ri-search-line"></i>
             </div>
@@ -344,9 +313,8 @@
             </button>
         </div>
     </nav>
-    <!-- <div class="btn px-5 py-2 bg-red-600 absolute top-[10%] z-[1]"></div> -->
     <div
-        class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap  bg-[#FAFAFA] text-black top-[9.5%]   w-full py-2">
+        class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap  bg-[#FAFAFA] text-black top-[10%] lg:top-[11.5%]   w-full py-2">
         <div aria-hidden="true" class="animate-marquee flex ">
             <li>
                 Recruitment_Result Notice_10871_20811221
@@ -440,15 +408,15 @@
             </li>
         </div>
     </div>
-    <div class="btn px-5 text-white  py-2 bg-red-600 absolute top-[9.5%] z-[2] flex ">
+    <div class="btn px-5 text-white  py-2 bg-red-600 absolute top-[10%] lg:top-[11.5%] z-[2] flex ">
         Updates (2)
 
     </div>
-    <div class="btn px-5 text-white  py-2 bg-red-600 absolute top-[15.5%] z-[2] flex ">
+    <div class="btn px-5 text-white  py-2 bg-red-600 absolute top-[15%] lg:top-[16.5%] z-[2] flex ">
         Notices (3)
     </div>
     <div
-        class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap  bg-[#FAFAFA] text-black top-[15.5%]   w-full py-2">
+        class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap  bg-[#FAFAFA] text-black top-[15%] lg:top-[16.5%]   w-full py-2">
         <div aria-hidden="true" class="animate-marquee flex  ">
             <li>
                 Weekly News(W13_20250331_102_AH)
@@ -941,12 +909,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                            <span class="text-primary font-bold">AMDA</span>
-                        </div>
-                        <div class="ml-2">
-                            <span class="font-bold text-white">AMDA-NEPAL</span>
-                        </div>
+                        
+                      <img src="  https://www.amda.org.np/image/logo.png" alt="">
                     </div>
                     <p class="text-gray-400 mb-4">
                         Association of Medical Doctors of Asia-Nepal is committed to

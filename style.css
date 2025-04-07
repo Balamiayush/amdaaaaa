@@ -42,13 +42,13 @@ html, body {
     transition: all 0.3s ease;
 }
 .hamburger.active .hamburger-line:nth-child(1) {
-    transform: rotate(40deg) translate(0px, -2px);
+    transform: rotate(45deg) translate(5px, -5px);
 }
 .hamburger.active .hamburger-line:nth-child(2) {
-    transform: rotate(-40deg) translate(4px, -5px);
+    opacity: 0;
 }
 .hamburger.active .hamburger-line:nth-child(3) {
-    opacity: 0;
+    transform: rotate(-45deg) translate(10px, -5px);
 }
 .mobile-menu {
     max-height: 0;
@@ -277,3 +277,7 @@ backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(125, 125, 125, 0.3);
 }
+.group:hover .mega-menu {
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  }
+
