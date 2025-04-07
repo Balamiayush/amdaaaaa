@@ -8,13 +8,8 @@ const heroImages = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lenis
-    const lenis = new Lenis({ autoRaf: true });
 
     // Initialize all necessary functionalities
-    initializeMobileMenu();
-    initializeMobileMegaMenu();
-    initializeDesktopMegaMenu();
     initializeGSAPAnimations();
     initializeImageGallery();
     initializeParallaxEffect();
@@ -31,36 +26,13 @@ function initializeMobileMenu() {
     });
 }
 
-// Mobile Mega Menu Toggle
-function initializeMobileMegaMenu() {
-    const mobileMegaMenuButton = document.getElementById('mobile-mega-menu-button');
-    const mobileMegaMenu = document.getElementById('mobile-mega-menu'); // Corrected this line
-    const mobileMegaMenuIcon = mobileMegaMenuButton.querySelector('svg');
 
-    mobileMegaMenuButton.addEventListener('click', () => {
-        mobileMegaMenu.classList.toggle('max-h-0');
-        mobileMegaMenu.classList.toggle('max-h-screen');
-        mobileMegaMenuIcon.classList.toggle('rotate-180');
-    });
 
-}
 
-// Desktop Mega Menu Hover Effect
-function initializeDesktopMegaMenu() {
-    const megaMenu = document.querySelector('.group');
-    const megaMenuDropdown = document.querySelector('.mega-menu');
-
-    megaMenu.addEventListener('mouseenter', () => {
-        megaMenuDropdown.classList.add('active');
-    });
-
-    megaMenu.addEventListener('mouseleave', () => {
-        megaMenuDropdown.classList.remove('active');
-    });
-}
 
 // GSAP Animation for Text and Elements
 function initializeGSAPAnimations() {
+    
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
     tl.from(".text-reveal", { duration: 1.2, clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", y: 50, opacity: 0, stagger: 0.2 })

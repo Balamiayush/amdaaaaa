@@ -4,168 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="AMDA-Nepal provides healthcare services and community programs to underserved communities in Nepal with compassion and excellence since 1989.">
-    <title>AMDA-Nepal | Better Quality of Life for Better Future</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#3b82f6', // blue-600
-                        secondary: '#059669', // emerald-600
-                        dark: '#1f2937', // gray-800
-                        light: '#f3f4f6', // gray-100
-                        card: '#727272'
-                    },
-                    animation: {
-                        'count-up': 'count-up 1s ease-out forwards'
-                    },
-                    keyframes: {
-                        'count-up': {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <title>AMDA Nepal - Healthcare Excellence</title>
 
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#4A90E2', secondary: '#F5F6F7' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font Awesome CSS (for version 6 - includes solid and brand icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
-<body class="bg-white text-gray-800 ">
+<body class="bg-white">
+    <!-- Navbar -->
 
+    <!-- Mobile Menu Button -->
+    <div class="lg:hidden flex items-center space-x-4">
+        <div class="relative">
+            <!-- Search Button -->
+            <button id="mobile-search-button"
+                class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-all z-[100] ">
+                <i class="fas fa-search text-gray-600  text-lg"></i>
+            </button>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50 px-4 py-3 flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-            <img src="https://www.amda.org.np/image/logo.png" class="w-[25vw]  md:w-[20vw] max-w-[200px]"
-                alt="AMDA-Nepal Logo">
-        </div>
-
-        <!-- Desktop Navigation -->
-        <div class="hidden lg:flex space-x-6 items-center">
-            <a href="#" class="text-gray-700 hover:text-primary transition-colors">Home</a>
-            <a href="#" class="text-gray-700 hover:text-primary transition-colors">About Us</a>
-
-            <!-- Mega Menu Container -->
-            <div class="relative group">
-                <button class="text-gray-700 hover:text-primary flex items-center focus:outline-none transition-colors">
-                    What We Do
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-
-                <!-- Mega Menu Dropdown -->
-                <div class="absolute left-0 mt-2 w-[600px] bg-white shadow-xl rounded-lg z-50 mega-menu">
-                    <div class="grid grid-cols-3 gap-6 p-6">
-                        <!-- Column 1 -->
-                        <div>
-                            <h3 class="font-semibold text-dark mb-3 flex items-center">
-                                <i class="fas fa-hospital mr-2 text-primary"></i> Health Services
-                            </h3>
-                            <ul class="space-y-3">
-                                <li><a href="#"
-                                        class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                            class="fas fa-medkit mr-2 text-secondary"></i> Medical Camps</a></li>
-                                <li><a href="#"
-                                        class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                            class="fas fa-clinic-medical mr-2 text-secondary"></i> Hospitals</a></li>
-                                <li><a href="#"
-                                        class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                            class="fas fa-graduation-cap mr-2 text-secondary"></i> Training</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Column 2 -->
-                        <div>
-                            <h3 class="font-semibold text-dark mb-3 flex items-center">
-                                <i class="fas fa-hands-helping mr-2 text-primary"></i> Community Programs
-                            </h3>
-                            <ul class="space-y-3">
-                                <li><a href="#"
-                                        class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                            class="fas fa-book-open mr-2 text-secondary"></i> Education</a></li>
-                                <li><a href="#"
-                                        class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                            class="fas fa-ambulance mr-2 text-secondary"></i> Disaster Relief</a></li>
-                                <li><a href="#"
-                                        class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                            class="fas fa-people-carry mr-2 text-secondary"></i> Outreach</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Column 3 -->
-                        <div>
-                            <h3 class="font-semibold text-dark mb-3 flex items-center">
-                                <i class="fas fa-hand-holding-heart mr-2 text-primary"></i> Support
-                            </h3>
-                            <ul class="space-y-3">
-                                <li><a href="#"
-                                        class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                            class="fas fa-hands mr-2 text-secondary"></i> Volunteering</a></li>
-                                <li><a href="#"
-                                        class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                            class="fas fa-handshake mr-2 text-secondary"></i> Partnerships</a></li>
-                                <li><a href="#"
-                                        class="text-gray-600 hover:text-primary transition-colors flex items-center"><i
-                                            class="fas fa-donate mr-2 text-secondary"></i> Donations</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <!-- Hidden Input Field -->
+            <div id="search-box" class="absolute top-0 right-0 translate-x-5 opacity-0 pointer-events-none">
+                <input type="text" id="search-input" placeholder="Search..."
+                    class="px-4 py-2 border rounded-full shadow-lg  focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-48">
             </div>
-
-            <a href="#" class="text-gray-700 hover:text-primary transition-colors">Resources</a>
-            <a href="#" class="text-gray-700 hover:text-primary transition-colors">Publications</a>
-            <a href="#" class="text-gray-700 hover:text-primary transition-colors">Gallery</a>
         </div>
-
-        <!-- Desktop Search -->
-
-        <div class="hidden md:flex justify-center items-center relative justify-between ">
-            <input type="search" id="default-search"
-                class="block w-[300px] h-[50px] text-sm text-white p-3 border border-gray-300 rounded-lg bg-blue-700 placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500 outline-none"
-                placeholder="Search..." required />
-            <button id="mobile-search-button" class="text-gray-700 focus:outline-none absolute right-2">
-                <i class="fas fa-search text-lg"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="lg:hidden flex items-center space-x-4">
-            <div class="relative">
-                <!-- Search Button -->
-                <button id="mobile-search-button" class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-all z-[100] ">
-                    <i class="fas fa-search text-gray-600  text-lg"></i>
-                </button>
-        
-                <!-- Hidden Input Field -->
-                <div id="search-box" class="absolute top-0 right-0 translate-x-5 opacity-0 pointer-events-none">
-                    <input type="text" id="search-input" placeholder="Search..." 
-                        class="px-4 py-2 border rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-48">
-                </div>
-            </div>
-            </button>
-            <button id="mobile-menu-button" class="hamburger focus:outline-none">
-                <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
-                <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
-                <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
-            </button>
-        </div>
+        </button>
+        <button id="mobile-menu-button" class="hamburger focus:outline-none">
+            <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
+            <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
+            <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
+        </button>
+    </div>
     </nav>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu fixed top-16 left-0 w-full bg-white shadow-lg z-40 lg:hidden ">
+
         <div class="px-4 py-3 space-y-4">
             <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">Home</a>
             <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">About Us</a>
@@ -241,181 +123,406 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Navigation -->
+    <nav class="fixed navbar  top-0 left-0 w-full bg-white shadow-md z-50 px-4 py-3 flex justify-between items-center">
+
+
+        <div class="flex items-center space-x-4">
+            <img src="https://www.amda.org.np/image/logo.png" class="w-[25vw]  md:w-[20vw] max-w-[200px]"
+                alt="AMDA-Nepal Logo">
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex space-x-6 items-center">
+            <a href="#" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+            <!-- Mega Menu Container -->
+            <div class="relative z-[100] group">
+                <button class="text-gray-700 hover:text-primary flex items-center focus:outline-none transition-colors">
+                    About us
+                    <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <!-- Mega Menu with transition effects -->
+                <div
+                    class="absolute left-0 mt-2 w-[300px] bg-white shadow-xl rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
+                    <div class="grid gap-6 p-6">
+                        <!-- Column 1 - About Us Links -->
+                        <div>
+                            <h3 class="font-semibold text-dark mb-3 flex items-center">
+                                <i class="fas fa-info-circle mr-2 text-primary"></i> About Our Organization
+                            </h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="history-overview.html"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-history mr-2 text-secondary"></i> History/Overview
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="vision-and-mission.html"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-bullseye mr-2 text-secondary"></i> Vision and Mission
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="executive-committee.html"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-users mr-2 text-secondary"></i> Executive Committee
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="members-of-amda-nepal.html"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-address-book mr-2 text-secondary"></i> Members of AMDA Nepal
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="management-and-staff-co.html"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-user-tie mr-2 text-secondary"></i> Management and Staff
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="chairpersons-of-amda-nepal.html"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-user-shield mr-2 text-secondary"></i> Chairpersons
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="chairpersonsmessage.html"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-envelope-open-text mr-2 text-secondary"></i> Chairperson's
+                                        Message
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="organogram.html"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-sitemap mr-2 text-secondary"></i> Organogram
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mega Menu Container -->
+            <div class="relative z-[100] group">
+                <button class="text-gray-700 hover:text-primary flex items-center focus:outline-none transition-colors">
+                    What We Do
+                    <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <!-- Mega Menu with transition effects -->
+                <div
+                    class="absolute left-0 mt-2 w-[600px] bg-white shadow-xl rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
+                    <div class="grid grid-cols-3 gap-6 p-6">
+                        <!-- Column 1 -->
+                        <div>
+                            <h3 class="font-semibold text-dark mb-3 flex items-center">
+                                <i class="fas fa-hospital mr-2 text-primary"></i> Health Services
+                            </h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-medkit mr-2 text-secondary"></i> Medical Camps
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-clinic-medical mr-2 text-secondary"></i> Hospitals
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-graduation-cap mr-2 text-secondary"></i> Training
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div>
+                            <h3 class="font-semibold text-dark mb-3 flex items-center">
+                                <i class="fas fa-hands-helping mr-2 text-primary"></i> Community Programs
+                            </h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fab fa-leanpub mr-2 text-secondary"></i> Education
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-ambulance mr-2 text-secondary"></i> Disaster Relief
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-people-carry mr-2 text-secondary"></i> Outreach
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div>
+                            <h3 class="font-semibold text-dark mb-3 flex items-center">
+                                <i class="fas fa-hand-holding-heart mr-2 text-primary"></i> Support
+                            </h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-hands-helping mr-2 text-secondary"></i> Volunteering
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fas fa-handshake mr-2 text-secondary"></i> Partnerships
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-600 hover:text-primary transition-colors flex items-center">
+                                        <i class="fab fa-paypal mr-2 text-secondary"></i> Donations
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="text-gray-700 hover:text-primary transition-colors">Resources</a>
+            <a href="#" class="text-gray-700 hover:text-primary transition-colors">Publications</a>
+            <a href="#" class="text-gray-700 hover:text-primary transition-colors">Gallery</a>
+        </div>
+
+        </div>
+
+        <!-- Desktop Search -->
+
+        <div class="relative">
+            <input type="text" placeholder="Search..."
+                class="py-3 px-4 w-[300px] bg-white  pr-10 rounded-[5px] border  border-gray-900 focus:outline focus:ring-2 focus:ring-primary focus:border-transparent text-sm" />
+            <div class="absolute right-3 top-2.5 w-5 h-5 flex items-center justify-center text-gray-800">
+                <i class="ri-search-line"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center space-x-4">
+            <div class="relative">
+
+
+                <!-- Hidden Input Field -->
+                <div id="search-box" class="absolute top-0 right-0 translate-x-5 opacity-0 pointer-events-none">
+                    <input type="text" id="search-input" placeholder="Search..."
+                        class="px-4 py-2 border rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-48">
+                </div>
+            </div>
+            </button>
+            <button id="mobile-menu-button" class="hamburger focus:outline-none">
+                <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
+                <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
+                <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
+            </button>
+        </div>
+    </nav>
+    <!-- <div class="btn px-5 py-2 bg-red-600 absolute top-[10%] z-[1]"></div> -->
+    <div
+        class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap  bg-[#FAFAFA] text-black top-[9.5%]   w-full py-2">
+        <div aria-hidden="true" class="animate-marquee flex ">
+            <li>
+                Recruitment_Result Notice_10871_20811221
+            </li>
+            <li>
+
+                Notice for procurement of USG and OT table
+            </li>
+            <li>
+                Notice for shortlisting
+            </li>
+            <li>
+                Recruitment_Result Notice_10871_20811221
+            </li>
+            <li>
+
+                Notice for procurement of USG and OT table
+            </li>
+            <li>
+                Notice for shortlisting
+            </li>
+            <li>
+                Recruitment_Result Notice_10871_20811221
+            </li>
+            <li>
+
+                Notice for procurement of USG and OT table
+            </li>
+            <li>
+                Notice for shortlisting
+            </li>
+            <li>
+                Recruitment_Result Notice_10871_20811221
+            </li>
+            <li>
+
+                Notice for procurement of USG and OT table
+            </li>
+            <li>
+                Notice for shortlisting
+            </li>
+            <li>
+                Recruitment_Result Notice_10871_20811221
+            </li>
+            <li>
+
+                Notice for procurement of USG and OT table
+            </li>
+            <li>
+                Notice for shortlisting
+            </li>
+            <li>
+                Recruitment_Result Notice_10871_20811221
+            </li>
+            <li>
+
+                Notice for procurement of USG and OT table
+            </li>
+            <li>
+                Notice for shortlisting
+            </li>
+            <li>
+                Recruitment_Result Notice_10871_20811221
+            </li>
+            <li>
+
+                Notice for procurement of USG and OT table
+            </li>
+            <li>
+                Notice for shortlisting
+            </li>
+            <li>
+                Recruitment_Result Notice_10871_20811221
+            </li>
+            <li>
+
+                Notice for procurement of USG and OT table
+            </li>
+            <li>
+                Notice for shortlisting
+            </li>
+            <li>
+                Recruitment_Result Notice_10871_20811221
+            </li>
+            <li>
+
+                Notice for procurement of USG and OT table
+            </li>
+            <li>
+                Notice for shortlisting
+            </li>
+        </div>
+    </div>
+    <div class="btn px-5 text-white  py-2 bg-red-600 absolute top-[9.5%] z-[2] flex ">
+        Updates (2)
+
+    </div>
+    <div class="btn px-5 text-white  py-2 bg-red-600 absolute top-[15.5%] z-[2] flex ">
+        Notices (3)
+    </div>
+    <div
+        class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap  bg-[#FAFAFA] text-black top-[15.5%]   w-full py-2">
+        <div aria-hidden="true" class="animate-marquee flex  ">
+            <li>
+                Weekly News(W13_20250331_102_AH)
+            </li>
+            <li>
+                Week News (W-13_20250331_205_PWS)
+
+            </li>
+
+            <li>
+                Weekly News(W13_20250331_102_AH)
+            </li>
+            <li>
+                Week News (W-13_20250331_205_PWS)
+
+            </li>
+
+            <li>
+                Weekly News(W13_20250331_102_AH)
+            </li>
+            <li>
+                Week News (W-13_20250331_205_PWS)
+
+            </li>
+
+            <li>
+                Weekly News(W13_20250331_102_AH)
+            </li>
+            <li>
+                Week News (W-13_20250331_205_PWS)
+
+            </li>
+
+            <li>
+                Weekly News(W13_20250331_102_AH)
+            </li>
+            <li>
+                Week News (W-13_20250331_205_PWS)
+
+            </li>
+
+            <li>
+                Weekly News(W13_20250331_102_AH)
+            </li>
+            <li>
+                Week News (W-13_20250331_205_PWS)
+
+            </li>
+            <li>
+                Weekly News(W13_20250331_102_AH)
+            </li>
+            <li>
+                Week News (W-13_20250331_205_PWS)
+
+            </li>
+            <li>
+                Weekly News(W13_20250331_102_AH)
+            </li>
+            <li>
+                Week News (W-13_20250331_205_PWS)
+
+            </li>
+            <li>
+                Weekly News(W13_20250331_102_AH)
+            </li>
+            <li>
+                Week News (W-13_20250331_205_PWS)
+
+            </li>
+        </div>
+    </div>
+
     <header class="relative h-screen w-full overflow-hidden pt-16">
         <!-- Background Gallery -->
-        <div
-            class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap  bg-white text-black top-[16%]   w-full">
-            <div aria-hidden="true" class="animate-marquee flex ">
-                <li>
-                    Recruitment_Result Notice_10871_20811221
-                </li>
-                <li>
-
-                    Notice for procurement of USG and OT table
-                </li>
-                <li>
-                    Notice for shortlisting
-                </li>
-                <li>
-                    Recruitment_Result Notice_10871_20811221
-                </li>
-                <li>
-
-                    Notice for procurement of USG and OT table
-                </li>
-                <li>
-                    Notice for shortlisting
-                </li>
-                <li>
-                    Recruitment_Result Notice_10871_20811221
-                </li>
-                <li>
-
-                    Notice for procurement of USG and OT table
-                </li>
-                <li>
-                    Notice for shortlisting
-                </li>
-                <li>
-                    Recruitment_Result Notice_10871_20811221
-                </li>
-                <li>
-
-                    Notice for procurement of USG and OT table
-                </li>
-                <li>
-                    Notice for shortlisting
-                </li>
-                <li>
-                    Recruitment_Result Notice_10871_20811221
-                </li>
-                <li>
-
-                    Notice for procurement of USG and OT table
-                </li>
-                <li>
-                    Notice for shortlisting
-                </li>
-                <li>
-                    Recruitment_Result Notice_10871_20811221
-                </li>
-                <li>
-
-                    Notice for procurement of USG and OT table
-                </li>
-                <li>
-                    Notice for shortlisting
-                </li>
-                <li>
-                    Recruitment_Result Notice_10871_20811221
-                </li>
-                <li>
-
-                    Notice for procurement of USG and OT table
-                </li>
-                <li>
-                    Notice for shortlisting
-                </li>
-                <li>
-                    Recruitment_Result Notice_10871_20811221
-                </li>
-                <li>
-
-                    Notice for procurement of USG and OT table
-                </li>
-                <li>
-                    Notice for shortlisting
-                </li>
-                <li>
-                    Recruitment_Result Notice_10871_20811221
-                </li>
-                <li>
-
-                    Notice for procurement of USG and OT table
-                </li>
-                <li>
-                    Notice for shortlisting
-                </li>
-            </div>
-        </div>
-        <div class="px-4  py-1 bg-red-500">
-
-        </div>
-        <div
-            class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap  bg-white text-black top-[12%]   w-full">
-            <div aria-hidden="true" class="animate-marquee flex ">
-               
-                <li>
-                    Weekly News(W13_20250331_102_AH)
-                </li>
-                <li>
-                    Week News (W-13_20250331_205_PWS)
-
-                </li>
-
-                <li>
-                    Weekly News(W13_20250331_102_AH)
-                </li>
-                <li>
-                    Week News (W-13_20250331_205_PWS)
-
-                </li>
-
-                <li>
-                    Weekly News(W13_20250331_102_AH)
-                </li>
-                <li>
-                    Week News (W-13_20250331_205_PWS)
-
-                </li>
-
-                <li>
-                    Weekly News(W13_20250331_102_AH)
-                </li>
-                <li>
-                    Week News (W-13_20250331_205_PWS)
-
-                </li>
-
-                <li>
-                    Weekly News(W13_20250331_102_AH)
-                </li>
-                <li>
-                    Week News (W-13_20250331_205_PWS)
-
-                </li>
-
-                <li>
-                    Weekly News(W13_20250331_102_AH)
-                </li>
-                <li>
-                    Week News (W-13_20250331_205_PWS)
-
-                </li>
-                <li>
-                    Weekly News(W13_20250331_102_AH)
-                </li>
-                <li>
-                    Week News (W-13_20250331_205_PWS)
-
-                </li>
-                <li>
-                    Weekly News(W13_20250331_102_AH)
-                </li>
-                <li>
-                    Week News (W-13_20250331_205_PWS)
-
-                </li>
-                <li>
-                    Weekly News(W13_20250331_102_AH)
-                </li>
-                <li>
-                    Week News (W-13_20250331_205_PWS)
-
-                </li>
-            </div>
-        </div>
 
         <div class="absolute inset-0">
             <img src="https://www.amda.org.np/files/pics/25th%20Anniversary%20of%20SCWH.jpg"
@@ -461,316 +568,507 @@
         </div>
     </header>
 
-    <!-- Stats Banner -->
-    <section class="py-5 px-4 md:px-16 bg-white flex flex-col items-center">
-        <div
-            class="w-full max-w-4xl bg-gradient-to-r from-blue-400 to-blue-500 shadow-lg rounded-xl p-6 sm:p-10 relative flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 animate-fade-in">
-            <div class="text-center">
-                <h3 class="text-2xl sm:text-3xl font-bold text-white">30+</h3>
-                <p class="text-white/90 text-xs sm:text-sm">Years Experience</p>
-            </div>
-            <div class="h-12 w-0.5 bg-white/30 hidden sm:block"></div>
-            <div class="text-center">
-                <h3 class="text-2xl sm:text-3xl font-bold text-white">100k+</h3>
-                <p class="text-white/90 text-xs sm:text-sm">Patients Helped</p>
-            </div>
-            <div class="h-12 w-0.5 bg-white/30 hidden sm:block"></div>
-            <div class="text-center">
-                <h3 class="text-2xl sm:text-3xl font-bold text-white">50+</h3>
-                <p class="text-white/90 text-xs sm:text-sm">Medical Camps</p>
-            </div>
-        </div>
-    </section>
+
     <!-- Stats Section -->
-    <div class="container mx-auto text-center mb-12 ">
-        <h2 class="text-3xl font-bold text-dark mb-4">What We Do</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-            Our comprehensive range of services aimed at improving healthcare accessibility and quality in
-            underserved communities.
-        </p>
-    </div>
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-6">
+                <div
+                    class="stats-card bg-gradient-to-r from-primary/10 to-primary/5 p-8 rounded-lg shadow-sm text-center w-full md:w-64">
+                    <h3 class="text-4xl font-bold text-primary mb-2">30+</h3>
+                    <p class="text-gray-700">Years Experience</p>
+                </div>
+                <div
+                    class="stats-card bg-gradient-to-r from-primary/10 to-primary/5 p-8 rounded-lg shadow-sm text-center w-full md:w-64">
+                    <h3 class="text-4xl font-bold text-primary mb-2">100k+</h3>
+                    <p class="text-gray-700">Patients Helped</p>
+                </div>
+                <div
+                    class="stats-card bg-gradient-to-r from-primary/10 to-primary/5 p-8 rounded-lg shadow-sm text-center w-full md:w-64">
+                    <h3 class="text-4xl font-bold text-primary mb-2">50+</h3>
+                    <p class="text-gray-700">Medical Camps</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="container mx-auto grid md:grid-cols-3 gap-8 ">
-        <!-- Card 1 -->
-        <div id="card" class=" p-8  rounded-xl text-center bg-card card-hover transition-all duration-300">
-            <div class="flex justify-center mb-6">
-                <div class="bg-black bg-opacity-8 p-4 rounded-full">
-                    <i class="fas fa-hospital text-3xl text-primary"></i>
+    <!-- What We Do Section -->
+    <!-- What We Do Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What We Do</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    AMDA-Nepal provides various healthcare services and programs to
+                    improve the quality of life for underprivileged communities.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-hospital-line text-primary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        Hospital/Clinic Activities
+                    </h3>
+                    <p class="text-gray-600">
+                        Providing quality healthcare services through our network of
+                        hospitals and clinics across Nepal.
+                    </p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-book-open-line text-primary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        Academic Programs
+                    </h3>
+                    <p class="text-gray-600">
+                        Conducting training, workshops, and educational programs for
+                        healthcare professionals.
+                    </p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-team-line text-primary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        Partnership and Collaboration
+                    </h3>
+                    <p class="text-gray-600">
+                        Working with local and international organizations to expand our
+                        reach and impact.
+                    </p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-government-line text-primary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        Citizen Charter
+                    </h3>
+                    <p class="text-gray-600">
+                        Promoting healthcare rights and responsibilities among citizens
+                        for better health outcomes.
+                    </p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-first-aid-kit-line text-primary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        Emergency Relief
+                    </h3>
+                    <p class="text-gray-600">
+                        Providing immediate medical assistance during natural disasters
+                        and emergencies.
+                    </p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-heart-line text-primary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        Social Responsibility
+                    </h3>
+                    <p class="text-gray-600">
+                        Implementing community-based programs to address social
+                        determinants of health.
+                    </p>
                 </div>
             </div>
-            <h3 class="text-xl font-semibold  mb-4">Hospitals & Clinics</h3>
-            <p class="text-black mb-6">
-                Access to quality healthcare services through our network of hospitals and clinics across the
-                region.
-            </p>
         </div>
-
-        <!-- Card 2 -->
-        <div id="card" class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
-            <div class="flex justify-center mb-6">
-                <div class="bg-black  p-4 rounded-full">
-                    <i class="fas fa-graduation-cap text-3xl text-primary"></i>
-                </div>
-            </div>
-            <h3 class="text-xl font-semibold text-dark mb-4">Academic Programs</h3>
-            <p class="text-black mb-6">
-                Education and training programs for healthcare professionals to enhance their skills and knowledge.
-            </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div id="card" class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
-            <div class="flex justify-center mb-6">
-                <div class=" bg-black p-4 rounded-full">
-                    <i class="fas fa-handshake text-3xl text-primary"></i>
-                </div>
-            </div>
-            <h3 class="text-xl font-semibold text-dark mb-4">Partnerships & Collaboration</h3>
-            <p class="text-black mb-6">
-                Working with local and international organizations to expand our reach and impact.
-            </p>
-        </div>
-    </div>
-    <div class="container mx-auto grid md:grid-cols-3 gap-8 mt-5 lg:mt-10">
-     <div id="card" class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
-    <div class="flex justify-center mb-6">
-        <div class="bg-black p-4 rounded-full">
-            <i class="fas fa-file-signature text-3xl text-primary"></i>
-        </div>
-    </div>
-    <h3 class="text-xl font-semibold text-dark mb-4">Citizen Charter</h3>
-    <p class="text-black mb-6">
-        Commitment to transparency and accountability in our service delivery to the community.
-    </p>
-</div>
-
-<div id="card" class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
-    <div class="flex justify-center mb-6">
-        <div class="bg-black  p-4 rounded-full">
-            <i class="fas fa-ambulance text-3xl text-primary"></i>
-        </div>
-    </div>
-    <h3 class="text-xl font-semibold text-dark mb-4">Emergency Relief</h3>
-    <p class="text-black mb-6">
-        Rapid response to disasters and emergencies, providing critical healthcare support when needed.
-    </p>
-</div>
-
-<div id="card" class="bg-card p-8 rounded-xl text-center card-hover transition-all duration-300">
-    <div class="flex justify-center mb-6">
-        <div class="bg-black  p-4 rounded-full">
-            <i class="fas fa-users text-3xl text-primary"></i>
-        </div>
-    </div>
-    <h3 class="text-xl font-semibold text-dark mb-4">Social Responsibility</h3>
-    <p class="text-black mb-6">
-        Initiatives focused on community well-being, preventive healthcare, and social determinants of health.
-    </p>
-</div>
-    </div>
-
-
-    <!-- Additional Services -->
-
+    </section>
 
 
     <!-- About Section -->
-    <section class="py-16 px-4 md:px-16 bg-white">
-        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <h2 class="text-3xl font-bold text-dark mb-6">Dedicated to Healthcare Excellence since 1989</h2>
-                <p class="text-gray-600 mb-6 text-lg leading-relaxed">
-                    Association of Medical Doctors of Asia-Nepal (AMDA-Nepal) was established in 1989 as a chapter of
-                    AMDA-International. Legally registered in the government office as an NGO in March 4, 1991, it is a
-                    humanitarian, non-profit making, non-political organization committed to providing quality
-                    healthcare services to underserved communities.
-                </p>
-                <div class="grid grid-cols-3 gap-4 mt-8">
-                    <div class="bg-light p-4 rounded-lg text-center">
-                        <div class="flex justify-center mb-2">
-                            <i class="fas fa-calendar-day text-2xl text-primary"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold text-primary">1989</h4>
-                        <p class="text-gray-600 text-sm">Founded</p>
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="bg-white p-2 rounded-lg shadow-sm">
+                        <img src="https://public.readdy.ai/ai/img_res/804e235c2d7458cf7a612aa7fef18531.jpg"
+                            alt="AMDA Nepal medical team" class="rounded w-full h-auto object-cover">
                     </div>
-                    <div class="bg-light p-4 rounded-lg text-center">
-                        <div class="flex justify-center mb-2">
-                            <i class="fas fa-clinic-medical text-2xl text-primary"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold text-primary">15+</h4>
-                        <p class="text-gray-600 text-sm">Health Facilities</p>
-                    </div>
-                    <div class="bg-light p-4 rounded-lg text-center">
-                        <div class="flex justify-center mb-2">
-                            <i class="fas fa-user-md text-2xl text-primary"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold text-primary">150+</h4>
-                        <p class="text-gray-600 text-sm">Team Members</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center space-x-4">
-                <!-- Previous Buttohn -->
-                <button
-                    class="nav-button prev bg-blue-600/80 hover:bg-blue-700 text-white p-2 sm:p-3 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-6 sm:w-6" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-
-
-                <!-- Image Container -->
-                <div class="flex flex-col items-center w-full h-full object-cover">
-                    <img src="https://www.amda.org.np/files/pics/3.jpg" alt="AMDA-Nepal medical camp in rural community"
-                        class="rounded-xl shadow-lg w-[500px] h-auto object-cover  Galleryimg" loading="lazy">
-                    <div class="mt-4 text-sm text-gray-900 text-center">
-                        AMDA-Nepal medical team providing care at a rural health camp
+                    <div class="absolute -bottom-4 -right-4 bg-primary text-white py-2 px-4 rounded-lg shadow-md">
+                        <p class="text-sm">AMDA Nepal medical team providing care at a rural health camp</p>
                     </div>
                 </div>
 
-                <!-- Next Button -->
-                <button
-                    class="nav-button nextfooter bg-blue-600/80 hover:bg-blue-700 text-white p-2 sm:p-3 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-6 sm:w-6" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Dedicated to Healthcare Excellence since 1989</h2>
+                    <p class="text-gray-600 mb-6">Association of Medical Doctors of Asia-Nepal (AMDA-Nepal) was
+                        established in 1989 as a chapter of AMDA-International. Legally registered in the government
+                        office as an NGO in March 4, 1991, it is a humanitarian, non-profit making, non-political
+                        organization committed to providing quality healthcare services to underserved communities.</p>
 
+                    <div class="grid grid-cols-3 gap-6 mt-10">
+                        <div class="text-center">
+                            <div
+                                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="ri-calendar-line text-primary text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">1989</h4>
+                            <p class="text-sm text-gray-600">Founded</p>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="ri-building-line text-primary text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">15+</h4>
+                            <p class="text-sm text-gray-600">Health Facilities</p>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="ri-user-heart-line text-primary text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">150+</h4>
+                            <p class="text-sm text-gray-600">Team Members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Newsletter Section -->
-    <section class="py-16 px-4 md:px-16 bg-card ">
-        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold mb-6">Stay updated with our latest news</h2>
-                <p class="text-blue-100 mb-8 text-lg">
-                    By subscribing to our mailing list you will always be updated with the latest news from us.
-                </p>
-                <form class="space-y-4">
-                    <div class="flex flex-col md:flex-row gap-4">
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Stay updated with our latest news</h2>
+                    <p class="text-gray-600 mb-8">By subscribing to our mailing list, you will always be updated with
+                        the latest news from us.</p>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
                         <input type="email" placeholder="Enter your email address"
-                            class="flex-grow px-6 py-4 rounded-lg border border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-dark"
-                            required>
-                        <button type="submit"
-                            class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
-                            Subscribe
-                        </button>
+                            class="flex-grow py-3 px-4 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <button
+                            class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Subscribe</button>
                     </div>
-                </form>
+                </div>
+
+                <div class="w-full lg:w-1/2 bg-gray-50 rounded-lg p-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Why Subscribe?</h3>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-1">
+                                <i class="ri-file-list-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1">Latest Healthcare Updates</h4>
+                                <p class="text-gray-600 text-sm">Stay informed about our programs and initiatives</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-1">
+                                <i class="ri-calendar-event-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1">Event Announcements</h4>
+                                <p class="text-gray-600 text-sm">Get invites to our health camps and community events
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-1">
+                                <i class="ri-award-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1">Success Stories</h4>
+                                <p class="text-gray-600 text-sm">Read inspiring stories of lives we've touched</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-filter backdrop-blur-sm">
-                <h3 class="text-2xl font-bold mb-6">Why Subscribe?</h3>
-                <ul class="space-y-5">
-                    <li class="flex items-start">
-                        <div class="bg-white bg-opacity-20 p-2 rounded-full mr-4">
-                            <i class="fas fa-bell text-white"></i>
+        </div>
+    </section>
+
+    <!-- Contact & Quick Links Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">
+                        Contact Details
+                    </h3>
+
+                    <div class="mb-8">
+                        <h4 class="text-lg font-bold text-primary mb-3">AMDA Nepal</h4>
+                        <p class="text-gray-600 mb-2">
+                            Gokarneshwer Municipality - 6, Jorpati
+                        </p>
+                        <p class="text-gray-600 mb-2">P.O. Box 8909, Kathmandu</p>
+                        <p class="text-gray-600 mb-2">Phone: +977 (1) 4910225, 4911340</p>
+                        <div class="flex items-center mb-2">
+                            <span class="text-gray-600">E-mail: </span>
+                            <a href="mailto:info@amda-nepal.org"
+                                class="text-primary ml-1 hover:underline">info@amda-nepal.org</a>
                         </div>
-                        <div>
-                            <h4 class="font-semibold">Latest Healthcare Updates</h4>
-                            <p class="text-blue-100 text-sm mt-1">Stay informed about our programs and initiatives</p>
+                        <p class="text-gray-600">Office Code: 101</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h4 class="text-lg font-bold text-primary mb-3">AMDA Hospital</h4>
+                        <p class="text-gray-600 mb-2">Damak Municipality-2, Jhapa</p>
+                        <p class="text-gray-600 mb-2">Phone: +977 (23) 580016, 582016</p>
+                        <div class="flex items-center mb-2">
+                            <span class="text-gray-600">E-mail: </span>
+                            <a href="mailto:hospital@amda-nepal.org"
+                                class="text-primary ml-1 hover:underline">hospital@amda-nepal.org</a>
                         </div>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="bg-white bg-opacity-20 p-2 rounded-full mr-4">
-                            <i class="fas fa-calendar-check text-white"></i>
+                        <p class="text-gray-600">Office Code: 102</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold text-primary mb-3">
+                            Siddharth Children & Women Hospital
+                        </h4>
+                        <p class="text-gray-600 mb-2">
+                            Butwal Sub-Metropolitan-7, Rupandehi
+                        </p>
+                        <p class="text-gray-600 mb-2">Phone: +977 (71) 502101, 502097</p>
+                        <div class="flex items-center mb-2">
+                            <span class="text-gray-600">E-mail: </span>
+                            <a href="mailto:siddharth@amda-nepal.org"
+                                class="text-primary ml-1 hover:underline">siddharth@amda-nepal.org</a>
                         </div>
-                        <div>
-                            <h4 class="font-semibold">Event Announcements</h4>
-                            <p class="text-blue-100 text-sm mt-1">Get invitations to our health camps and community
-                                events</p>
+                        <p class="text-gray-600">Office Code: 103</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Quick Links</h3>
+
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">AMDA Staff Login /
+                                Office Portal</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">Ministry of Health and
+                                Population</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">Department of Health
+                                Services</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">NHRC Nepal</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">NCLEX</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">Nepal Health
+                                Professional Council</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">Nepal Medical
+                                Council</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">Nepal Nursing
+                                Council</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">Nepal Health Research
+                                Council (NHRC)</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">Logistics Management
+                                Division</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">National Public Health
+                                Laboratory</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">Inland Revenue
+                                Department</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">Employees Provident
+                                Fund</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-primary hover:underline">Corona Info-Ministry of
+                                Health & Population</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Location Map</h3>
+                    <div class="rounded-lg overflow-hidden h-80 shadow-sm">
+                        <div class="w-full h-full"
+                            style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
                         </div>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="bg-white bg-opacity-20 p-2 rounded-full mr-4">
-                            <i class="fas fa-heart text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold">Success Stories</h4>
-                            <p class="text-blue-100 text-sm mt-1">Read inspiring stories of lives we've touched</p>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAYAAAAZtYVBAAAAAklEQVR4AewaftIAAAYoSURBVO3BQY4cSRLAQDLQ//8yV0c/JZCoain2xgj+wVqXOFjrIgdrXeRgrYscrHWRg7UucrDWRQ7WusjBWhc5WOsiB2td5GCtixysddHBh1TyTRWTSqaSSeUbKiaVTCWTyqTyTRWfdLDWRQ7WusjBWhc5+FCVJyl8k8qkMqk8SeWJypMqnqTwTSpPOljrIgdrXeRgrYs+/DKVJ1V8k8qk8kRlUnmi8kTlicqkMqlMKk9U/qaDtS5ysNZFDta6yMcvU3mi8kTlTSqTyqQyqUwqb1J5ovJNB2td5GCtixysddHHL1P5L6lMKpPKpDKpTCr/JZW/6WCtixysddHBWhe56D+mMqlMKpPKpPKkiv+nDta6yMFaFzlY66IPf1nFE5VJZVKZVCaVSeWJyhOVSeVJFU9UJpVJ5YnKpPKkiv/SwVoXOVjrIgdrXeTDL1P5JpVJZVKZVCaVJyqTyqQyqTxRmVQmlUnlicqk8kTlTQdrXeRgrYscrHWRgw+p/JdUJpVJZVKZVCaVSWVSmVQmlScqk8o3VfxNB2td5GCtixysddHBhyreVPGkiicqk8qkMqlMKpPKpDKpTCpPqnhSxZsqnqhMKk86WOsiB2td5GCti3z4kMqk8iaVN6lMKpPKpDKpTCqTyqQyqUwqk8qkMqlMKpPKpDKpTCpPVP6mg7UucrDWRQ7WusjBP1CZVCaVJypPVCaVSeWJypMqJpVJZVKZVCaVJyqTyqQyqUwqk8qk8qSKTzpY6yIHa13kYK2LHHxIZVKZVCaVJypPVJ6oTCqTyqQyqUwqk8qkMqlMKpPKpDKpTCpPVCaVJypPVCaVSeVvOljrIgdrXeRgrYscfKjiTRVPVCaVJypPVCaVSWVSmVQmlScqk8qkMqlMKpPKpDKpTCqTyqTyROVNFZ90sNZFDta6yMFaF/nwIZVJZVKZVCaVSWVSmVQmlScqk8qkMqlMKpPKpDKpTCpPVCaVJypPVCaVJypPVCaVSeVNB2td5GCtixysddHBhyomlUllUnlSxaTyRGVSmVQmlScqk8qkMqlMKpPKE5VJZVKZVCaVJypPVCaVJxWfdLDWRQ7WusjBWhf58CGVJypPVCaVSeWJyqQyqUwqk8qkMqlMKpPKpDKpTCqTyqQyqUwqk8qk8kRlUplUJpVJ5W86WOsiB2td5GCti3z4ZSpPVCaVJyqTyqQyqUwqk8qkMqlMKpPKpDKpTCqTyqQyqUwqk8qkMqlMKpPKpDKpTCpPOljrIgdrXeRgrYt8+JDKpDKpTCqTyqQyqUwqk8qkMqlMKk9UJpVJZVKZVCaVSWVSmVQmlUllUnmi8kRlUnlSxScdrHWRg7UucrDWRQ7+gYpJZVJ5ojKpTCqTyqQyqUwqk8qkMqlMKpPKpDKpTCpPVCaVJyqTyqQyqUwqk8qTKj7pYK2LHKx1kYO1LnLwIZVvqphUJpVJZVJ5ojKpTCqTyqTyROWJyqQyqUwqk8qkMqlMKpPKpDKpTCpPqvimg7UucrDWRQ7WusjBh6p4UsWkMqlMKpPKpDKpTCqTyqQyqUwqk8qkMqlMKk9UJpVJZVKZVCaVSeVJFZ90sNZFDta6yMFaF/nwy1SeqEwqk8qk8kRlUplUJpVJZVJ5ovJEZVJ5ojKpTCqTyqQyqUwqT1T+poO1LnKw1kUO1rrIxy9TeaIyqUwqk8qkMqlMKpPKpDKpTCqTyqQyqUwqk8qkMqlMKpPKpDKpTCqTyqQyqfxNB2td5GCtixysddHHL6v4JpVJZVKZVCaVJyqTyqQyqUwqk8qkMqlMKpPKpPKkiicqk8qTDta6yMFaFzlY6yIf/jKVSeVJFU9UJpVJZVKZVCaVSWVSmVQmlUllUplUJpVJZVKZVCaVJypPqvimg7UucrDWRQ7WusjBP1DxpIpJZVKZVCaVSWVSmVQmlScqk8qkMqlMKpPKpDKpTCqTyqQyqUwqk8qk8qSKTzpY6yIHa13kYK2LHHxI5ZtUJpVJZVJ5ojKpTCqTyhOVJypPVCaVSWVSmVQmlUllUnmi8jcdrHWRg7UucrDWRQ7WusjBWhc5WOsiB2td5GCtixysddHBWhc5WOsiB2td5GCtixysddHBWhf5P3ZQW1tQYH3fAAAAAElFTkSuQmCC"
+                            alt="QR Code" class="w-32 h-32" />
+                    </div>
+                    <p class="text-center text-gray-600 mt-2">Scan Google map</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-12 px-4 md:px-16">
-        <div class="container mx-auto grid md:grid-cols-4 gap-8">
-            <!-- Column 1: About -->
-            <div>
-                <h3 class="text-xl font-semibold mb-4">AMDA Nepal</h3>
-                <p class="text-gray-400 mb-4">
-                    Association of Medical Doctors of Asia-Nepal is a humanitarian, non-profit organization dedicated to
-                    improving healthcare in underserved communities.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-facebook-f text-lg"></i>
-                    </a>
-                    <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-twitter text-lg"></i>
-                    </a>
-                    <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-instagram text-lg"></i>
-                    </a>
-                    <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-linkedin-in text-lg"></i>
-                    </a>
-                    <a href="#" aria-label="YouTube" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-youtube text-lg"></i>
-                    </a>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                            <span class="text-primary font-bold">AMDA</span>
+                        </div>
+                        <div class="ml-2">
+                            <span class="font-bold text-white">AMDA-NEPAL</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Association of Medical Doctors of Asia-Nepal is committed to
+                        promoting the health and well-being of underprivileged
+                        communities.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">What We Do</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Resources</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Publications</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Vacancy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-map-pin-line text-primary"></i>
+                            </div>
+                            <span class="ml-2 text-gray-400">Gokarneshwer Municipality - 6, Jorpati, P.O. Box 8909,
+                                Kathmandu</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-phone-line text-primary"></i>
+                            </div>
+                            <span class="ml-2 text-gray-400">+977 (1) 4910225, 4911340</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-mail-line text-primary"></i>
+                            </div>
+                            <a href="mailto:info@amda-nepal.org"
+                                class="ml-2 text-gray-400 hover:text-white transition-colors">info@amda-nepal.org</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-
-
-
-            <!-- Column 4: Contact -->
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
-                <address class="not-italic text-gray-400 space-y-3">
-                    <div class="flex items-start">
-                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
-                        <p>Kathmandu Municipality-6, Jorpati<br>PO Box 9997, Kathmandu, Nepal</p>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        © 2025 Association of Medical Doctors of Asia-Nepal (AMDA Nepal).
+                        All Rights Reserved.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Terms &
+                            Conditions</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Sitemap</a>
                     </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-phone-alt mr-3 text-primary"></i>
-                        <a href="tel:+97714910033" class="hover:text-white transition-colors">+977 (1) 4910033</a>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope mr-3 text-primary"></i>
-                        <a href="mailto:amda@amda.org.np"
-                            class="hover:text-white transition-colors">amda@amda.org.np</a>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-clock mr-3 text-primary"></i>
-                        <p>Mon-Fri: 9AM-5PM<br>Sat: 9AM-1PM</p>
-                    </div>
-                </address>
-            </div>
-        </div>
-
-        <div class="container mx-auto flex justify-center items-center w-full   mt-12 pt-6 border-t border-gray-800  ">
-            <div class="flex flex-col w-full       justify-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
-                    © 2025 Association of Medical Doctors of Asia-Nepal. All Rights Reserved.
-                </p>
-                <hr class="">
-                <div class="space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Accessibility</a>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Back to top button -->
+    <a href="#"
+        class="fixed bottom-6 right-6 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg opacity-0 transition-opacity duration-300"
+        id="backToTop">
+        <i class="ri-arrow-up-line text-white ri-lg"></i>
+    </a>
+
 </body>
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 10) {
+            navbar.classList.add('shadow');
+        } else {
+            navbar.classList.remove('shadow');
+        } // Added missing closing brace here
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
+    integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"
+    integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
 
 </html>

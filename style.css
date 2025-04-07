@@ -231,3 +231,49 @@ html {
         
     }
  }
+
+ :where([class^="ri-"])::before {
+    content: "\f3c2";
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-gradient {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.😎 50%, rgba(255, 255, 255, 0) 100%))
+}
+
+.stats-card {
+    transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.service-card{
+background: rgba(125, 125, 125, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(125, 125, 125, 0.3);
+}
