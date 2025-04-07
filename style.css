@@ -270,12 +270,29 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 .service-card{
-background: rgba(125, 125, 125, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(125, 125, 125, 0.3);
+    background: #c0c0c0;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    animation-timeline: view();
+    animation-fill-mode: forwards;
+    animation-range: entry 10%;
+    animation-duration: 0.5s;
+    animation-name: service;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes service {
+    0% {
+        transform: translateY(120px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 .group:hover .mega-menu {
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
