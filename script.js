@@ -12,75 +12,44 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeMobileMenu();
     initializeImageGallery();
     initializeParallaxEffect();
-    initializeSearchBox();
-    injectCustomStyles();
+    initializeSearchFunctionality();
+    injectHamburgerCSS();
 });
 
-// ==================== Custom Styles ====================
-function injectCustomStyles() {
-    const style = document.createElement('style');
-    style.textContent = `
-        .hamburger.open .hamburger-line:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
-        }
-        .hamburger.open .hamburger-line:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.open .hamburger-line:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
-        }
-        .rotate-180 {
-            transform: rotate(180deg);
-        }
-    `;
-    document.head.appendChild(style);
-}
-
-// ==================== Mobile Menu ====================
+// Mobile Menu Toggle
 function initializeMobileMenu() {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuButton = document.getElementById('mobile-menu-button'); 
     const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = document.getElementById('close-menu');
+    
     const megaMenuButton = document.getElementById('mobile-mega-menu-button');
     const megaMenu = document.getElementById('mobile-mega-menu');
 
-    mobileMenuButton?.addEventListener('click', function () {
+    mobileMenuButton?.addEventListener('click', () => {
         mobileMenu?.classList.toggle('hidden');
-        this.classList.toggle('open');
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenuButton.classList.toggle('open');
+        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
     });
 
-    megaMenuButton?.addEventListener('click', function () {
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !isExpanded);
-        this.querySelector('svg')?.classList.toggle('rotate-180');
-        megaMenu.style.maxHeight = isExpanded ? '0px' : megaMenu.scrollHeight + 'px';
-    });
-}
-
-// ==================== Search Box Toggle (GSAP) ====================
-function initializeSearchBox() {
-    const searchButton = document.getElementById("mobile-search-button");
-    const searchBox = document.getElementById("search-box");
-    let isOpen = false;
-
-    searchButton?.addEventListener("click", (e) => {
-        e.stopPropagation();
-        isOpen
-            ? gsap.to(searchBox, { x: 20, opacity: 0, duration: 0.3, pointerEvents: "none" })
-            : gsap.to(searchBox, { x: 0, opacity: 1, duration: 0.3, pointerEvents: "auto" });
-        isOpen = !isOpen;
+    closeMenu?.addEventListener('click', () => {
+        mobileMenu?.classList.add('hidden');
     });
 
-    document.addEventListener("click", (e) => {
-        if (!searchBox.contains(e.target)) {
-            gsap.to(searchBox, { x: 20, opacity: 0, duration: 0.3, pointerEvents: "none" });
-            isOpen = false;
+    megaMenuButton?.addEventListener('click', () => {
+        const isExpanded = megaMenuButton.getAttribute('aria-expanded') === 'true';
+        megaMenuButton.setAttribute('aria-expanded', !isExpanded);
+        megaMenuButton.querySelector('svg')?.classList.toggle('rotate-180');
+        
+        if (isExpanded) {
+            megaMenu.style.maxHeight = '0px';
+        } else {
+            megaMenu.style.maxHeight = megaMenu.scrollHeight + 'px';
         }
     });
 }
 
-// ==================== GSAP Animations ====================
+// GSAP Text Animations
 function initializeGSAPAnimations() {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
@@ -90,26 +59,29 @@ function initializeGSAPAnimations() {
       .to(".absolute.bottom-10", { duration: 0.6, opacity: 1, y: 0 }, "-=0.4");
 }
 
-// ==================== Parallax Background Video ====================
+// Parallax on scroll (for video)
 function initializeParallaxEffect() {
     if (window.innerWidth > 768) {
         window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
+            const scrollPosition = window.scrollY;
             const video = document.querySelector('video');
-            if (video) video.style.transform = `translateY(${scrollY * 0.3}px)`;
+            if (video) {
+                video.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+            }
         });
     }
 }
 
-// ==================== Image Gallery ====================
+// Hero Image Gallery
 function initializeImageGallery() {
     let currentIndex = 0;
     const galleryImage = document.querySelector('.gallery-image');
     const herotext = document.querySelector('.textheading');
     const dotsContainer = document.querySelector('.absolute.bottom-8');
 
-    // Create dots
-    heroImages.forEach((_, index) => {
+    if (!galleryImage || !dotsContainer) return;
+
+    heroImages.forEach((image, index) => {
         const dot = document.createElement('div');
         dot.className = `dot w-3 h-3 rounded-full bg-white/50 cursor-pointer ${index === 0 ? 'active' : ''}`;
         dot.addEventListener('click', () => changeImage(index));
@@ -132,27 +104,21 @@ function initializeImageGallery() {
                 dots[newIndex].classList.add('active');
                 currentIndex = newIndex;
             }
-        }).to(galleryImage, {
-            opacity: 1,
-            duration: 0.5,
-            ease: "power2.inOut"
-        });
+        }).to(galleryImage, { opacity: 1, duration: 0.5, ease: "power2.inOut" });
     }
 
-    // Button controls
     document.querySelector('.next')?.addEventListener('click', () => {
         changeImage((currentIndex + 1) % heroImages.length);
     });
+
     document.querySelector('.prev')?.addEventListener('click', () => {
         changeImage((currentIndex - 1 + heroImages.length) % heroImages.length);
     });
 
-    // Auto-rotate
     let interval = setInterval(() => {
         changeImage((currentIndex + 1) % heroImages.length);
     }, 4000);
 
-    // Pause on hover
     const gallery = document.querySelector('header');
     gallery?.addEventListener('mouseenter', () => clearInterval(interval));
     gallery?.addEventListener('mouseleave', () => {
@@ -160,4 +126,49 @@ function initializeImageGallery() {
             changeImage((currentIndex + 1) % heroImages.length);
         }, 4000);
     });
+}
+
+// Search toggle functionality
+function initializeSearchFunctionality() {
+    const searchButton = document.getElementById("mobile-search-button");
+    const searchBox = document.getElementById("search-box");
+
+    let isOpen = false;
+
+    searchButton?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (!isOpen) {
+            gsap.to(searchBox, { x: 0, opacity: 1, duration: 0.3, pointerEvents: "auto" });
+        } else {
+            gsap.to(searchBox, { x: 20, opacity: 0, duration: 0.3, pointerEvents: "none" });
+        }
+        isOpen = !isOpen;
+    });
+
+    document.addEventListener("click", (e) => {
+        if (searchBox && !searchBox.contains(e.target)) {
+            gsap.to(searchBox, { x: 20, opacity: 0, duration: 0.3, pointerEvents: "none" });
+            isOpen = false;
+        }
+    });
+}
+
+// Inject hamburger toggle CSS
+function injectHamburgerCSS() {
+    const style = document.createElement('style');
+    style.textContent = `
+        .hamburger.open .hamburger-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger.open .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open .hamburger-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    `;
+    document.head.appendChild(style);
 }
