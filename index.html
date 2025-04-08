@@ -19,372 +19,149 @@
 </head>
 
 <body class="">
-
-  <!-- Mobile Menu -->
-<div id="mobile-menu" class="mobile-menu fixed h-auto left-0 top-[30vh] w-full bg-white shadow-lg z-40 lg:hidden hidden">
-    <div class="px-4 py-3 space-y-4">
-        <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">Home</a>
-        <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">About Us</a>
-
-        <!-- Mobile Mega Menu Trigger -->
-        <div class="relative">
-            <button id="mobile-mega-menu-button"
-                class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary transition-colors focus:outline-none"
-                aria-expanded="false"
-                aria-controls="mobile-mega-menu">
-                <span>What We Do</span>
-                <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-
-            <!-- Mobile Mega Menu Content -->
-            <div id="mobile-mega-menu" class="pl-4 overflow-hidden max-h-0 transition-all duration-300">
-                <div class="py-2 space-y-3">
-                    <h3 class="font-semibold text-dark mb-2 flex items-center">
-                        <i class="fas fa-hospital mr-2 text-primary text-sm"></i> Health Services
-                    </h3>
-                    <ul class="space-y-2 pl-4">
-                        <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                            <i class="fas fa-medkit mr-2 text-secondary text-xs"></i> Medical Camps</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                            <i class="fas fa-clinic-medical mr-2 text-secondary text-xs"></i> Hospitals</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                            <i class="fas fa-graduation-cap mr-2 text-secondary text-xs"></i> Training</a></li>
-                    </ul>
-                </div>
-
-                <div class="py-2 space-y-3">
-                    <h3 class="font-semibold text-dark mb-2 flex items-center">
-                        <i class="fas fa-hands-helping mr-2 text-primary text-sm"></i> Community Programs
-                    </h3>
-                    <ul class="space-y-2 pl-4">
-                        <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                            <i class="fas fa-book-open mr-2 text-secondary text-xs"></i> Education</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                            <i class="fas fa-ambulance mr-2 text-secondary text-xs"></i> Disaster Relief</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                            <i class="fas fa-people-carry mr-2 text-secondary text-xs"></i> Outreach</a></li>
-                    </ul>
-                </div>
-
-                <div class="py-2 space-y-3">
-                    <h3 class="font-semibold text-dark mb-2 flex items-center">
-                        <i class="fas fa-hand-holding-heart mr-2 text-primary text-sm"></i> Support
-                    </h3>
-                    <ul class="space-y-2 pl-4">
-                        <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                            <i class="fas fa-hands mr-2 text-secondary text-xs"></i> Volunteering</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                            <i class="fas fa-handshake mr-2 text-secondary text-xs"></i> Partnerships</a></li>
-                    </ul>
+    <div class="w-full mx-auto bg-white shadow-md min-h-screen">
+        <!-- Top Info Bar -->
+        <div class="w-full bg-gray-200 text-xs text-center p-2">
+            <p>Gokarneshwar-6 Jorpati, Kathmandu, Tel: +977-1-4910235</p>
+        </div>
+    
+        <!-- Header with Logo and Search -->
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between border-b">
+            <!-- Logo -->
+            <div class="mb-4 md:mb-0">
+                <img src="https://www.amda.org.np/image/logo.png" alt="Logo" class="h-16">
+            </div>
+    
+            <!-- Search Bar - Desktop -->
+            <div class="w-full md:w-1/3">
+                <div class="relative">
+                    <input type="text" placeholder="Search..."
+                        class="w-full py-2 px-4 bg-white pr-10 rounded-md border border-gray-300 focus:outline-none text-sm">
+                    <div class="absolute right-3 top-2.5 w-5 h-5 flex items-center justify-center text-gray-600">
+                        <i class="fas fa-search"></i>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">Resources</a>
-        <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">Publications</a>
-        <a href="#" class="block py-2 text-gray-700 hover:text-primary transition-colors">Gallery</a>
-    </div>
-</div>
-
-<!-- Top Info Bar -->
-<div class="w-full h-[5vh] bg-[#bdbdbd] top-0 z-[100] flex justify-between items-center text-[10px] lg:text-[12px] p-4">
-    <p>Gokarneshwar-6 Jorpati, Kathmandu, Tel : +977-1-4910235,4911140</p>
-    <p>Mon 07 Apr, 2025</p>
-</div>
-
-<!-- Logo -->
-<div class="absolute top-8 z-[10] w-full flex justify-center lg:justify-start lg:pl-8">
-    <img src="https://www.amda.org.np/image/logo.png" class="w-[90vh] max-w-[200px] lg:max-w-[250px]" alt="AMDA-Nepal Logo">
-</div>
-
-<!-- Navigation -->
-<nav class="fixed navbar top-[32vh] right-3 lg:top-0 lg:right-0 lg:w-full lg:bg-white lg:shadow-md z-50 lg:px-8 lg:py-2 flex justify-end lg:justify-between items-center">
-
-    <!-- Desktop Navigation -->
-    <div class="hidden lg:flex space-x-6 items-center">
-        <a href="#" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+    
+        <!-- Main Navigation - Desktop -->
+        <nav class="hidden md:block bg-red-600 text-white">
+            <div class="container mx-auto px-4">
+                <ul class="flex space-x-1">
+                    <li><a href="#" class="block py-3 px-4 hover:bg-red-700 transition">Home</a></li>
+                    <li><a href="#" class="block py-3 px-4 hover:bg-red-700 transition">About Us</a></li>
+                    <li><a href="#" class="block py-3 px-4 hover:bg-red-700 transition">What We Do</a></li>
+                    <li><a href="#" class="block py-3 px-4 hover:bg-red-700 transition">Resources</a></li>
+                    <li><a href="#" class="block py-3 px-4 hover:bg-red-700 transition">Publications</a></li>
+                    <li><a href="#" class="block py-3 px-4 hover:bg-red-700 transition">Gallery</a></li>
+                    <li><a href="#" class="block py-3 px-4 hover:bg-red-700 transition">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <!-- Mobile Menu Button - Hidden on Desktop -->
+        <div class="md:hidden flex justify-between items-center px-4 py-2 border-b">
+            <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <span class="font-semibold">Menu</span>
+            <button class="text-gray-700 focus:outline-none">
+                <i class="fas fa-user text-xl"></i>
+            </button>
+        </div>
+    
+        <!-- Marquee Sections -->
+        <div class="container mx-auto">
+            <!-- Updates Marquee -->
+            <div class="flex border-b">
+                <div class="px-4 py-2 bg-red-600 text-white whitespace-nowrap flex items-center">
+                    Updates
+                </div>
+                <div class="flex-grow overflow-hidden whitespace-nowrap py-2 px-2">
+                    <div class="animate-marquee inline-flex">
+                        <span class="mx-4">Recruitment Result Notice 10871</span>
+                        <span class="mx-4">Notice for procurement of USG</span>
+                        <span class="mx-4">Notice for shortlisting</span>
+                        <span class="mx-4">Notice for shortlisting</span>
+                        <span class="mx-4">Notice for shortlisting</span>
+                        <span class="mx-4">Notice for shortlisting</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Notices Marquee -->
+            <div class="flex border-b">
+                <div class="px-4 py-2 bg-red-600 text-white whitespace-nowrap flex items-center">
+                    Notices
+                </div>
+                <div class="flex-grow overflow-hidden whitespace-nowrap py-2 px-2">
+                    <div class="animate-marquee inline-flex">
+                        <span class="mx-4">Weekly News W13_20250331</span>
+                        <span class="mx-4">Week News W-13_20250331</span>
+                        <span class="mx-4">Week News W-13_20250331</span>
+                        <span class="mx-4">Week News W-13_20250331</span>
+                        <span class="mx-4">Week News W-13_20250331</span>
+                        <span class="mx-4">Weekly News W13_20250331</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Hero Slider -->
+        <div class="relative h-[90vh] w-full overflow-hidden">
+            <!-- Background Gallery -->
+            <div class="absolute inset-0">
+                <img src="https://www.amda.org.np/files/pics/25th%20Anniversary%20of%20SCWH.jpg"
+                    alt="AMDA-Nepal gallery image" class="gallery-image w-full h-full object-cover">
+            </div>
+    
+            <!-- Navigation Buttons -->
+            <button
+                class="nav-button prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-600/80 hover:bg-blue-700 text-white p-3 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+    
+            <button
+                class="nav-button next absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-600/80 hover:bg-blue-700 text-white p-3 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+    
+            <!-- Dot Indicators -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+                <!-- Dots will be added dynamically by JavaScript -->
+            </div>
+        </div>
+    
+        <!-- Content Section - Example for desktop -->
         
-        <!-- Mega Menu Container - About Us -->
-        <div class="relative z-[100] group">
-            <button class="text-gray-700 hover:text-primary flex items-center focus:outline-none transition-colors">
-                About us
-                <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-
-            <!-- Mega Menu with transition effects -->
-            <div
-                class="absolute left-0 mt-2 w-[300px] bg-white shadow-xl rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
-                <div class="grid gap-6 p-6">
-                    <!-- Column 1 - About Us Links -->
-                    <div>
-                        <h3 class="font-semibold text-dark mb-3 flex items-center">
-                            <i class="fas fa-info-circle mr-2 text-primary"></i> About Our Organization
-                        </h3>
-                        <ul class="space-y-3">
-                            <li>
-                                <a href="history-overview.html"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-history mr-2 text-secondary"></i> History/Overview
-                                </a>
-                            </li>
-                            <li>
-                                <a href="vision-and-mission.html"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-bullseye mr-2 text-secondary"></i> Vision and Mission
-                                </a>
-                            </li>
-                            <li>
-                                <a href="executive-committee.html"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-users mr-2 text-secondary"></i> Executive Committee
-                                </a>
-                            </li>
-                            <li>
-                                <a href="members-of-amda-nepal.html"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-address-book mr-2 text-secondary"></i> Members of AMDA Nepal
-                                </a>
-                            </li>
-                            <li>
-                                <a href="management-and-staff-co.html"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-user-tie mr-2 text-secondary"></i> Management and Staff
-                                </a>
-                            </li>
-                            <li>
-                                <a href="chairpersons-of-amda-nepal.html"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-user-shield mr-2 text-secondary"></i> Chairpersons
-                                </a>
-                            </li>
-                            <li>
-                                <a href="chairpersonsmessage.html"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-envelope-open-text mr-2 text-secondary"></i> Chairperson's
-                                    Message
-                                </a>
-                            </li>
-                            <li>
-                                <a href="organogram.html"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-sitemap mr-2 text-secondary"></i> Organogram
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay (same as before) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="bg-white w-64 min-h-screen p-4">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="font-bold text-lg">Menu</h2>
+                <button id="close-menu" class="text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
             </div>
-        </div>
-
-        <!-- Mega Menu Container - What We Do -->
-        <div class="relative z-[100] group">
-            <button class="text-gray-700 hover:text-primary flex items-center focus:outline-none transition-colors">
-                What We Do
-                <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-
-            <!-- Mega Menu with transition effects -->
-            <div
-                class="absolute left-0 mt-2 w-[600px] bg-white shadow-xl rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
-                <div class="grid grid-cols-3 gap-6 p-6">
-                    <!-- Column 1 -->
-                    <div>
-                        <h3 class="font-semibold text-dark mb-3 flex items-center">
-                            <i class="fas fa-hospital mr-2 text-primary"></i> Health Services
-                        </h3>
-                        <ul class="space-y-3">
-                            <li>
-                                <a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-medkit mr-2 text-secondary"></i> Medical Camps
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-clinic-medical mr-2 text-secondary"></i> Hospitals
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-graduation-cap mr-2 text-secondary"></i> Training
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Column 2 -->
-                    <div>
-                        <h3 class="font-semibold text-dark mb-3 flex items-center">
-                            <i class="fas fa-hands-helping mr-2 text-primary"></i> Community Programs
-                        </h3>
-                        <ul class="space-y-3">
-                            <li>
-                                <a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fab fa-leanpub mr-2 text-secondary"></i> Education
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-ambulance mr-2 text-secondary"></i> Disaster Relief
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-people-carry mr-2 text-secondary"></i> Outreach
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Column 3 -->
-                    <div>
-                        <h3 class="font-semibold text-dark mb-3 flex items-center">
-                            <i class="fas fa-hand-holding-heart mr-2 text-primary"></i> Support
-                        </h3>
-                        <ul class="space-y-3">
-                            <li>
-                                <a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-hands-helping mr-2 text-secondary"></i> Volunteering
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fas fa-handshake mr-2 text-secondary"></i> Partnerships
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-600 hover:text-primary transition-colors flex items-center">
-                                    <i class="fab fa-paypal mr-2 text-secondary"></i> Donations
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <a href="#" class="text-gray-700 hover:text-primary transition-colors">Resources</a>
-        <a href="#" class="text-gray-700 hover:text-primary transition-colors">Publications</a>
-        <a href="#" class="text-gray-700 hover:text-primary transition-colors">Gallery</a>
-    </div>
-
-    <!-- Desktop Search -->
-    <div class="relative hidden lg:block">
-        <input type="text" placeholder="Search..."
-            class="py-2 w-[200px] lg:py-2 lg:px-4 lg:w-[250px] bg-white pr-10 rounded-[5px] border border-gray-900 focus:outline focus:ring-2 focus:ring-primary focus:border-transparent text-sm" />
-        <div class="absolute right-3 top-2.5 w-5 h-5 flex items-center justify-center text-gray-800">
-            <i class="ri-search-line"></i>
+            <nav class="space-y-4">
+                <a href="#" class="block py-2 border-b border-gray-200">Home</a>
+                <a href="#" class="block py-2 border-b border-gray-200">About Us</a>
+                <a href="#" class="block py-2 border-b border-gray-200">What We Do</a>
+                <a href="#" class="block py-2 border-b border-gray-200">Resources</a>
+                <a href="#" class="block py-2 border-b border-gray-200">Publications</a>
+                <a href="#" class="block py-2 border-b border-gray-200">Gallery</a>
+                <a href="#" class="block py-2 border-b border-gray-200">Contact Us</a>
+            </nav>
         </div>
     </div>
-
-    <!-- Mobile Menu Button -->
-    <div class="lg:hidden bg-blue-600 w-10 h-10 rounded-md flex items-center justify-center">
-        <button id="mobile-menu-button" class="hamburger outline-none focus:outline-none">
-            <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
-            <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
-            <div class="hamburger-line w-6 h-0.5 bg-gray-700 my-1 transition-all"></div>
-        </button>
-    </div>
-</nav>
-
-<!-- Marquee Sections -->
-<div class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap bg-[#FAFAFA] text-black top-[20%] lg:top-[8vh] w-full py-2">
-    <div aria-hidden="true" class="animate-marquee flex">
-        <li>Recruitment_Result Notice_10871_20811221</li>
-        <li>Notice for procurement of USG and OT table</li>
-        <li>Notice for shortlisting</li>
-        <li>Recruitment_Result Notice_10871_20811221</li>
-        <li>Notice for procurement of USG and OT table</li>
-        <li>Notice for shortlisting</li>
-        <li>Recruitment_Result Notice_10871_20811221</li>
-        <li>Notice for procurement of USG and OT table</li>
-        <li>Notice for shortlisting</li>
-    </div>
-</div>
-
-<div class="btn px-5 text-white py-2 bg-red-600 absolute top-[20%] lg:top-[8vh] z-[2] flex">
-    Updates (2)
-</div>
-
-<div class="btn px-5 text-white py-2 bg-red-600 absolute top-[26%] lg:top-[12vh] z-[2] flex">
-    Notices (3)
-</div>
-
-<div class="absolute z-[1] mainmarquee overflow-hidden whitespace-nowrap bg-[#FAFAFA] text-black top-[26%] lg:top-[12vh] w-full py-2">
-    <div aria-hidden="true" class="animate-marquee flex">
-        <li>Weekly News(W13_20250331_102_AH)</li>
-        <li>Week News (W-13_20250331_205_PWS)</li>
-        <li>Weekly News(W13_20250331_102_AH)</li>
-        <li>Week News (W-13_20250331_205_PWS)</li>
-        <li>Weekly News(W13_20250331_102_AH)</li>
-        <li>Week News (W-13_20250331_205_PWS)</li>
-        <li>Weekly News(W13_20250331_102_AH)</li>
-        <li>Week News (W-13_20250331_205_PWS)</li>
-    </div>
-</div>
-    <header class="relative h-screen w-full overflow-hidden pt-16">
-        <!-- Background Gallery -->
-
-        <div class="absolute inset-0">
-            <img src="https://www.amda.org.np/files/pics/25th%20Anniversary%20of%20SCWH.jpg"
-                alt="AMDA-Nepal gallery image" class="gallery-image w-full h-full object-cover">
-            <div class="absolute inset-0 gradient-overlay"></div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <button
-            class="nav-button prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-600/80 hover:bg-blue-700 text-white p-2 sm:p-3 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-        </button>
-
-        <button
-            class="nav-button next absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-600/80 hover:bg-blue-700 text-white p-2 sm:p-3 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-        </button>
-
-        <!-- Dot Indicators -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
-            <!-- Dots will be added dynamically by JavaScript -->
-        </div>
-
-        <!-- Overlay Content -->
-        <div class="absolute inset-0 flex items-center justify-center text-center px-4 sm:px-6">
-            <div class="max-w-4xl">
-                <!-- Animated heading -->
-                <h1
-                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-white text-reveal">
-                    <span class="inline-block">Better Quality of Life</span><br>
-                    <span class="inline-block">for a Better Future</span>
-                </h1>
-
-                <!-- Animated paragraph -->
-
-            </div>
-        </div>
-    </header>
-
 
     <!-- Stats Section -->
     <section class="py-16">
@@ -758,8 +535,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        
-                      <img src="  https://www.amda.org.np/image/logo.png" alt="">
+
+                        <img src="  https://www.amda.org.np/image/logo.png" alt="">
                     </div>
                     <p class="text-gray-400 mb-4">
                         Association of Medical Doctors of Asia-Nepal is committed to
