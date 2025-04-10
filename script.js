@@ -172,3 +172,25 @@ function injectHamburgerCSS() {
     `;
     document.head.appendChild(style);
 }
+window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const nav = document.querySelector(".navbar");
+    const threshold = window.innerHeight * 0.2; // 20% of the window height
+
+    if (scrollTop > threshold) {
+        gsap.to(nav, {
+            duration: 0.5,
+            ease: "power3.out",
+            y: 0, // Move navbar to the top
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Add shadow
+            backgroundColor: "#ffffff", // Change background to white
+        });
+        nav.classList.add("top-0");
+    } else {
+        gsap.to(nav, {
+            duration: 0.5,
+            ease: "power3.out",
+        });
+        nav.classList.remove("top-0");
+    }
+});
