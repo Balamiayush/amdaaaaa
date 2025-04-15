@@ -172,19 +172,3 @@ function injectHamburgerCSS() {
     `;
     document.head.appendChild(style);
 }
-gsap.to(".desktopnav",{
-    top: 0,
-    duration: 0.5,
-    opacity: 1,
-    color: "#fff",
-    backgroundColor: "#000",
-    ease: "power2.out",
-    scrollTrigger: {
-        trigger: ".desktopnav",
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-        
-    }
-
-})
