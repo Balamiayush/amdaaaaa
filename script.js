@@ -198,9 +198,8 @@ function scrollingNav() {
     tl.to(".loadinggg div", {
       top: "-50%",
       height: 0,
-      stagger: 0.5,
-      duration: 0.8,
-      ease: "power2.out",
+      stagger: 0.3,
+      duration: 0.5,
     });
     tl.to(".loadinggg", {
       opacity: 0,
