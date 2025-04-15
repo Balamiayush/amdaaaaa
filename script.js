@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', () => {
+    initializeGSAPAnimations();
+    initializeMobileMenu();
+    initializeImageGallery();
+    initializeParallaxEffect();
+    initializeSearchFunctionality();
+    injectHamburgerCSS();
+   
+});
+
+// Add this new function for mega menu animations
+
+
+// Rest of your existing functions remain unchanged...
 const heroImages = [
     { id: 1, title: "Celebrating 25 Years of AMDA Siddhartha Children and Women Hospital_Butwal_20800716", src: "https://www.amda.org.np/files/pics/25th%20Anniversary%20of%20SCWH.jpg" },
     { id: 2, title: "AMDA 65th General Assembly", src: "https://amda.org.np/files/pics/65GA_20810724.jpg" },
@@ -6,16 +20,6 @@ const heroImages = [
     { id: 5, title: "Relief Materials to Earthquake Victims_Jajarkor-Rukum Paschim_20800723", src: "https://amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" },
     { id: 6, title: "AMDA Nepal - Event Image", src: "https://www.amda.org.np/files/pics/3.jpg" }
 ];
-
-document.addEventListener('DOMContentLoaded', () => {
-    initializeGSAPAnimations();
-    initializeMobileMenu();
-    initializeImageGallery();
-    initializeParallaxEffect();
-    initializeSearchFunctionality();
-    injectHamburgerCSS();
-});
-
 // Mobile Menu Toggle
 function initializeMobileMenu() {
     const mobileMenuButton = document.getElementById('mobile-menu-button'); 
@@ -172,3 +176,65 @@ function injectHamburgerCSS() {
     `;
     document.head.appendChild(style);
 }
+function scrollingNav() {
+    let nav = document.querySelector(".desktopNav");
+    gsap.to(nav, {
+      position: "fixed", // this is the correct property
+      top: 0,
+      duration:0.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "body",
+        start: "5% top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
+  }
+  
+  scrollingNav();
+  function loading() {
+    let tl = gsap.timeline(); // fixed typo here
+    tl.to(".loadinggg div", {
+      top: "-50%",
+      height: 0,
+      stagger: 0.5,
+      duration: 0.8,
+      ease: "power2.out",
+    });
+    tl.to(".loadinggg", {
+      opacity: 0,
+      duration: 0.5,
+      onComplete: () => {
+        document.querySelector(".loadinggg").style.display = "none";
+      }
+    });
+  }
+  
+  loading();
+function startMarquee() {
+    document.querySelectorAll('.marquee-content').forEach((el) => {
+        const width = el.offsetWidth;
+        const animation = gsap.fromTo(el, 
+            { x: window.innerWidth }, 
+            {
+                x: -width,
+                duration: 25,
+                ease: "linear",
+                repeat: -1,
+            }
+        );
+
+        el.addEventListener('mouseenter', () => {
+            animation.pause();
+        });
+
+        el.addEventListener('mouseleave', () => {
+            animation.play();
+        });
+    });
+}
+
+startMarquee();
+  
+  
