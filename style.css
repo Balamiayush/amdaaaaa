@@ -347,3 +347,68 @@ input[type="number"]::-webkit-outer-spin-button {
     color: white;
     background: #2563EB;
 }
+.nav-link {
+    position: relative;
+}
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+}
+.nav-link:hover:after {
+    width: 100%;
+}
+
+/* Mobile menu animations */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.mobile-menu.open {
+    max-height: 1000px;
+}
+
+/* Mega menu enhancements */
+.mega-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.mega-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hamburger menu animation */
+.hamburger span {
+    transition: all 0.3s ease;
+}
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}     .marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+}
+.marquee-content {
+    display: inline-flex;
+    will-change: transform;
+}
+.marquee-item {
+    padding: 0 1rem;
+    white-space: nowrap;
+}

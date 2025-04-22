@@ -19,58 +19,75 @@
 </head>
 
 <body class=" w-full">
-    <div class="loadinggg h-screen top-0  flex w-full fixed z-[20000] flex justify-center">
+    <!-- <div class="loadinggg h-screen top-0  flex w-full fixed z-[20000] flex justify-center">
+        <h1 class="absolute text-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-5xl ">AMDA NEAPL</h1>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
-    </div>
+        <div class="h-screen w-[25%] bg-blue-600 "></div>
+        <div class="h-screen w-[25%] bg-blue-600 "></div>
+        <div class="h-screen w-[25%] bg-blue-600 "></div>
+    </div> -->
     <!-- Top Bar (visible on all screens) -->
-    <div class="heroSection w-full h-screen bg-cover bg-center relative px-2 lg:px-4">
+    <div class="heroSection  w-full lg:h-screen bg-cover bg-center relative ">
         
-        <div
-            class="w-full h-10 bg-gray-200 flex items-center justify-center lg:justify-between px-4 text-xs lg:text-sm">
-            <p>Gokarneshwar-6 Jorpati, Kathmandu, Tel: +977-1-4910235</p>
-            <div class="flex gap-2 text-lg ">
-                <i class="ri-facebook-circle-line cursor-pointer"></i>
-                <i class="ri-youtube-line cursor-pointer"></i>
-                <i class="ri-google-line cursor-pointer"></i>
-                <i class="ri-twitter-line cursor-pointer"></i>
+        <div class="w-full bg-[#574FCB] text-white text-xs lg:text-sm">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between h-12 lg:h-14  gap-2">
+              
+              <!-- Address and Phone -->
+              <p class="text-center lg:text-left p-2">
+                Gokarneshwar-6 Jorpati, Kathmandu, Tel: +977-1-4910235
+              </p>
+              
+              <!-- Social Icons -->
+              <div class="lg:flex gap-3 hidden  text-lg justify-center lg:justify-end">
+                <i class="ri-facebook-circle-line cursor-pointer hover:text-gray-200 transition"></i>
+                <i class="ri-youtube-line cursor-pointer hover:text-gray-200 transition"></i>
+                <i class="ri-google-line cursor-pointer hover:text-gray-200 transition"></i>
+                <i class="ri-twitter-line cursor-pointer hover:text-gray-200 transition"></i>
+              </div>
+          
+              <!-- Action Buttons (hidden on small screens) -->
+              <div class="hidden lg:flex gap-2">
+                <a href="#" class="px-4 py-1.5 bg-blue-500 text-white text-xs rounded hover:bg-blue-600 transition">
+                  Check Mail
+                </a>
+                <a href="#" class="px-4 py-1.5 bg-blue-500 text-white text-xs rounded hover:bg-blue-600 transition">
+                  e-Bidding
+                </a>
+                <a href="#" class="px-4 py-1.5 bg-blue-500 text-white text-xs rounded hover:bg-blue-600 transition">
+                  User Manual
+                </a>
+              </div>
+              
             </div>
-            <div class=" hidden lg:flex gap-2">
-                <a href="#" class="px-4 py-2 bg-blue-500 text-white text-xs rounded hover:bg-blue-600 transition">Check
-                    Mail</a>
-                <a href="#"
-                    class="px-4 py-2 bg-blue-500 text-white text-xs rounded hover:bg-blue-600 transition">e-bidding</a>
-                <a href="#" class="px-4 py-2 bg-blue-500 text-white text-xs rounded hover:bg-blue-600 transition">User
-                    Manual</a>
-            </div>
-           
-        </div>
+          </div>
+          
 
         <!-- Desktop Navbar (hidden on mobile) -->
         <nav class="w-full desktopNav bg-white shadow-md z-[10000] hidden lg:block">
 
-            <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
+            <div class="max-w-7xl mx-auto px flex items-center justify-between h-20">
                 <!-- Logo -->
                 <div class="w-[200px]">
                     <img src="https://www.amda.org.np/image/logo.png" alt="Logo" class="h-auto max-h-16">
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="flex items-center gap-6 capitalize">
-                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">Home</a>
-                    <div class="relative z-[100] group">
-                        <button
-                            class="text-gray-700 hover:text-primary flex items-center focus:outline-none transition-colors">
+                <div class="flex items-center gap-6  capitalize">
+                    <a href="#" class=" nav-link hover:text-blue-600 transition">Home</a> 
+                    <div class="relative z-[100] group ">
+                        <a
+                            class=" nav-link hover:text-primary flex items-center focus:outline-none transition-colors">
                             About us
                             <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7"></path>
                             </svg>
-                        </button>
+                        </a>
 
                         <!-- Mega Menu with transition effects -->
                         <div
@@ -145,15 +162,15 @@
                     </div>
 
                     <div class="relative z-[100] group">
-                        <button
-                            class="text-gray-700 hover:text-primary flex items-center focus:outline-none transition-colors">
+                        <a href="#"
+                            class=" nav-link  flex items-center focus:outline-none transition-colors">
                             What We Do
                             <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7"></path>
                             </svg>
-                        </button>
+                        </a>
 
                         <!-- Mega Menu -->
                         <div
@@ -161,8 +178,8 @@
                             <div class="flex gap-6 px-6 py-5">
                                 <!-- Column 1 -->
                                 <div>
-                                    <h3 class="font-semibold text-dark mb-3 flex items-center">
-                                        <i class="fas fa-hospital mr-2 text-primary"></i> Health Services
+                                    <h3 class="font-semibold  mb-3 flex items-center">
+                                        <i class="fas fa-hospital mr-2 text-primary "></i> Health Services
                                     </h3>
                                     <ul class="flex flex-col space-y-3">
                                         <li class="group/hospital relative">
@@ -303,19 +320,18 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">Resources</a>
-                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">Publications</a>
-                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">Gallery</a>
-                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">Vacancy</a>
+                    <a href="#" class=" nav-link  transition">Resources</a>
+                    <a href="#" class=" nav-link  transition">Publications</a>
+                    <a href="#" class=" nav-link  transition">Gallery</a>
+                    <a href="#" class=" nav-link  transition">Vacancy</a>
                 </div>
 
                 <!-- Search Bar -->
-                <form class="flex items-center">
-                    <div class="relative">
+                <form class=" w-[20%]">
+                    <div class="relative w-full  ">
                         <input type="text" placeholder="Search..."
-                            class="px-4 py-2 border border-gray-300 rounded-[8px] bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        <button type="submit"
-                            class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                            class="w-full px-2 py-2  border  border-gray-500 rounded-[8px]  focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -330,7 +346,7 @@
             <p class="Updates p-2 bg-red-500 absolute z-[10] left-0">Update(1)</p>
             <div class="marquee-content whitespace-nowrap pl-24">
               <li class="inline-block px-4">
-                Weekly News (W13_20250331_101_CO)
+                Weekly News (W13_20250331_101_CO) &nbsp; &nbsp;
               </li>
             </div>
           </div>
@@ -339,10 +355,9 @@
             <p class="Updates p-2 bg-red-500 absolute z-[10] left-0">Notice(2)</p>
             <div class="marquee-content whitespace-nowrap pl-24">
               <li class="inline-block px-4">
-                Tender Notice_Electric Vehicle_0062/AMDA/AH/2081_82
+                Tender Notice_Electric Vehicle_0062/AMDA/AH/2081_82 &nbsp;  &nbsp;
               </li>
-              <li class="inline-block px-4">
-                Notice for procurement of USG and OT table
+              <li class="inline-block px-4">                Notice for procurement of USG and OT table &nbsp;  &nbsp;
               </li>
             </div>
           </div>     
@@ -628,7 +643,24 @@
             https://www.amda.org.np/files/pics/65GA_20810724.jpg" alt="" class="w-full h-full ">
         </div>
     </div>
-
+ <!-- WELCOME SECTION -->
+<div class="w-full min-h-[50vh] bg-white text-black mt-[6vw] lg:mt-[8vw] flex items-center justify-center">
+    <div class="max-w-5xl flex flex-col items-center justify-center text-center px-4 lg:px-8">
+      
+      <!-- Heading -->
+      <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-[#574FCB] text-white px-6 py-4 rounded-md shadow-md">
+        Welcome to AMDA Nepal
+      </h1>
+  
+      <!-- Paragraph -->
+      <p class="mt-6 text-sm sm:text-base md:text-lg leading-relaxed text-gray-700">
+        Association of Medical Doctors of Asia-Nepal (AMDA-Nepal) was established in 1989 as a chapter of AMDA-International, Japan and was officially registered in the government office as a NGO on March 4, 1991. It is a humanitarian, nonprofit-making, non-political, non-sectarian, Non-Governmental Organization working with its mission to promote the health and well-being of the underprivileged and marginalized people under the slogan:
+        <br><span class="italic font-medium text-[#574FCB] mt-2 block">“Better quality of life for better future”.</span>
+      </p>
+      
+    </div>
+  </div>
+  
     <!-- What We Do Section -->
     <section class="px-2 lg:px-4 mt-10 lg:mt-20 ">
         <div class="container mx-auto px-4">

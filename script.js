@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeParallaxEffect();
     initializeSearchFunctionality();
     injectHamburgerCSS();
+
+    
    
 });
 
@@ -211,29 +213,43 @@ function scrollingNav() {
   }
   
   loading();
-function startMarquee() {
+  function startMarquee() {
     document.querySelectorAll('.marquee-content').forEach((el) => {
-        const width = el.offsetWidth;
-        const animation = gsap.fromTo(el, 
-            { x: window.innerWidth }, 
+        // Duplicate the content multiple times for seamless looping
+        const originalContent = el.innerHTML;
+        el.innerHTML = originalContent.repeat(5); // Repeat 3 times for smooth effect
+
+        const width = el.offsetWidth / 3; // Width of original content
+        el.style.width = `${width * 3}px`; // Set width to accommodate duplicated content
+
+        // GSAP animation
+        const animation = gsap.fromTo(
+            el,
+            { x: 0 },
             {
-                x: -width,
-                duration: 25,
-                ease: "linear",
+                x: -width, // Move by the width of the original content
+                duration:20, // Adjust speed as needed
+                ease: 'linear',
                 repeat: -1,
+                modifiers: {
+                    x: gsap.utils.unitize((x) => parseFloat(x) % width) // Seamless loop
+                }
             }
         );
 
+        // Pause on hover
         el.addEventListener('mouseenter', () => {
             animation.pause();
         });
 
+        // Resume on leave
         el.addEventListener('mouseleave', () => {
             animation.play();
         });
     });
 }
 
+// Initialize marquee
 startMarquee();
   
   
