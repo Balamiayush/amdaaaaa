@@ -285,11 +285,21 @@ body {
 
 .service-card {
     transition: all 0.3s ease;
+    background: white;
+    transform: perspective(1000px) rotateX(0deg);
+    backface-visibility: hidden;
+
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateX(5deg) translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.gradient-text {
+    background: linear-gradient(45deg, #574FCB, #8E2DE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .navbar {
@@ -303,7 +313,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .service-card {
-    background: #c0c0c0;
+    background: rgb(175, 175, 175);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
@@ -311,8 +321,8 @@ input[type="number"]::-webkit-outer-spin-button {
     border: 1px solid rgba(255, 255, 255, 0.18);
     animation-timeline: view();
     animation-fill-mode: forwards;
-    animation-range: entry 10%;
-    animation-duration: 0.5s;
+    animation-range: entry 20%;
+    animation-duration: 0.3s;
     animation-name: service;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
@@ -321,7 +331,7 @@ input[type="number"]::-webkit-outer-spin-button {
 @keyframes service {
     0% {
         transform: translateY(120px);
-        opacity: 0;
+        opacity: 0.5;
     }
 
     100% {

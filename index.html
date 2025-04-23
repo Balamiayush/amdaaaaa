@@ -7,7 +7,7 @@
     <title>AMDA Nepal - Healthcare Excellence</title>
 
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { primary: '#4A90E2', secondary: '#F5F6F7' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#4A90E2', secondary: '#F5F6F7', accent: '#FF6B6B', }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Font Awesome CSS (for version 6 - includes solid and brand icons) -->
@@ -19,7 +19,7 @@
 </head>
 
 <body class=" w-full">
-    <div class="loadinggg h-screen top-0  flex w-full fixed z-[20000] flex justify-center">
+    <!-- <div class="loadinggg h-screen top-0  flex w-full fixed z-[20000] flex justify-center">
         <h1 class="absolute text-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-5xl ">AMDA NEAPL</h1>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
@@ -29,7 +29,7 @@
         <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
         <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
         <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
-    </div>
+    </div> -->
     <!-- Top Bar (visible on all screens) -->
     <div class="heroSection  w-full lg:h-screen bg-cover bg-center relative ">
         
@@ -660,96 +660,120 @@
       
     </div>
   </div>
-  
+
     <!-- What We Do Section -->
-    <section class="px-2 lg:px-4 mt-10 lg:mt-20 ">
+    <section class="px-4   lg:px-8 py-12 lg:py-20 bg-gradient-to-b from-gray-50 to-white section-mask">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">What We Do</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
+            <!-- Animated Header -->
+            <div class="flex items-center flex-col mb-16" id="section-header">
+                <div class="inline-block relative mb-6">
+                    <div class="absolute -inset-3 bg-[#574FCB]/10 rounded-lg blur-md opacity-75"></div>
+                    <h1 class="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#574FCB] px-8 py-4 rounded-lg shadow-sm">
+                        What We <span class="gradient-text">Do</span>
+                    </h1>
+                </div>
+                <p class="text-gray-600 max-w-3xl mx-auto mt-4 text-center text-lg leading-relaxed">
                     AMDA-Nepal provides various healthcare services and programs to
                     improve the quality of life for underprivileged communities.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="service-card  p-6 rounded-lg shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-hospital-line text-primary ri-lg"></i>
+            <!-- Services Grid with GSAP Animation -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card group p-8 rounded-xl shadow-md border border-gray-100/50 hover:border-[#574FCB]/20 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#E0DDFF] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#574FCB] transition-all duration-300">
+                        <i class="ri-hospital-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
                         Hospital/Clinic Activities
                     </h3>
-                    <p class="text-gray-600">
-                        Providing quality healthcare services through our network of
-                        hospitals and clinics across Nepal.
+                    <p class="text-gray-600 mb-4 group-hover:text-gray-800 transition-all duration-300">
+                        Providing quality healthcare services through our network of hospitals and clinics across Nepal.
                     </p>
+                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-accent transition-all duration-300">
+                        Learn more <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
                 </div>
 
-                <div class="service-card  p-6 rounded-lg shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-book-open-line text-primary ri-lg"></i>
+                <!-- Service Card 2 -->
+                <div class="service-card group p-8 rounded-xl shadow-md border border-gray-100/50 hover:border-[#574FCB]/20 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#E0DDFF] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#574FCB] transition-all duration-300">
+                        <i class="ri-book-open-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
                         Academic Programs
                     </h3>
-                    <p class="text-gray-600">
-                        Conducting training, workshops, and educational programs for
-                        healthcare professionals.
+                    <p class="text-gray-600 mb-4 group-hover:text-gray-800 transition-all duration-300">
+                        Conducting training, workshops, and educational programs for healthcare professionals.
                     </p>
+                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-accent transition-all duration-300">
+                        Learn more <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
                 </div>
 
-                <div class="service-card  p-6 rounded-lg shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-team-line text-primary ri-lg"></i>
+                <!-- Service Card 3 -->
+                <div class="service-card group p-8 rounded-xl shadow-md border border-gray-100/50 hover:border-[#574FCB]/20 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#E0DDFF] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#574FCB] transition-all duration-300">
+                        <i class="ri-team-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">
-                        Partnership and Collaboration
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
+                        Partnership & Collaboration
                     </h3>
-                    <p class="text-gray-600">
-                        Working with local and international organizations to expand our
-                        reach and impact.
+                    <p class="text-gray-600 mb-4 group-hover:text-gray-800 transition-all duration-300">
+                        Working with local and international organizations to expand our reach and impact.
                     </p>
+                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-accent transition-all duration-300">
+                        Learn more <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
                 </div>
 
-                <div class="service-card  p-6 rounded-lg shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-government-line text-primary ri-lg"></i>
+                <!-- Service Card 4 -->
+                <div class="service-card group p-8 rounded-xl shadow-md border border-gray-100/50 hover:border-[#574FCB]/20 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#E0DDFF] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#574FCB] transition-all duration-300">
+                        <i class="ri-government-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
                         Citizen Charter
                     </h3>
-                    <p class="text-gray-600">
-                        Promoting healthcare rights and responsibilities among citizens
-                        for better health outcomes.
+                    <p class="text-gray-600 mb-4 group-hover:text-gray-800 transition-all duration-300">
+                        Promoting healthcare rights and responsibilities among citizens for better health outcomes.
                     </p>
+                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-accent transition-all duration-300">
+                        Learn more <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
                 </div>
 
-                <div class="service-card  p-6 rounded-lg shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-first-aid-kit-line text-primary ri-lg"></i>
+                <!-- Service Card 5 -->
+                <div class="service-card group p-8 rounded-xl shadow-md border border-gray-100/50 hover:border-[#574FCB]/20 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#E0DDFF] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#574FCB] transition-all duration-300">
+                        <i class="ri-first-aid-kit-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
                         Emergency Relief
                     </h3>
-                    <p class="text-gray-600">
-                        Providing immediate medical assistance during natural disasters
-                        and emergencies.
+                    <p class="text-gray-600 mb-4 group-hover:text-gray-800 transition-all duration-300">
+                        Providing immediate medical assistance during natural disasters and emergencies.
                     </p>
+                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-accent transition-all duration-300">
+                        Learn more <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
                 </div>
 
-                <div class="service-card  p-6 rounded-lg shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-heart-line text-primary ri-lg"></i>
+                <!-- Service Card 6 -->
+                <div class="service-card group p-8 rounded-xl shadow-md border border-gray-100/50 hover:border-[#574FCB]/20 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#E0DDFF] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#574FCB] transition-all duration-300">
+                        <i class="ri-heart-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
                         Social Responsibility
                     </h3>
-                    <p class="text-gray-600">
-                        Implementing community-based programs to address social
-                        determinants of health.
+                    <p class="text-gray-600 mb-4 group-hover:text-gray-800 transition-all duration-300">
+                        Implementing community-based programs to address social determinants of health.
                     </p>
+                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-accent transition-all duration-300">
+                        Learn more <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -811,7 +835,7 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="px-2 lg:px-4 bg-white">
+    <!-- <section class="px-2 lg:px-4 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row gap-12">
                 <div class="w-full lg:w-1/2">
@@ -868,10 +892,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact & Quick Links Section -->
-    <section class="bg-gray-50 px-2 lg:px-4">
+    <!-- <section class="bg-gray-50 px-2 lg:px-4">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
@@ -1001,10 +1025,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white px-2 lg:px-4">
+    <!-- <footer class="bg-gray-900 text-white px-2 lg:px-4">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
@@ -1106,14 +1130,14 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <!-- Back to top button -->
-    <a href="#"
+    <!-- <a href="#"
         class="fixed bottom-6 right-6 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg opacity-0 transition-opacity duration-300"
         id="backToTop">
         <i class="ri-arrow-up-line text-white ri-lg"></i>
-    </a>
+    </a> -->
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

@@ -14,6 +14,49 @@ document.addEventListener('DOMContentLoaded', () => {
       lenis.on('scroll', (e) => {
         console.log(e);
       });
+                //   // Animate the header
+                //   gsap.from("#section-header", {
+                //     duration: 1,
+                //     y: 50,
+                //     opacity: 0,
+                //     ease: "power3.out"
+                // });
+    
+                // // Animate each service card with stagger
+                // gsap.from(".service-card", {
+                //     scrollTrigger: {
+                //         trigger: "#services-grid",
+                //         start: "top 80%",
+                //         toggleActions: "play none none none"
+                //     },
+                //     duration: 0.8,
+                //     y: 50,
+                //     opacity: 0,
+                //     stagger: 0.15,
+                //     ease: "back.out(1.2)"
+                // });
+    
+                // // Add hover animations
+                // document.querySelectorAll('.service-card').forEach(card => {
+                //     card.addEventListener('mouseenter', () => {
+                //         gsap.to(card, {
+                //             duration: 0.3,
+                //             y: -5,
+                //             boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                //             ease: "power2.out"
+                //         });
+                //     });
+                    
+                //     card.addEventListener('mouseleave', () => {
+                //         gsap.to(card, {
+                //             duration: 0.3,
+                //             y: 0,
+                //             boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                //             ease: "power2.out"
+                //         });
+                //     });
+                // });
+    
    
 });
 
