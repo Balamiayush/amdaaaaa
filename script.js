@@ -228,34 +228,91 @@ function injectHamburgerCSS() {
     `;
     document.head.appendChild(style);
 }
-function scrollingNav() {
-    let nav = document.querySelector(".desktopNav");
-    gsap.to(nav, {
-      position: "fixed", // this is the correct property
-      top: 0,
-      duration:0.5,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: "body",
-        start: "5% top",
-        end: "bottom bottom",
-        scrub: true,
-      },
+function dynamicStickyNav() {
+    const nav = document.querySelector(".desktopNav");
+    const originalPosition = nav.style.position; // Store original position
+    const originalTop = nav.style.top; // Store original top
+    const navHeight = nav.offsetHeight;
+    const originalBgColor = "bg-white";
+    const scrolledBgColor = "bg-[#002D71]";
+    const originalTextColor = "text-gray-800";
+    const scrolledTextColor = "text-white";
+
+    // Set initial state (non-sticky)
+    gsap.set(nav, {
+        position: "relative",
+        top: "auto",
+        width: "auto"
     });
-  }
-  
-  scrollingNav();
+
+    // Create ScrollTrigger
+    ScrollTrigger.create({
+        trigger: "body",
+        start: "top 10%",
+        end: "max",
+        onUpdate: (self) => {
+            const scrollY = self.scroll();
+            const threshold = window.innerHeight * 0.05; // 5% of viewport height
+            
+            if (scrollY > threshold) {
+                // Scrolled past 5% - make sticky and change style
+                gsap.to(nav, {
+                    position: "fixed",
+                    top: 0,
+                    width: "100%",
+                    duration: 0.3
+                });
+                nav.classList.remove(originalBgColor);
+                nav.classList.add(scrolledBgColor);
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove(originalTextColor);
+                    link.classList.add(scrolledTextColor);
+                });
+                
+                // Add padding only when sticky
+                document.body.style.paddingTop = `${navHeight}px`;
+            } else {
+                // Back at top - revert to original position and style
+                gsap.to(nav, {
+                    position: "relative",
+                    top: "auto",
+                    width: "auto",
+                    duration: 0.3
+                });
+                nav.classList.add(originalBgColor);
+                nav.classList.remove(scrolledBgColor);
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.add(originalTextColor);
+                    link.classList.remove(scrolledTextColor);
+                });
+                
+                // Remove padding when not sticky
+                document.body.style.paddingTop = "0";
+            }
+        },
+        markers: false // Set to true for debugging
+    });
+}
+
+// Initialize when DOM is loaded and GSAP is ready
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        dynamicStickyNav();
+    } else {
+        console.error("GSAP or ScrollTrigger not loaded");
+    }
+});
+  dynamicStickyNav();
   function loading() {
     let tl = gsap.timeline(); // fixed typo here
     tl.to(".loadinggg div", {
       top: "-50%",
       height: 0,
-      stagger: 0.3,
-      duration: 0.5,
+      stagger: 0.2,
     });
     tl.to(".loadinggg", {
       opacity: 0,
-      duration: 0.5,
+      duration: 0.2,
       onComplete: () => {
         document.querySelector(".loadinggg").style.display = "none";
       }

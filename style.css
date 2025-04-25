@@ -368,10 +368,12 @@ input[type="number"]::-webkit-outer-spin-button {
     bottom: -2px;
     left: 0;
     background-color: #3b82f6;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease-in-out;
+
 }
 .nav-link:hover:after {
     width: 100%;
+   
 }
 
 /* Mobile menu animations */
