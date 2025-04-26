@@ -5,58 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeParallaxEffect();
     initializeSearchFunctionality();
     injectHamburgerCSS();
+// Header animation
+    
+const lenis = new Lenis({
+    lerp: 0.1,
+    smooth: true,
+    direction: 'vertical'
+});
 
-    const lenis = new Lenis({
-        autoRaf: true,
-      });
-      
-      // Listen for the scroll event and log the event data
-      lenis.on('scroll', (e) => {
-        console.log(e);
-      });
-                //   // Animate the header
-                //   gsap.from("#section-header", {
-                //     duration: 1,
-                //     y: 50,
-                //     opacity: 0,
-                //     ease: "power3.out"
-                // });
-    
-                // // Animate each service card with stagger
-                // gsap.from(".service-card", {
-                //     scrollTrigger: {
-                //         trigger: "#services-grid",
-                //         start: "top 80%",
-                //         toggleActions: "play none none none"
-                //     },
-                //     duration: 0.8,
-                //     y: 50,
-                //     opacity: 0,
-                //     stagger: 0.15,
-                //     ease: "back.out(1.2)"
-                // });
-    
-                // // Add hover animations
-                // document.querySelectorAll('.service-card').forEach(card => {
-                //     card.addEventListener('mouseenter', () => {
-                //         gsap.to(card, {
-                //             duration: 0.3,
-                //             y: -5,
-                //             boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-                //             ease: "power2.out"
-                //         });
-                //     });
-                    
-                //     card.addEventListener('mouseleave', () => {
-                //         gsap.to(card, {
-                //             duration: 0.3,
-                //             y: 0,
-                //             boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                //             ease: "power2.out"
-                //         });
-                //     });
-                // });
-    
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
    
 });
 
@@ -412,6 +374,79 @@ document.addEventListener('DOMContentLoaded', () => {
                 end: "bottom top",
                 scrub: 1
             }
+        });
+    });
+});
+
+gsap.from("#section-header h1", {
+    scrollTrigger: {
+        trigger: "#section-header",
+        start: "top 80%",
+        toggleActions: "play none none none"
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+});
+
+gsap.from("#section-header p", {
+    scrollTrigger: {
+        trigger: "#section-header",
+        start: "top 70%",
+        toggleActions: "play none none none"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    delay: 0.3,
+    ease: "power3.out"
+});
+
+// Cards staggered animation
+gsap.from(".service-card", {
+    scrollTrigger: {
+        trigger: "#services-grid",
+        start: "top 75%",
+        toggleActions: "play none none none"
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.1,
+    ease: "back.out(1.2)"
+});
+
+// Card hover effects
+const cards = document.querySelectorAll('.service-card');
+
+cards.forEach((card, index) => {
+    const hoverEffect = card.querySelector('.card-hover-effect');
+    
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        gsap.to(hoverEffect, {
+            x: x,
+            y: y,
+            duration: 0.3
+        });
+    });
+    
+    // Additional animation on hover
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+            scale: 1.02,
+            duration: 0.3
+        });
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+            scale: 1,
+            duration: 0.3
         });
     });
 });

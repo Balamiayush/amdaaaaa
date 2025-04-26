@@ -267,10 +267,6 @@ html {
     content: "\f3c2";
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-}
-
 .hero-gradient {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.😎 50%, rgba(255, 255, 255, 0) 100%))
 }
@@ -433,3 +429,67 @@ input[type="number"]::-webkit-outer-spin-button {
 .card-stack {
     perspective: 500px;
 }
+
+.gradient-text {
+    background: linear-gradient(90deg, #574FCB 0%, #8B85FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(87, 79, 203, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.card-hover-effect {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(87, 79, 203, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover .card-hover-effect {
+    opacity: 1;
+}
+
+.floating {
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+.delay-6 { animation-delay: 1.2s; }
