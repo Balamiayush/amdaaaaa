@@ -359,4 +359,59 @@ document.addEventListener('DOMContentLoaded', () => {
 // Initialize marquee
 startMarquee();
   
-  
+document.addEventListener('DOMContentLoaded', () => {
+    // Register plugins
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Smooth scrolling (similar to Lenis)
+    gsap.to(window, {
+        scrollTo: 0,
+        duration: 1
+    });
+    
+    // Card animations
+    const cards = gsap.utils.toArray('.card');
+    
+    cards.forEach((card, i) => {
+        const imageInner = card.querySelector('.card-image-inner');
+        
+        // Image scale animation
+        gsap.fromTo(imageInner, 
+            { scale: 1.5 },
+            {
+                scale: 1,
+                scrollTrigger: {
+                    trigger: card.parentElement,
+                    start: "top bottom",
+                    end: "top top",
+                    scrub: 1
+                }
+            }
+        );
+        
+        // Card scale animation (skip scaling for the last card)
+        if (i !== cards.length - 1) {
+            const targetScale = 1 - ((cards.length - i) * 0.05);
+            gsap.to(card, {
+                scale: targetScale,
+                scrollTrigger: {
+                    trigger: card.parentElement,
+                    start: "top center",
+                    end: "bottom center",
+                    scrub: 1
+                }
+            });
+        }
+        
+        // Card position animation
+        gsap.to(card, {
+            y: -i * 10,
+            scrollTrigger: {
+                trigger: card.parentElement,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            }
+        });
+    });
+});

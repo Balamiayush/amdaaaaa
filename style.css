@@ -424,3 +424,12 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 0 1rem;
     white-space: nowrap;
 }
+
+
+.card-image-inner {
+    will-change: transform;
+}
+
+.card-stack {
+    perspective: 500px;
+}
