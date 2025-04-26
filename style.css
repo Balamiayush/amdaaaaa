@@ -221,23 +221,31 @@ html {
     }
 }
 
-.mainmarquee div {
-    gap: 20px
+.marquee-container {
+    --marquee-speed: 30s;
+    --marquee-gap: 2rem;
 }
 
-.animate-marquee {
-    animation: marquee 25s linear infinite;
+.marquee-item {
+    flex: 0 0 auto;
+    padding: 0 var(--marquee-gap);
+    position: relative;
 }
 
-.animate-marquee:hover {
-    animation-play-state: paused;
+.marquee-item:not(:last-child)::after {
+    content: "•";
+    position: absolute;
+    right: -0.5rem;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-@keyframes marquee {
+.update-badge {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    transition: all 0.3s ease;
+}
 
-    to {
-        transform: translateX(calc(-100% - 20px));
-    }
+.marquee:hover .update-badge {
+    transform: translateX(0.5rem);
 }
 
 #card {

@@ -1,321 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What We Do - AMDA Nepal</title>
-     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f9fafb;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(90deg, #574FCB 0%, #8B85FF 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .service-card {
-            position: relative;
-            overflow: hidden;
-            background: white;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(87, 79, 203, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .service-card:hover::before {
-            opacity: 1;
-        }
-        
-        .card-hover-effect {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(87, 79, 203, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .service-card:hover .card-hover-effect {
-            opacity: 1;
-        }
-        
-        .floating {
-            animation: floating 6s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        .delay-4 { animation-delay: 0.8s; }
-        .delay-5 { animation-delay: 1s; }
-        .delay-6 { animation-delay: 1.2s; }
-    </style>
-</head>
-<body class="antialiased">
-    <section class="px-4 lg:px-8 py-12 lg:py-24 bg-gradient-to-b from-white to-[#f9f9ff]">
-        <div class="container mx-auto px-4">
-            <!-- Animated Header -->
-            <div class="flex items-center flex-col mb-16 lg:mb-24" id="section-header">
-                <div class="inline-block relative mb-6">
-                    <div class="absolute -inset-3 bg-[#574FCB]/10 rounded-lg blur-md opacity-75"></div>
-                    <h1 class="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#574FCB] px-8 py-4 rounded-lg">
-                        What We <span class="gradient-text">Do</span>
-                    </h1>
-                </div>
-                <p class="text-gray-600 max-w-3xl mx-auto mt-4 text-center text-lg md:text-xl leading-relaxed">
-                    AMDA-Nepal provides various healthcare services and programs to
-                    improve the quality of life for underprivileged communities.
-                </p>
-            </div>
-
-            <!-- Services Grid with GSAP Animation -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="services-grid">
-                <!-- Service Card 1 -->
-                <div class="service-card group relative p-8 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 hover:border-[#574FCB]/20 transition-all duration-500 hover:-translate-y-2 floating delay-1">
-                    <div class="card-hover-effect" id="hover-effect-1"></div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-[#E0DDFF] to-[#f0eeff] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-[#574FCB] group-hover:to-[#8B85FF] transition-all duration-500">
-                        <i class="ri-hospital-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-500"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
-                        Hospital/Clinic Activities
-                    </h3>
-                    <p class="text-gray-600 mb-6 group-hover:text-gray-800 transition-all duration-300">
-                        Providing quality healthcare services through our network of hospitals and clinics across Nepal.
+<div class="card-stack">
+    <!-- Card 1 -->
+    <div class="min-h-screen flex items-center justify-center sticky top-0">
+        <div class="card bg-white relative w-full max-w-4xl rounded-3xl p-4 md:p-8 lg:p-12 transform origin-top shadow-2xl mx-4 my-8 md:my-0">
+            <h2 class="text-center text-2xl md:text-3xl font-bold mb-6 md:mb-12">Web Development</h2>
+            <div class="flex flex-col md:flex-row h-full gap-6 md:gap-12 mt-6 md:mt-12">
+                <div class="w-full md:w-2/5 relative md:top-10 order-2 md:order-1">
+                    <p class="text-base md:text-lg">
+                        <span class="text-2xl md:text-3xl font-bold">W</span>e create responsive, high-performance websites that deliver exceptional user experiences across all devices. Our team specializes in modern web technologies and frameworks.
                     </p>
-                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-[#8B85FF] transition-all duration-300">
-                        Learn more 
-                        <span class="ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300">
-                            <i class="ri-arrow-right-line"></i>
-                        </span>
-                    </a>
+                    <span class="flex items-center gap-2 mt-4 md:mt-6">
+                        <a href="#" class="text-sm underline cursor-pointer">See more</a>
+                        <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
+                        </svg>
+                    </span>
                 </div>
-
-                <!-- Service Card 2 -->
-                <div class="service-card group relative p-8 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 hover:border-[#574FCB]/20 transition-all duration-500 hover:-translate-y-2 floating delay-2">
-                    <div class="card-hover-effect" id="hover-effect-2"></div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-[#E0DDFF] to-[#f0eeff] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-[#574FCB] group-hover:to-[#8B85FF] transition-all duration-500">
-                        <i class="ri-book-open-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-500"></i>
+                <div class="w-full md:w-3/5 h-64 md:h-full relative rounded-xl md:rounded-3xl overflow-hidden order-1 md:order-2 mb-6 md:mb-0">
+                    <div class="card-image-inner w-full h-full absolute">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Web Development" 
+                             class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
-                        Academic Programs
-                    </h3>
-                    <p class="text-gray-600 mb-6 group-hover:text-gray-800 transition-all duration-300">
-                        Conducting training, workshops, and educational programs for healthcare professionals.
-                    </p>
-                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-[#8B85FF] transition-all duration-300">
-                        Learn more 
-                        <span class="ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300">
-                            <i class="ri-arrow-right-line"></i>
-                        </span>
-                    </a>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div class="service-card group relative p-8 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 hover:border-[#574FCB]/20 transition-all duration-500 hover:-translate-y-2 floating delay-3">
-                    <div class="card-hover-effect" id="hover-effect-3"></div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-[#E0DDFF] to-[#f0eeff] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-[#574FCB] group-hover:to-[#8B85FF] transition-all duration-500">
-                        <i class="ri-team-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-500"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
-                        Partnership & Collaboration
-                    </h3>
-                    <p class="text-gray-600 mb-6 group-hover:text-gray-800 transition-all duration-300">
-                        Working with local and international organizations to expand our reach and impact.
-                    </p>
-                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-[#8B85FF] transition-all duration-300">
-                        Learn more 
-                        <span class="ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300">
-                            <i class="ri-arrow-right-line"></i>
-                        </span>
-                    </a>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div class="service-card group relative p-8 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 hover:border-[#574FCB]/20 transition-all duration-500 hover:-translate-y-2 floating delay-4">
-                    <div class="card-hover-effect" id="hover-effect-4"></div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-[#E0DDFF] to-[#f0eeff] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-[#574FCB] group-hover:to-[#8B85FF] transition-all duration-500">
-                        <i class="ri-government-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-500"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
-                        Citizen Charter
-                    </h3>
-                    <p class="text-gray-600 mb-6 group-hover:text-gray-800 transition-all duration-300">
-                        Promoting healthcare rights and responsibilities among citizens for better health outcomes.
-                    </p>
-                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-[#8B85FF] transition-all duration-300">
-                        Learn more 
-                        <span class="ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300">
-                            <i class="ri-arrow-right-line"></i>
-                        </span>
-                    </a>
-                </div>
-
-                <!-- Service Card 5 -->
-                <div class="service-card group relative p-8 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 hover:border-[#574FCB]/20 transition-all duration-500 hover:-translate-y-2 floating delay-5">
-                    <div class="card-hover-effect" id="hover-effect-5"></div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-[#E0DDFF] to-[#f0eeff] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-[#574FCB] group-hover:to-[#8B85FF] transition-all duration-500">
-                        <i class="ri-first-aid-kit-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-500"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
-                        Emergency Relief
-                    </h3>
-                    <p class="text-gray-600 mb-6 group-hover:text-gray-800 transition-all duration-300">
-                        Providing immediate medical assistance during natural disasters and emergencies.
-                    </p>
-                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-[#8B85FF] transition-all duration-300">
-                        Learn more 
-                        <span class="ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300">
-                            <i class="ri-arrow-right-line"></i>
-                        </span>
-                    </a>
-                </div>
-
-                <!-- Service Card 6 -->
-                <div class="service-card group relative p-8 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 hover:border-[#574FCB]/20 transition-all duration-500 hover:-translate-y-2 floating delay-6">
-                    <div class="card-hover-effect" id="hover-effect-6"></div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-[#E0DDFF] to-[#f0eeff] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-[#574FCB] group-hover:to-[#8B85FF] transition-all duration-500">
-                        <i class="ri-heart-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-500"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#574FCB] transition-all duration-300">
-                        Social Responsibility
-                    </h3>
-                    <p class="text-gray-600 mb-6 group-hover:text-gray-800 transition-all duration-300">
-                        Implementing community-based programs to address social determinants of health.
-                    </p>
-                    <a href="#" class="inline-flex items-center text-[#574FCB] font-medium group-hover:text-[#8B85FF] transition-all duration-300">
-                        Learn more 
-                        <span class="ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300">
-                            <i class="ri-arrow-right-line"></i>
-                        </span>
-                    </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <script>
-        // Initialize smooth scrolling
-        const lenis = new Lenis({
-            lerp: 0.1,
-            smooth: true,
-            direction: 'vertical'
-        });
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-
-        // GSAP Animations
-        document.addEventListener('DOMContentLoaded', () => {
-            // Header animation
-            gsap.from("#section-header h1", {
-                scrollTrigger: {
-                    trigger: "#section-header",
-                    start: "top 80%",
-                    toggleActions: "play none none none"
-                },
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out"
-            });
-
-            gsap.from("#section-header p", {
-                scrollTrigger: {
-                    trigger: "#section-header",
-                    start: "top 70%",
-                    toggleActions: "play none none none"
-                },
-                y: 30,
-                opacity: 0,
-                duration: 1,
-                delay: 0.3,
-                ease: "power3.out"
-            });
-
-            // Cards staggered animation
-            gsap.from(".service-card", {
-                scrollTrigger: {
-                    trigger: "#services-grid",
-                    start: "top 75%",
-                    toggleActions: "play none none none"
-                },
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                stagger: 0.1,
-                ease: "back.out(1.2)"
-            });
-
-            // Card hover effects
-            const cards = document.querySelectorAll('.service-card');
-            
-            cards.forEach((card, index) => {
-                const hoverEffect = card.querySelector('.card-hover-effect');
-                
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    
-                    gsap.to(hoverEffect, {
-                        x: x,
-                        y: y,
-                        duration: 0.3
-                    });
-                });
-                
-                // Additional animation on hover
-                card.addEventListener('mouseenter', () => {
-                    gsap.to(card, {
-                        scale: 1.02,
-                        duration: 0.3
-                    });
-                });
-                
-                card.addEventListener('mouseleave', () => {
-                    gsap.to(card, {
-                        scale: 1,
-                        duration: 0.3
-                    });
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="min-h-screen flex items-center justify-center sticky top-0">
+        <div class="card bg-white relative w-full max-w-4xl rounded-3xl p-4 md:p-8 lg:p-12 transform origin-top shadow-2xl mx-4 my-8 md:my-0">
+            <h2 class="text-center text-2xl md:text-3xl font-bold mb-6 md:mb-12">Data Analytics</h2>
+            <div class="flex flex-col md:flex-row h-full gap-6 md:gap-12 mt-6 md:mt-12">
+                <div class="w-full md:w-2/5 relative md:top-10 order-2 md:order-1">
+                    <p class="text-base md:text-lg">
+                        <span class="text-2xl md:text-3xl font-bold">T</span>ransform your data into actionable insights with our powerful analytics solutions and visualization tools. We help businesses make data-driven decisions.
+                    </p>
+                    <span class="flex items-center gap-2 mt-4 md:mt-6">
+                        <a href="#" class="text-sm underline cursor-pointer">See more</a>
+                        <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="w-full md:w-3/5 h-64 md:h-full relative rounded-xl md:rounded-3xl overflow-hidden order-1 md:order-2 mb-6 md:mb-0">
+                    <div class="card-image-inner w-full h-full absolute">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80" 
+                             alt="Data Analytics" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="min-h-screen flex items-center justify-center sticky top-0">
+        <div class="card bg-white relative w-full max-w-4xl rounded-3xl p-4 md:p-8 lg:p-12 transform origin-top shadow-2xl mx-4 my-8 md:my-0">
+            <h2 class="text-center text-2xl md:text-3xl font-bold mb-6 md:mb-12">Mobile Development</h2>
+            <div class="flex flex-col md:flex-row h-full gap-6 md:gap-12 mt-6 md:mt-12">
+                <div class="w-full md:w-2/5 relative md:top-10 order-2 md:order-1">
+                    <p class="text-base md:text-lg">
+                        <span class="text-2xl md:text-3xl font-bold">B</span>uild engaging mobile experiences with our cross-platform app development expertise. We create apps that users love and businesses rely on.
+                    </p>
+                    <span class="flex items-center gap-2 mt-4 md:mt-6">
+                        <a href="#" class="text-sm underline cursor-pointer">See more</a>
+                        <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="w-full md:w-3/5 h-64 md:h-full relative rounded-xl md:rounded-3xl overflow-hidden order-1 md:order-2 mb-6 md:mb-0">
+                    <div class="card-image-inner w-full h-full absolute">
+                        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Mobile Development" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -20,10 +20,6 @@
 
 <body class=" w-full">
     <div class="loadinggg h-screen top-0  flex w-full fixed bottom-0 z-[20000] flex justify-center">
-        <!-- <img src="https://www.amda.org.np/image/logo.png" class="absolute text-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[20vw] " > -->
-         <h1  class="absolute text-2xl top-1/2 left-1/2 font-semibold text-[5rem] transform -translate-x-1/2 -translate-y-1/2">
-            Amda-Nepal.
-         </h1>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
@@ -34,8 +30,7 @@
         <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
     </div>
     <!-- Top Bar (visible on all screens) -->
-    <div class="heroSection   w-full lg:h-screen bg-cover bg-center relative ">
-        
+    <div class="heroSection">
         <div class="w-full bg-[#574FCB] text-white text-xs lg:text-sm">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between h-12 lg:h-14  gap-2">
               
@@ -345,24 +340,54 @@
                 </form>
             </div>
         </nav>
-        <div class="marquee overflow-hidden w-full bg-[#574FCB] h-10 flex items-center relative">
-            <p class="Updates p-2 bg-red-500 absolute z-[10] left-0">Update(1)</p>
-            <div class="marquee-content whitespace-nowrap text-sm  pl-24 text-white">    
-              <li class="inline-block px-4">
-                Weekly News (W13_20250331_101_CO) &nbsp; &nbsp;
-              </li>
+        <div class="marquee-container relative overflow-hidden w-full bg-[#574FCB] h-12 flex items-center group">
+            <span class="update-badge absolute left-0 top-0 h-full bg-red-500 text-white font-medium px-6 flex items-center justify-center z-10">
+                Update(1)
+            </span>
+            
+            <div class="marquee-track flex items-center h-full pl-28">
+                <div class="marquee-content flex items-center text-white text-sm md:text-base">
+                    <span class="marquee-item">Weekly News (W13_20250331_101_CO)</span>
+                    <span class="marquee-item">New Health Initiative Launching Next Month</span>
+                    <span class="marquee-item">Annual Report 2024 Now Available</span>
+                    <span class="marquee-item">Community Health Workshop Schedule</span>
+                    <span class="marquee-item">Volunteer Recruitment Open</span>
+                </div>
+                
+                <!-- Duplicate for seamless looping -->
+                <div class="marquee-content flex items-center text-white text-sm md:text-base" aria-hidden="true">
+                    <span class="marquee-item">Weekly News (W13_20250331_101_CO)</span>
+                    <span class="marquee-item">New Health Initiative Launching Next Month</span>
+                    <span class="marquee-item">Annual Report 2024 Now Available</span>
+                    <span class="marquee-item">Community Health Workshop Schedule</span>
+                    <span class="marquee-item">Volunteer Recruitment Open</span>
+                </div>
             </div>
-          </div>
-          <div class="marquee overflow-hidden w-full bg-[#574FCB] h-10 flex items-center relative mt-[0.5px]">
-            <p class="Updates p-2 bg-red-500 absolute z-[10] left-0">Notice(2)</p>
-            <div class="marquee-content whitespace-nowrap text-sm  pl-24 text-white">    
-              <li class="inline-block px-4">
-                Tender Notice_Electric Vehicle_0062/AMDA/AH/2081_82 &nbsp;  &nbsp;
-              </li>
-              <li class="inline-block px-4">                Notice for procurement of USG and OT table &nbsp;  &nbsp;
-              </li>
+        </div>
+    
+        <!-- Marquee 2 -->
+        <div class="marquee-container relative overflow-hidden w-full bg-[#574FCB] h-12 flex items-center group mt-0.5">
+            <span class="update-badge absolute left-0 top-0 h-full bg-amber-500 text-white font-medium px-6 flex items-center justify-center z-10">
+                Notice(2)
+            </span>
+            
+            <div class="marquee-track flex items-center h-full pl-28">
+                <div class="marquee-content flex items-center text-white text-sm md:text-base">
+                    <span class="marquee-item">Tender Notice_Electric Vehicle_0062/AMDA/AH/2081_82</span>
+                    <span class="marquee-item">Notice for procurement of USG and OT table</span>
+                    <span class="marquee-item">Upcoming Maintenance Schedule</span>
+                    <span class="marquee-item">Policy Update Notification</span>
+                </div>
+                
+                <!-- Duplicate for seamless looping -->
+                <div class="marquee-content flex items-center text-white text-sm md:text-base" aria-hidden="true">
+                    <span class="marquee-item">Tender Notice_Electric Vehicle_0062/AMDA/AH/2081_82</span>
+                    <span class="marquee-item">Notice for procurement of USG and OT table</span>
+                    <span class="marquee-item">Upcoming Maintenance Schedule</span>
+                    <span class="marquee-item">Policy Update Notification</span>
+                </div>
             </div>
-          </div>     
+        </div>    
         <!-- Mobile Navbar (visible on mobile) -->
         <div class="lg:hidden w-full bg-white shadow-md flex items-center justify-between px-4 h-16">
             <!-- Logo -->
@@ -646,23 +671,22 @@
         </div>
     </div>
  <!-- WELCOME SECTION -->
-<div class="w-full min-h-[50vh] bg-white text-black mt-[6vw] lg:mt-[8vw] flex items-center justify-center">
+ <div class="w-full bg-red-500 z-[100] min-h-[50vh] bg-white text-black mt-[3vw] lg:mt-[2vw] flex items-center justify-center">
     <div class="max-w-5xl flex flex-col items-center justify-center text-center px-4 lg:px-8">
-      
-      <!-- Heading -->
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-[#574FCB] text-white px-6 py-4 rounded-md shadow-md">
+        <!-- Heading -->
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold   px-6 py-4 rounded-md shadow-md">
             Welcome to AMDA Nepal
         </h1>
   
-      <!-- Paragraph -->
-      <p class="mt-6 text-sm sm:text-base md:text-lg leading-relaxed text-gray-700">
-        Association of Medical Doctors of Asia-Nepal (AMDA-Nepal) was established in 1989 as a chapter of AMDA-International, Japan and was officially registered in the government office as a NGO on March 4, 1991. It is a humanitarian, nonprofit-making, non-political, non-sectarian, Non-Governmental Organization working with its mission to promote the health and well-being of the underprivileged and marginalized people under the slogan:
-        <br><span class="italic font-medium text-[#574FCB] mt-2 block">“Better quality of life for better future”.</span>
-      </p>
-      
+        <!-- Paragraph -->
+        <p class="mt-6 text-sm sm:text-base md:text-lg leading-relaxed text-gray-700">
+            Association of Medical Doctors of Asia-Nepal (AMDA-Nepal) was established in 1989 as a chapter of AMDA-International, Japan and was officially registered in the government office as an NGO on March 4, 1991. It is a humanitarian, nonprofit-making, non-political, non-sectarian, Non-Governmental Organization working with its mission to promote the health and well-being of the underprivileged and marginalized people under the slogan:
+            <br>
+            <span class="italic font-medium text-[#574FCB] block mt-2">“Better quality of life for better future”.</span>
+        </p>
+        
     </div>
-  </div>
-
+</div>
     <!-- What We Do Section -->
     <section class="px-4   lg:px-8 py-12 lg:py-20 ">
         <div class="container mx-auto px-4">
@@ -747,7 +771,7 @@
                 </div>
 
                 <!-- Service Card 5 -->
-                <div class="service-card group p-8 rounded-xl shadow-md border border-gray-800 hover:border-[#574FCB]/20 bg-gray-100 transition-all duration-300">
+                <div class="service-card group p-8 rounded-xl shadow-md border border-gray-800 hover:border-bg-blue-500 bg-gray-100 transition-all duration-300">
                     <div class="w-16 h-16 bg-[#E0DDFF] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#574FCB] transition-all duration-300">
                         <i class="ri-first-aid-kit-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-300"></i>
                     </div>
@@ -763,7 +787,7 @@
                 </div>
 
                 <!-- Service Card 6 -->
-                <div class="service-card group p-8 rounded-xl shadow-md border border-gray-800 hover:border-[#574FCB]/20 bg-gray-100 transition-all duration-300">
+                <div class="service-card group p-8 rounded-xl shadow-md border border-gray-800 hover:border-bg-blue-500 bg-gray-100 transition-all duration-300">
                     <div class="w-16 h-16 bg-[#E0DDFF] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#574FCB] transition-all duration-300">
                         <i class="ri-heart-line text-[#574FCB] ri-2x group-hover:text-white transition-all duration-300"></i>
                     </div>
@@ -780,89 +804,7 @@
             </div>
         </div>
     </section>
-    <div class="card-stack">
-        <!-- Card 1 -->
-        <div class="min-h-screen flex items-center justify-center sticky top-0">
-            <div class="card bg-white relative w-full max-w-4xl rounded-3xl p-4 md:p-8 lg:p-12 transform origin-top shadow-2xl mx-4 my-8 md:my-0">
-                <h2 class="text-center text-2xl md:text-3xl font-bold mb-6 md:mb-12">Web Development</h2>
-                <div class="flex flex-col md:flex-row h-full gap-6 md:gap-12 mt-6 md:mt-12">
-                    <div class="w-full md:w-2/5 relative md:top-10 order-2 md:order-1">
-                        <p class="text-base md:text-lg">
-                            <span class="text-2xl md:text-3xl font-bold">W</span>e create responsive, high-performance websites that deliver exceptional user experiences across all devices. Our team specializes in modern web technologies and frameworks.
-                        </p>
-                        <span class="flex items-center gap-2 mt-4 md:mt-6">
-                            <a href="#" class="text-sm underline cursor-pointer">See more</a>
-                            <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="w-full md:w-3/5 h-64 md:h-full relative rounded-xl md:rounded-3xl overflow-hidden order-1 md:order-2 mb-6 md:mb-0">
-                        <div class="card-image-inner w-full h-full absolute">
-                            <img src="https://www.amda.org.np/files/pics/61General%20Assembly_AMDA%20Nepal_%2020790719%20(img%202)-189.jpg" 
-                                 alt="Web Development" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Card 2 -->
-        <div class="min-h-screen flex items-center justify-center sticky top-0">
-            <div class="card bg-white relative w-full max-w-4xl rounded-3xl p-4 md:p-8 lg:p-12 transform origin-top shadow-2xl mx-4 my-8 md:my-0">
-                <h2 class="text-center text-2xl md:text-3xl font-bold mb-6 md:mb-12">Data Analytics</h2>
-                <div class="flex flex-col md:flex-row h-full gap-6 md:gap-12 mt-6 md:mt-12">
-                    <div class="w-full md:w-2/5 relative md:top-10 order-2 md:order-1">
-                        <p class="text-base md:text-lg">
-                            <span class="text-2xl md:text-3xl font-bold">T</span>ransform your data into actionable insights with our powerful analytics solutions and visualization tools. We help businesses make data-driven decisions.
-                        </p>
-                        <span class="flex items-center gap-2 mt-4 md:mt-6">
-                            <a href="#" class="text-sm underline cursor-pointer">See more</a>
-                            <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="w-full md:w-3/5 h-64 md:h-full relative rounded-xl md:rounded-3xl overflow-hidden order-1 md:order-2 mb-6 md:mb-0">
-                        <div class="card-image-inner w-full h-full absolute">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80" 
-                                 alt="Data Analytics" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Card 3 -->
-        <div class="min-h-screen flex items-center justify-center sticky top-0">
-            <div class="card bg-white relative w-full max-w-4xl rounded-3xl p-4 md:p-8 lg:p-12 transform origin-top shadow-2xl mx-4 my-8 md:my-0">
-                <h2 class="text-center text-2xl md:text-3xl font-bold mb-6 md:mb-12">Mobile Development</h2>
-                <div class="flex flex-col md:flex-row h-full gap-6 md:gap-12 mt-6 md:mt-12">
-                    <div class="w-full md:w-2/5 relative md:top-10 order-2 md:order-1">
-                        <p class="text-base md:text-lg">
-                            <span class="text-2xl md:text-3xl font-bold">B</span>uild engaging mobile experiences with our cross-platform app development expertise. We create apps that users love and businesses rely on.
-                        </p>
-                        <span class="flex items-center gap-2 mt-4 md:mt-6">
-                            <a href="#" class="text-sm underline cursor-pointer">See more</a>
-                            <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="w-full md:w-3/5 h-64 md:h-full relative rounded-xl md:rounded-3xl overflow-hidden order-1 md:order-2 mb-6 md:mb-0">
-                        <div class="card-image-inner w-full h-full absolute">
-                            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                                 alt="Mobile Development" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+ 
     <!-- About Section -->
     <section class="px-2 lg:px-4 bg-gray-50">
         <div class="container mx-auto px-4">
@@ -916,88 +858,6 @@
             </div>
         </div>
     </section>
-    <div class="card-stack">
-        <!-- Card 1 -->
-        <div class="min-h-screen flex items-center justify-center sticky top-0">
-            <div class="card bg-white relative w-full max-w-4xl rounded-3xl p-4 md:p-8 lg:p-12 transform origin-top shadow-2xl mx-4 my-8 md:my-0">
-                <h2 class="text-center text-2xl md:text-3xl font-bold mb-6 md:mb-12">Web Development</h2>
-                <div class="flex flex-col md:flex-row h-full gap-6 md:gap-12 mt-6 md:mt-12">
-                    <div class="w-full md:w-2/5 relative md:top-10 order-2 md:order-1">
-                        <p class="text-base md:text-lg">
-                            <span class="text-2xl md:text-3xl font-bold">W</span>e create responsive, high-performance websites that deliver exceptional user experiences across all devices. Our team specializes in modern web technologies and frameworks.
-                        </p>
-                        <span class="flex items-center gap-2 mt-4 md:mt-6">
-                            <a href="#" class="text-sm underline cursor-pointer">See more</a>
-                            <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="w-full md:w-3/5 h-64 md:h-full relative rounded-xl md:rounded-3xl overflow-hidden order-1 md:order-2 mb-6 md:mb-0">
-                        <div class="card-image-inner w-full h-full absolute">
-                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                                 alt="Web Development" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Card 2 -->
-        <div class="min-h-screen flex items-center justify-center sticky top-0">
-            <div class="card bg-white relative w-full max-w-4xl rounded-3xl p-4 md:p-8 lg:p-12 transform origin-top shadow-2xl mx-4 my-8 md:my-0">
-                <h2 class="text-center text-2xl md:text-3xl font-bold mb-6 md:mb-12">Data Analytics</h2>
-                <div class="flex flex-col md:flex-row h-full gap-6 md:gap-12 mt-6 md:mt-12">
-                    <div class="w-full md:w-2/5 relative md:top-10 order-2 md:order-1">
-                        <p class="text-base md:text-lg">
-                            <span class="text-2xl md:text-3xl font-bold">T</span>ransform your data into actionable insights with our powerful analytics solutions and visualization tools. We help businesses make data-driven decisions.
-                        </p>
-                        <span class="flex items-center gap-2 mt-4 md:mt-6">
-                            <a href="#" class="text-sm underline cursor-pointer">See more</a>
-                            <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="w-full md:w-3/5 h-64 md:h-full relative rounded-xl md:rounded-3xl overflow-hidden order-1 md:order-2 mb-6 md:mb-0">
-                        <div class="card-image-inner w-full h-full absolute">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80" 
-                                 alt="Data Analytics" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Card 3 -->
-        <div class="min-h-screen flex items-center justify-center sticky top-0">
-            <div class="card bg-white relative w-full max-w-4xl rounded-3xl p-4 md:p-8 lg:p-12 transform origin-top shadow-2xl mx-4 my-8 md:my-0">
-                <h2 class="text-center text-2xl md:text-3xl font-bold mb-6 md:mb-12">Mobile Development</h2>
-                <div class="flex flex-col md:flex-row h-full gap-6 md:gap-12 mt-6 md:mt-12">
-                    <div class="w-full md:w-2/5 relative md:top-10 order-2 md:order-1">
-                        <p class="text-base md:text-lg">
-                            <span class="text-2xl md:text-3xl font-bold">B</span>uild engaging mobile experiences with our cross-platform app development expertise. We create apps that users love and businesses rely on.
-                        </p>
-                        <span class="flex items-center gap-2 mt-4 md:mt-6">
-                            <a href="#" class="text-sm underline cursor-pointer">See more</a>
-                            <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="w-full md:w-3/5 h-64 md:h-full relative rounded-xl md:rounded-3xl overflow-hidden order-1 md:order-2 mb-6 md:mb-0">
-                        <div class="card-image-inner w-full h-full absolute">
-                            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                                 alt="Mobile Development" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Newsletter Section -->
     <section class="px-2 lg:px-4 bg-white mt-10">
         <div class="container mx-auto px-4">
@@ -1057,7 +917,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact & Quick Links Section -->
     <section class="bg-gray-50 px-2 lg:px-4">
         <div class="container mx-auto px-4">
@@ -1185,16 +1044,13 @@
         </div>
     </section>
     <!-- Gallery section -->
-
-
     <!-- Footer -->
     <footer class="bg-gray-900 text-white px-2 lg:px-4">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
                     <div class="flex items-center mb-4">
-
-                        <img src="  https://www.amda.org.np/image/logo.png" alt="">
+                        <img src="https://www.amda.org.np/image/logo.png" alt="">
                     </div>
                     <p class="text-gray-400 mb-4">
                         Association of Medical Doctors of Asia-Nepal is committed to
