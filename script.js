@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initializeCardAnimations();
         initializeHeaderAnimations();
         injectHamburgerCSS();
+        tabOfContent();
     };
 
     // Smooth scrolling with Lenis
@@ -35,7 +36,135 @@ document.addEventListener('DOMContentLoaded', () => {
             requestAnimationFrame(raf);
         }
     };
+    function tabOfContent(){
+        const tabWrapper = document.getElementById('tab-block');
+        const tabMnu = tabWrapper.querySelectorAll('ul li');
+        const tabContent = tabWrapper.querySelectorAll('.tab-pane');
 
+        // Initialize first tab as active with GSAP
+        gsap.set(tabContent[0], { 
+            opacity: 1, 
+            height: 'auto',
+            display: 'block'
+        });
+        
+        // Add data-tab attributes
+        tabMnu.forEach((tab, index) => {
+            tab.dataset.tab = 'tab' + index;
+            
+            // Micro-interactions with GSAP
+            tab.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('active-tab')) {
+                    gsap.to(this, {
+                        y: -2,
+                        duration: 0.2,
+                        ease: "power2.out"
+                    });
+                }
+            });
+            
+            tab.addEventListener('mouseleave', function() {
+                gsap.to(this, {
+                    y: 0,
+                    duration: 0.2,
+                    ease: "power2.out"
+                });
+            });
+            
+            tab.addEventListener('mousedown', function() {
+                if (!this.classList.contains('active-tab')) {
+                    gsap.to(this, {
+                        y: 1,
+                        duration: 0.1,
+                        ease: "power2.out"
+                    });
+                }
+            });
+            
+            tab.addEventListener('mouseup', function() {
+                gsap.to(this, {
+                    y: -2,
+                    duration: 0.1,
+                    ease: "power2.out"
+                });
+            });
+        });
+        
+        tabContent.forEach((pane, index) => {
+            pane.dataset.tab = 'tab' + index;
+        });
+
+        // Add click event listeners to tabs
+        tabMnu.forEach(tab => {
+            tab.addEventListener('click', function() {
+                if (this.classList.contains('active-tab')) return;
+                
+                const tabData = this.dataset.tab;
+                const activePane = tabWrapper.querySelector(`.tab-pane[data-tab="${tabData}"]`);
+                const currentActivePane = tabWrapper.querySelector('.tab-pane.active');
+                
+                // Animate out current active tab content
+                if (currentActivePane) {
+                    gsap.to(currentActivePane, {
+                        opacity: 0,
+                        height: 0,
+                        duration: 0.3,
+                        ease: "power2.inOut",
+                        onComplete: () => {
+                            currentActivePane.classList.remove('active');
+                        }
+                    });
+                }
+                
+                // Animate in new tab content
+                if (activePane) {
+                    activePane.classList.add('active');
+                    gsap.fromTo(activePane, 
+                        { opacity: 0, height: 0 },
+                        { 
+                            opacity: 1, 
+                            height: 'auto',
+                            duration: 0.4,
+                            ease: "power2.inOut",
+                            delay: 0.1
+                        }
+                    );
+                }
+                
+                // Update active tab styling with animation
+                const activeTab = tabWrapper.querySelector('ul li.active-tab');
+                if (activeTab) {
+                    // Animate out old active tab
+                    gsap.to(activeTab, {
+                        backgroundColor: '#b2bbc0',
+                        color: '#ffffff',
+                        borderBottomWidth: '0px',
+                        duration: 0.3,
+                        ease: "power2.inOut",
+                        onComplete: () => {
+                            activeTab.classList.remove('active-tab', 'bg-white', 'text-[#596165]', 'border-b-2', 'border-[#4c607c]', 'cursor-default');
+                            activeTab.classList.add('bg-[#b2bbc0]', 'text-white', 'cursor-pointer', 'hover:bg-[#bdc5c9]');
+                        }
+                    });
+                }
+                
+                // Animate in new active tab
+                gsap.to(this, {
+                    backgroundColor: '#ffffff',
+                    color: '#596165',
+                    borderBottomWidth: '2px',
+                    borderBottomColor: '#4c607c',
+                    duration: 0.3,
+                    ease: "power2.inOut",
+                    onStart: () => {
+                        this.classList.remove('bg-[#b2bbc0]', 'text-white', 'cursor-pointer', 'hover:bg-[#bdc5c9]');
+                        this.classList.add('active-tab', 'bg-white', 'text-[#596165]', 'border-b-2', 'border-[#4c607c]', 'cursor-default');
+                    }
+                });
+            });
+        });
+
+    }
     // Mobile Menu Toggle
     const initializeMobileMenu = () => {
         const mobileMenuButton = document.getElementById('mobile-menu-button');

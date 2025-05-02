@@ -22,16 +22,16 @@
 </head>
 
 <body class=" w-full">
-    <div class="loadinggg h-screen top-0  flex w-full fixed bottom-0 z-[20000] flex justify-center">
-        <div class="h-screen w-[25%] bg-blue-600 "></div>
-        <div class="h-screen w-[25%] bg-blue-600 "></div>
-        <div class="h-screen w-[25%] bg-blue-600 "></div>
-        <div class="h-screen w-[25%] bg-blue-600 "></div>
-        <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
-        <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
-        <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
-        <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
-    </div>
+        <div class="loadinggg h-screen top-0  flex w-full fixed bottom-0 z-[20000] flex justify-center">
+            <div class="h-screen w-[25%] bg-blue-600 "></div>
+            <div class="h-screen w-[25%] bg-blue-600 "></div>
+            <div class="h-screen w-[25%] bg-blue-600 "></div>
+            <div class="h-screen w-[25%] bg-blue-600 "></div>
+            <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
+            <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
+            <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
+            <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
+        </div>
     <!-- Top Bar (visible on all screens) -->
     <div class="heroSection">
         <div class="w-full bg-[#574FCB] text-white text-xs lg:text-sm">
@@ -737,15 +737,14 @@
 
         <!-- slider  -->
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
+            <div class="swiper-wrapper w-full h-[60vh] lg:h-[80vh]">
+                <div class="swiper-slide  ">
                     <img src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmFuZG9tfGVufDB8fDB8fHww"
                         alt="">
                 </div>
                 <div class="swiper-slide">
                     <img src="https://www.amda.org.np/files/pics/65GA_20810724.jpg" alt="">
                 </div>
-
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -759,7 +758,7 @@
         </div>
     </div>
     <!-- WELCOME SECTION -->
-    <div class="w-full  min-h-[50vh] bg-white text-black mt-[3vw] lg:mt-[2vw] flex items-center justify-center">
+    <div class="w-full  bg-white flex flex-col text-black mt-[3vw] lg:mt-[2vw] flex items-center justify-center">
         <div class="max-w-5xl flex flex-col items-center justify-center text-center px-4 lg:px-8">
             <!-- Heading -->
             <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold   px-6 py-4 rounded-md shadow-md">
@@ -779,6 +778,44 @@
             </p>
 
         </div>
+        <div class="w-full max-w-3xl bg-white rounded-lg shadow-xl overflow-hidden" id="tab-block">
+            <ul class="flex list-none">
+                <li class="flex-1 text-center py-4 bg-white text-[#596165] cursor-default border-b-2 border-[#4c607c] active-tab tab-btn">
+                    <span class="inline-block">About</span>
+                </li>
+                <li class="flex-1 text-center py-4 bg-[#b2bbc0] text-white cursor-pointer hover:bg-[#bdc5c9] tab-btn">
+                    <span class="inline-block">Team</span>
+                </li>
+                <li class="flex-1 text-center py-4 bg-[#b2bbc0] text-white cursor-pointer hover:bg-[#bdc5c9] tab-btn">
+                    <span class="inline-block">Privacy</span>
+                </li>
+                <li class="flex-1 text-center py-4 bg-[#b2bbc0] text-white cursor-pointer hover:bg-[#bdc5c9] tab-btn">
+                    <span class="inline-block">Advertise</span>
+                </li>
+                <li class="flex-1 text-center py-4 bg-[#b2bbc0] text-white cursor-pointer hover:bg-[#bdc5c9] tab-btn">
+                    <span class="inline-block">Contact</span>
+                </li>
+            </ul>
+            
+            <div class="p-6">
+                <div class="tab-pane" data-tab="tab0">
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ex optio molestiae deleniti accusantium nobis hic, quia, quaerat ipsa numquam, eius expedita odit earum. Dolores dolore iusto est earum praesentium?</p>
+                </div>
+                <div class="tab-pane" data-tab="tab1">
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, sit, velit mollitia pariatur laudantium officia, fugit neque eligendi saepe sint ea! Debitis aperiam nulla voluptatem libero fuga a, veniam amet.</p>
+                </div>
+                <div class="tab-pane" data-tab="tab2">
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi magnam porro iure fugiat repellendus iusto aperiam ducimus laudantium alias omnis maiores beatae veniam debitis voluptatibus asperiores, voluptates nostrum nihil quae?</p>
+                </div>
+                <div class="tab-pane" data-tab="tab3">
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur excepturi, amet voluptatibus quibusdam assumenda adipisci, quidem ipsa necessitatibus, fugit repellat nam sequi ducimus recusandae id illo? Unde necessitatibus repellat, modi?</p>
+                </div>
+                <div class="tab-pane" data-tab="tab4">
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cupiditate dignissimos quae aspernatur, ex hic, voluptatibus excepturi officia velit dolorum fugiat nam nostrum earum maiores praesentium nemo nobis eaque officiis.</p>
+                </div>
+            </div>
+        </div>
+    
     </div>
     <!-- What We Do Section -->
     <section class="px-4   lg:px-8 py-12 lg:py-20 ">
@@ -797,7 +834,6 @@
                     improve the quality of life for underprivileged communities.
                 </p>
             </div>
-
             <!-- Services Grid with GSAP Animation -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
                 <!-- Service Card 1 -->
