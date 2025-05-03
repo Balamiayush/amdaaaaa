@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="utility/css/reUse.css">
     <link rel="stylesheet" href="assets/css/customAnimation.css">
+    <link rel="stylesheet" href="assets/css/navBar.css">
 </head>
 
 <body class=" w-full">
@@ -82,280 +83,492 @@
         </div>
 
 
-        <!-- Desktop Navbar (hidden on mobile) -->
-        <nav class="w-full desktopNav bg-white shadow-md z-[10000] hidden lg:block">
+        <!-- xxxxxxxxxxxxxxxxxxxxxxx -->
 
-            <div class="max-w-7xl mx-auto px flex items-center justify-between h-16">
-                <!-- Logo -->
-                <div class="w-[200px] ">
-                    <img src="https://www.amda.org.np/image/logo.png" alt="Logo" class="h-auto max-h-16">
+        <!-- mobile hambrgr  -->
+        <div class="megaMenu">
+            <div class="hmParent">
+                <img src="https://www.amda.org.np/image/logo.png" alt="" class="mobileLogo">
+                <div class="hamburgerFirstNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-
-                <!-- Navigation Links -->
-                <div class="flex items-center gap-6  capitalize">
-                    <a href="#" class=" nav-link hover:text-blue-600 transition">Home</a>
-                    <div class="relative z-[100] group ">
-                        <a class=" nav-link hover:text-primary flex items-center focus:outline-none transition-colors">
-                            About us
-                            <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-
-                        <!-- Mega Menu with transition effects -->
-                        <div
-                            class="absolute left-0 whitespace-nowrap mt-2 w-[300px] bg-white shadow-xl rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-10 group-hover:translate-y-0">
-                            <div class="grid gap-6 p-6">
-                                <!-- Column 1 - About Us Links -->
-                                <div>
-                                    <h3 class="font-semibold text-dark mb-3 flex items-center">
-                                        <i class="fas fa-info-circle mr-2 text-primary"></i> About Our Organization
-                                    </h3>
-                                    <ul class="space-y-3">
-                                        <li>
-                                            <a href="history-overview.html"
-                                                class="text-gray-600 hover:bg-blue-500    rounded-md px-3 py-1.5 hover:text-white transition-colors flex items-center">
-                                                <i class="fas fa-history mr-2"></i> History/Overview
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="vision-and-mission.html"
-                                                class="text-gray-600 hover:bg-blue-500   rounded-md px-3 py-1.5 hover:text-white transition-colors flex items-center">
-                                                <i class="fas fa-bullseye mr-2"></i> Vision and Mission
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="executive-committee.html"
-                                                class="text-gray-600 hover:bg-blue-500  rounded-md px-3 py-1.5 hover:text-white transition-colors flex items-center">
-                                                <i class="fas fa-users mr-2"></i> Executive Committee
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="members-of-amda-nepal.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-1.5 hover:text-white transition-colors flex items-center">
-                                                <i class="fas fa-address-book mr-2"></i> Members of AMDA Nepal
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="management-and-staff-co.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-1.5 hover:text-white transition-colors flex items-center">
-                                                <i class="fas fa-user-tie mr-2"></i> Management and Staff
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="chairpersons-of-amda-nepal.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md  px-3 py-1.5 hover:text-white transition-colors flex items-center">
-                                                <i class="fas fa-user-shield mr-2"></i> Chairpersons
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="chairpersonsmessage.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-1.5 hover:text-white transition-colors flex items-center">
-                                                <i class="fas fa-envelope-open-text mr-2"></i> Chairperson's Message
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="organogram.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-1.5 hover:text-white transition-colors flex items-center">
-                                                <i class="fas fa-sitemap mr-2"></i> Organogram
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="relative z-[100] group">
-                        <a href="#" class=" nav-link  flex items-center focus:outline-none transition-colors">
-                            What We Do
-                            <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-
-                        <!-- Mega Menu -->
-                        <div
-                            class="absolute  left-0 mt-2 bg-white shadow-xl rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
-                            <div class="flex gap-6 px-6 py-5">
-                                <!-- Column 1 -->
-                                <div>
-                                    <h3 class="font-semibold  mb-3 flex items-center">
-                                        <i class="fas fa-hospital mr-2 text-primary "></i> Health Services
-                                    </h3>
-                                    <ul class="flex flex-col space-y-3">
-                                        <li class="group/hospital relative">
-                                            <a href="#"
-                                                class="text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-1.5 rounded transition-colors flex items-center">
-                                                <i class="fas fa-medkit mr-2 text-secondary"></i>
-                                                Hospitals/Clinics Activities
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                            <!-- Submenu for Hospitals/Clinics -->
-                                            <div
-                                                class="absolute left-full top-0 ml-2 w-64 bg-white p-4 shadow-lg rounded-lg opacity-0 invisible group-hover/hospital:opacity-100 group-hover/hospital:visible group-hover/hospital:pointer-events-auto transition-all duration-300 transform translate-y-1 group-hover/hospital:translate-y-0">
-                                                <ul class="space-y-2">
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">AMDA
-                                                            Hospital </a></li>
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Siddhartha
-                                                            Children and Women Hospital </a></li>
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">AMDA
-                                                            Mechi Hospital </a></li>
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Shimazu
-                                                            Dental Clinic </a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-
-                                        <li class="group/academic relative">
-                                            <a href="#"
-                                                class="text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-1.5 rounded transition-colors flex items-center">
-                                                <i class="fas fa-clinic-medical mr-2 text-secondary"></i> Academic
-                                                Programs
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                            <!-- Submenu for Academic Programs -->
-                                            <div
-                                                class="absolute left-full top-0 ml-2 w-64 bg-white p-4 shadow-lg rounded-lg opacity-0 invisible group-hover/academic:opacity-100 group-hover/academic:visible group-hover/academic:pointer-events-auto transition-all duration-300 transform translate-y-1 group-hover/academic:translate-y-0">
-                                                <ul class="space-y-2">
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Medical
-                                                            Training Programs </a></li>
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Nursing
-                                                            Education </a></li>
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Research
-                                                            Initiatives </a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-
-                                        <li class="group/partnership relative">
-                                            <a href="#"
-                                                class="text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-1.5 rounded transition-colors flex items-center whitespace-nowrap">
-                                                <i class="fas fa-handshake mr-2 text-secondary"></i> Partnership and
-                                                Collaboration
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                            <!-- Comment-style submenu -->
-                                            <div
-                                                class="absolute left-full top-0 ml-2  bg-white p-4 shadow-lg rounded-lg opacity-0 invisible group-hover/partnership:opacity-100 group-hover/partnership:visible group-hover/partnership:pointer-events-auto transition-all duration-300 transform translate-y-1 group-hover/partnership:translate-y-0">
-                                                <div
-                                                    class="text-sm text-gray-500 italic mb-2 border-l-2 border-primary pl-2">
-                                                    Our collaborative projects with international partners
-                                                </div>
-                                                <ul class="space-y-2  whitespace-nowrap">
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Breast
-                                                            and Cervical Cancer Screening Project (AGWC) </a></li>
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Bhutanese
-                                                            Refugees Assistance Project </a></li>
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Past
-                                                            Projects </a></li>
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Appreciation
-                                                            and Awards </a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="group/partnership relative">
-                                            <a href="#"
-                                                class="text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-1.5 rounded transition-colors flex items-center whitespace-nowrap">
-                                                <i class="fas fa-handshake mr-2 text-secondary"></i> Citizen Charter
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                            <!-- Comment-style submenu -->
-                                            <div
-                                                class="absolute left-full top-0 ml-2 w-72 bg-white p-4 shadow-lg rounded-lg opacity-0 invisible group-hover/partnership:opacity-100 group-hover/partnership:visible group-hover/partnership:pointer-events-auto transition-all duration-300 transform translate-y-1 group-hover/partnership:translate-y-0">
-                                                <ul class="space-y-2">
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">AMDA
-                                                            NEPAL </a></li>
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Shimazu
-                                                            Dental Clinic </a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="group/partnership relative">
-                                            <a href="#"
-                                                class="text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-1.5 rounded transition-colors flex items-center whitespace-nowrap">
-                                                <i class="fas fa-handshake mr-2 text-secondary"></i> Emergency Relief
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                            <!-- Comment-style submenu -->
-                                            <div
-                                                class="absolute left-full top-0 ml-2 w-72 bg-white p-4 shadow-lg rounded-lg opacity-0 invisible group-hover/partnership:opacity-100 group-hover/partnership:visible group-hover/partnership:pointer-events-auto transition-all duration-300 transform translate-y-1 group-hover/partnership:translate-y-0">
-                                                <ul class="space-y-2">
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Jajarkot
-                                                            Earthquake </a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="group/partnership relative">
-                                            <a href="#"
-                                                class="text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-1.5 rounded transition-colors flex items-center whitespace-nowrap">
-                                                <i class="fas fa-handshake mr-2 text-secondary"></i> Social
-                                                Responsibilities
-                                                <i class="ri-arrow-right-s-line ml-auto"></i>
-                                            </a>
-                                            <!-- Comment-style submenu -->
-                                            <div
-                                                class="absolute left-full top-0 ml-2 w-72 bg-white p-4 shadow-lg rounded-lg opacity-0 invisible group-hover/partnership:opacity-100 group-hover/partnership:visible group-hover/partnership:pointer-events-auto transition-all duration-300 transform translate-y-1 group-hover/partnership:translate-y-0">
-                                                <ul class="space-y-2">
-                                                    <li><a href="#"
-                                                            class="text-gray-600 hover:bg-blue-500 hover:text-white px-2 py-1 rounded flex items-center">Review
-                                                            Documentary</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class=" nav-link  transition">Resources</a>
-                    <a href="#" class=" nav-link  transition">Publications</a>
-                    <a href="#" class=" nav-link  transition">Gallery</a>
-                    <a href="#" class=" nav-link  transition">Vacancy</a>
-                </div>
-
-                <!-- Search Bar -->
-                <form class=" w-[20%]">
-                    <div class="relative w-full  ">
-                        <input type="text" placeholder="Search..."
-                            class="w-full px-2 py-2  border  border-gray-500 rounded-[8px]  focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <button type="submit" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                        </button>
-                    </div>
-                </form>
             </div>
-        </nav>
+            <nav class="navBarMenuWithSearch hideNavinMoble pb-[9px]" id="navBarMain">
+                <a href=""><img src="https://www.amda.org.np/image/logo.png" alt="" class="llogo"></a>
+
+                <div>
+                    <a href="#" class="font-semibold homeLink firstNavOptions">
+                        <div class="group inline-block">
+
+                            <span class="pr-1 font-semibold  textAlignStart">Home</span>
+                        </div>
+                    </a>
+                    <!-- ABOUT US  -->
+                    <div class="group inline-block firstNavOptions">
+                        <button class="outline-none focus:outline-none px-3 py-1 rounded-sm flex items-center ">
+                            <span class="pr-1 font-semibold ">About Us</span>
+                            <span>
+                                <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                  transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="AboutUsUl  rounded-sm transform scale-0 group-hover:scale-100 absolute 
+            transition duration-150 ease-in-out origin-top ">
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                            </li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Testing</li>
+                        </ul>
+                    </div>
+                    <!-- WHAT WE DO  -->
+                    <div class="group inline-block firstNavOptions">
+                        <button class="outline-none focus:outline-none  px-3 py-1 rounded-sm flex items-center ">
+                            <span class="pr-1 font-semibold ">What we do</span>
+                            <span>
+                                <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                      transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class=" whatWeDoUl  rounded-sm transform scale-0 group-hover:scale-100 absolute 
+                transition duration-150 ease-in-out origin-top ">
+
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
+                transition duration-150 ease-in-out origin-top-left
+                
+                ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
+                transition duration-150 ease-in-out origin-top-left
+                
+                ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
+                transition duration-150 ease-in-out origin-top-left
+                
+                ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
+                transition duration-150 ease-in-out origin-top-left
+                
+                ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
+                transition duration-150 ease-in-out origin-top-left
+                
+                ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
+                transition duration-150 ease-in-out origin-top-left
+                
+                ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
+                transition duration-150 ease-in-out origin-top-left
+                
+                ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
+                transition duration-150 ease-in-out origin-top-left
+                
+                ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- RESOURCES  -->
+                    <div class="group inline-block firstNavOptions">
+                        <button class="outline-none focus:outline-none  px-3 py-1 rounded-sm flex items-center ">
+                            <span class="pr-1 font-semibold ">Resources</span>
+                            <span>
+                                <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                      transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class=" resourcesUl  rounded-sm transform scale-0 group-hover:scale-100 absolute 
+                transition duration-150 ease-in-out origin-top ">
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
+                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Testing</li>
+
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class=" nestedResourcesUl rounded-sm absolute top-0 right-0 
+                transition duration-150 ease-in-out origin-top-left
+                
+                ">
+                                    <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                        <button
+                                            class="w-full text-left flex items-center outline-none focus:outline-none">
+                                            <span class="pr-1 ">Python</span>
+                                            <span class="mr-auto">
+                                                <svg class="fill-current h-4 w-4
+                              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <ul class="nestedUL rounded-sm absolute top-0 right-0 
+                    transition duration-150 ease-in-out origin-top-left
+                    
+                    ">
+                                            <li class="px-3 py-1 hover:bg-[#002d71a3]">2.7</li>
+                                            <li class="px-3 py-1 hover:bg-[#002d71a3]">2.7</li>
+                                            <li class="px-3 py-1 hover:bg-[#002d71a3]">2.7</li>
+                                            <li class="px-3 py-1 hover:bg-[#002d71a3]">3+</li>
+                                        </ul>
+                                    </li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- PUBLICATION -->
+                    <div class="group inline-block firstNavOptions">
+                        <button class="outline-none focus:outline-none  px-3 py-1 rounded-sm flex items-center ">
+                            <span class="pr-1 font-semibold ">Publication</span>
+                            <span>
+                                <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class=" publicationUl  rounded-sm transform scale-0 group-hover:scale-100 absolute 
+    transition duration-150 ease-in-out origin-top ">
+
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL rounded-sm absolute top-0 right-0 
+    transition duration-150 ease-in-out origin-top-left
+    
+    ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL rounded-sm absolute top-0 right-0 
+    transition duration-150 ease-in-out origin-top-left
+    
+    ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL rounded-sm absolute top-0 right-0 
+    transition duration-150 ease-in-out origin-top-left
+    
+    ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Langauges</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nestedUL rounded-sm absolute top-0 right-0 
+    transition duration-150 ease-in-out origin-top-left
+    
+    ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                                </ul>
+                            </li>
+
+                            <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                            <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
+                        </ul>
+                    </div>
+
+                    <!-- VACANCY -->
+                    <div class="group inline-block firstNavOptions">
+                        <button class="outline-none focus:outline-none  px-3 py-1 rounded-sm flex items-center ">
+                            <span class="pr-1 font-semibold  textAlignStart">Vacancy</span>
+                            <span>
+                                <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                      transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="rounded-sm bg-white transform scale-0 group-hover:scale-100 absolute 
+                transition duration-150 ease-in-out origin-top ">
+
+                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
+                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                    <span class="pr-1 ">Apply</span>
+                                    <span class="mr-auto">
+                                        <svg class="fill-current h-4 w-4
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="rounded-sm bg-white absolute top-0 right-0 
+                transition duration-150 ease-in-out origin-top-left
+                
+                ">
+
+                                    <!-- D2 -->
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Apply Online</li>
+                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">More</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- SEARCH  -->
+                <div class="flex SearchSecNav">
+                    <div
+                        class="flex w-10 searchhSecParent items-center justify-center rounded-tl-lg rounded-bl-lg -r -gray-200 p-5">
+                        <svg viewBox="0 0 20 20" aria-hidden="true"
+                            class="pointer-events-none absolute w-5 fill-gray-500 transition">
+                            <path
+                                d="M16.72 17.78a.75.75 0 1 0 1.06-1.06l-1.06 1.06ZM9 14.5A5.5 5.5 0 0 1 3.5 9H2a7 7 0 0 0 7 7v-1.5ZM3.5 9A5.5 5.5 0 0 1 9 3.5V2a7 7 0 0 0-7 7h1.5ZM9 3.5A5.5 5.5 0 0 1 14.5 9H16a7 7 0 0 0-7-7v1.5Zm3.89 10.45 3.83 3.83 1.06-1.06-3.83-3.83-1.06 1.06ZM14.5 9a5.48 5.48 0 0 1-1.61 3.89l1.06 1.06A6.98 6.98 0 0 0 16 9h-1.5Zm-1.61 3.89A5.48 5.48 0 0 1 9 14.5V16a6.98 6.98 0 0 0 4.95-2.05l-1.06-1.06Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <input type="text" class="w-full searchInput max-w-[160px] pl-2 text-base font-semibold outline-0"
+                        placeholder="Search" id="">
+                    <input type="button" value="Search"
+                        class="bg-[#002d71] p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 transition-colors">
+                </div>
+            </nav>
+        </div>
         <div class="marquee-container relative overflow-hidden w-full bg-[#003D96] h-12 flex items-center group">
             <span
                 class="update-badge absolute left-0 top-0 h-full bg-red-500 text-white font-medium px-6 flex items-center justify-center z-10">
@@ -406,344 +619,7 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Navbar (visible on mobile) -->
-        <div class="lg:hidden w-full bg-white shadow-md flex items-center justify-between px-4 h-16">
-            <!-- Logo -->
-            <div class="w-[120px]">
-                <img src="https://www.amda.org.np/image/logo.png" alt="Logo" class="h-auto max-h-12">
-            </div>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="absolute  inset-0 bg-black bg-opacity-60 z-50 hidden lg:hidden">
-            <div class="bg-white w-4/5 min-h-screen p-5 ml-auto flex flex-col overflow-y-auto">
-                <!-- Header -->
-                <div class="flex justify-between items-center mb-6 pb-3 border-b border-gray-200">
-                    <h2 class="font-bold text-xl text-gray-800">Menu</h2>
-                    <button id="close-menu" class="text-gray-700 p-2 hover:bg-gray-100 rounded-full focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Search Bar for Mobile -->
-                <form class="mb-6">
-                    <div class="relative">
-                        <input type="text" placeholder="Search..."
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <button type="submit" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-
-                <!-- Main Navigation -->
-                <nav class="flex-1">
-                    <div class="space-y-1">
-                        <a href="#"
-                            class="block py-3 px-3 rounded-md text-gray-800 hover:text-blue-600 hover:bg-blue-50">
-                            Home
-                        </a>
-
-                        <!-- About Us Accordion -->
-                        <div class="relative z-30 group">
-                            <button
-                                class="w-full py-3 px-3 rounded-md flex items-center justify-between text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-colors focus:outline-none">
-                                <span>About Us</span>
-                                <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-
-                            <div
-                                class="mt-1 bg-gray-50 rounded-md shadow-sm overflow-hidden max-h-0 group-hover:max-h-screen transition-all duration-300">
-                                <div class="p-3">
-                                    <h3 class="font-semibold text-gray-800 mb-3 flex items-center">
-                                        <i class="fas fa-info-circle mr-2 text-blue-500"></i> About Our Organization
-                                    </h3>
-                                    <ul class="space-y-2 pl-2">
-                                        <li>
-                                            <a href="history-overview.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-history mr-2"></i> History/Overview</span>
-                                                <i class="ri-arrow-right-s-line"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="vision-and-mission.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-bullseye mr-2"></i> Vision and Mission</span>
-                                                <i class="ri-arrow-right-s-line"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="executive-committee.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-users mr-2"></i> Executive Committee</span>
-                                                <i class="ri-arrow-right-s-line"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="members-of-amda-nepal.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-address-book mr-2"></i> Members of AMDA
-                                                    Nepal</span>
-                                                <i class="ri-arrow-right-s-line"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="management-and-staff-co.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-user-tie mr-2"></i> Management and Staff</span>
-                                                <i class="ri-arrow-right-s-line"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="chairpersons-of-amda-nepal.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-user-shield mr-2"></i> Chairpersons</span>
-                                                <i class="ri-arrow-right-s-line"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="chairpersonsmessage.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-envelope-open-text mr-2"></i> Chairperson's
-                                                    Message</span>
-                                                <i class="ri-arrow-right-s-line"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="organogram.html"
-                                                class="text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-sitemap mr-2"></i> Organogram</span>
-                                                <i class="ri-arrow-right-s-line"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- What We Do Accordion -->
-                        <div class="relative z-20 group">
-                            <button
-                                class="w-full py-3 px-3 rounded-md flex items-center justify-between text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-colors focus:outline-none">
-                                <span>What We Do</span>
-                                <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-
-                            <div
-                                class="mt-1 bg-gray-50 rounded-md shadow-sm overflow-hidden max-h-0 group-hover:max-h-screen transition-all duration-300">
-                                <div class="p-3">
-                                    <h3 class="font-semibold text-gray-800 mb-3 flex items-center">
-                                        <i class="fas fa-hospital mr-2 text-blue-500"></i> Health Services
-                                    </h3>
-                                    <ul class="space-y-2 pl-2">
-                                        <!-- Hospitals/Clinics Activities -->
-                                        <li class="group/hospital">
-                                            <button
-                                                class="w-full text-left text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-medkit mr-2"></i> Hospitals/Clinics
-                                                    Activities</span>
-                                                <i
-                                                    class="ri-arrow-down-s-line transition-transform group-hover/hospital:rotate-180"></i>
-                                            </button>
-                                            <div
-                                                class="pl-4 mt-1 overflow-hidden max-h-0 group-hover/hospital:max-h-screen transition-all duration-300">
-                                                <ul class="space-y-1 pt-1 pb-1">
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">AMDA
-                                                            Hospital</a></li>
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Siddhartha
-                                                            Children and Women Hospital</a></li>
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">AMDA
-                                                            Mechi Hospital</a></li>
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Shimazu
-                                                            Dental Clinic</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-
-                                        <!-- Academic Programs -->
-                                        <li class="group/academic">
-                                            <button
-                                                class="w-full text-left text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-clinic-medical mr-2"></i> Academic
-                                                    Programs</span>
-                                                <i
-                                                    class="ri-arrow-down-s-line transition-transform group-hover/academic:rotate-180"></i>
-                                            </button>
-                                            <div
-                                                class="pl-4 mt-1 overflow-hidden max-h-0 group-hover/academic:max-h-screen transition-all duration-300">
-                                                <ul class="space-y-1 pt-1 pb-1">
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Medical
-                                                            Training Programs</a></li>
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Nursing
-                                                            Education</a></li>
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Research
-                                                            Initiatives</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-
-                                        <!-- Partnership and Collaboration -->
-                                        <li class="group/partnership">
-                                            <button
-                                                class="w-full text-left text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-handshake mr-2"></i> Partnership and
-                                                    Collaboration</span>
-                                                <i
-                                                    class="ri-arrow-down-s-line transition-transform group-hover/partnership:rotate-180"></i>
-                                            </button>
-                                            <div
-                                                class="pl-4 mt-1 overflow-hidden max-h-0 group-hover/partnership:max-h-screen transition-all duration-300">
-                                                <div
-                                                    class="text-sm text-gray-500 italic mb-2 border-l-2 border-blue-500 pl-2 mt-1">
-                                                    Our collaborative projects with international partners
-                                                </div>
-                                                <ul class="space-y-1 pt-1 pb-1">
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Breast
-                                                            and Cervical Cancer Screening Project (AGWC)</a></li>
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Bhutanese
-                                                            Refugees Assistance Project</a></li>
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Past
-                                                            Projects</a></li>
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Appreciation
-                                                            and Awards</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-
-                                        <!-- Citizen Charter -->
-                                        <li class="group/charter">
-                                            <button
-                                                class="w-full text-left text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-file-alt mr-2"></i> Citizen Charter</span>
-                                                <i
-                                                    class="ri-arrow-down-s-line transition-transform group-hover/charter:rotate-180"></i>
-                                            </button>
-                                            <div
-                                                class="pl-4 mt-1 overflow-hidden max-h-0 group-hover/charter:max-h-screen transition-all duration-300">
-                                                <ul class="space-y-1 pt-1 pb-1">
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">AMDA
-                                                            NEPAL</a></li>
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Shimazu
-                                                            Dental Clinic</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-
-                                        <!-- Emergency Relief -->
-                                        <li class="group/relief">
-                                            <button
-                                                class="w-full text-left text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-hands-helping mr-2"></i> Emergency Relief</span>
-                                                <i
-                                                    class="ri-arrow-down-s-line transition-transform group-hover/relief:rotate-180"></i>
-                                            </button>
-                                            <div
-                                                class="pl-4 mt-1 overflow-hidden max-h-0 group-hover/relief:max-h-screen transition-all duration-300">
-                                                <ul class="space-y-1 pt-1 pb-1">
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Jajarkot
-                                                            Earthquake</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-
-                                        <!-- Social Responsibilities -->
-                                        <li class="group/social">
-                                            <button
-                                                class="w-full text-left text-gray-600 hover:bg-blue-500 rounded-md px-3 py-2 hover:text-white transition-colors flex items-center justify-between">
-                                                <span><i class="fas fa-heart mr-2"></i> Social Responsibilities</span>
-                                                <i
-                                                    class="ri-arrow-down-s-line transition-transform group-hover/social:rotate-180"></i>
-                                            </button>
-                                            <div
-                                                class="pl-4 mt-1 overflow-hidden max-h-0 group-hover/social:max-h-screen transition-all duration-300">
-                                                <ul class="space-y-1 pt-1 pb-1">
-                                                    <li><a href="#"
-                                                            class="block text-gray-600 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md">Review
-                                                            Documentary</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Other Main Menu Items -->
-                        <a href="#"
-                            class="block py-3 px-3 rounded-md text-gray-800 hover:text-blue-600 hover:bg-blue-50">
-                            Resources
-                        </a>
-                        <a href="#"
-                            class="block py-3 px-3 rounded-md text-gray-800 hover:text-blue-600 hover:bg-blue-50">
-                            Publications
-                        </a>
-                        <a href="#"
-                            class="block py-3 px-3 rounded-md text-gray-800 hover:text-blue-600 hover:bg-blue-50">
-                            Gallery
-                        </a>
-                        <a href="#"
-                            class="block py-3 px-3 rounded-md text-gray-800 hover:text-blue-600 hover:bg-blue-50">
-                            Vacancy
-                        </a>
-                    </div>
-                </nav>
-
-                <!-- Mobile Quick Links -->
-                <div class="mt-6 grid grid-cols-1 gap-3 pt-4 border-t border-gray-200">
-                    <a href="#"
-                        class="px-4 py-3 bg-blue-500 text-white rounded-md text-center hover:bg-blue-600 transition-colors shadow-sm">
-                        Check Mail
-                    </a>
-                    <a href="#"
-                        class="px-4 py-3 bg-blue-500 text-white rounded-md text-center hover:bg-blue-600 transition-colors shadow-sm">
-                        e-bidding
-                    </a>
-                    <a href="#"
-                        class="px-4 py-3 bg-blue-500 text-white rounded-md text-center hover:bg-blue-600 transition-colors shadow-sm">
-                        User Manual
-                    </a>
-                </div>
-            </div>
-        </div>
         <!-- <div class="bgimg w-full">
             <img src="
             https://www.amda.org.np/files/pics/65GA_20810724.jpg" alt="" class="w-full  ">

@@ -1,0 +1,329 @@
+#navBarMain {
+    /* width: 100%;
+background: #ffffff;
+color: rgb(0, 0, 0);
+padding: 4px 2rem;
+z-index: 99999999;
+position: relative;
+box-shadow: -1px 0px 7px 0px black; */
+}
+
+li>ul {
+    transform: translatex(100%) scale(0)
+}
+
+input {
+    border: none !important;
+}
+
+.deskTopNavBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.space-around {
+    justify-content: space-around !important;
+}
+
+li:hover>ul {
+    transform: translatex(101%) scale(1)
+}
+
+li>button svg {
+    transform: rotate(-90deg)
+}
+
+li:hover>button svg {
+    transform: rotate(-270deg)
+}
+
+.group:hover .group-hover\:scale-100 {
+    transform: scale(1)
+}
+
+.searchhSecParent,
+.searchInput {
+    background: rgb(211 211 211 / 32%) !important;
+}
+
+.group:hover .group-hover\:-rotate-180 {
+    transform: rotate(180deg)
+}
+
+.scale-0 {
+    transform: scale(0)
+}
+
+. {
+    min-width: 8rem
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navBarMenuWithSearch {
+    box-shadow: 1px 1px 7px 0px #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: .3s ease-in-out;
+
+}
+
+.navBarLogoAndMenu {
+    transform: translateY(-50px);
+    animation: slideDown 0.3s ease-out forwards;
+    z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+    position: relative;
+    width: 100%;
+    background-color: white;
+
+}
+
+/* TOP NAV BBUTTON  */
+.topNavbutton {
+    background: #002d71;
+    border: none;
+    padding: 5px 13px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    color: white;
+}
+
+.topNavbutton span {
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+.topNavbutton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.topNavbutton:hover {
+    color: #fff;
+}
+
+.topNavbutton:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+ul {
+    z-index: 11 !important;
+}
+
+.mobileLogo {
+    width: 30% !important;
+}
+
+/* RESPONSIVENES  */
+
+
+/* MOBILE  */
+
+@media(max-width:1170px) {
+    .hideNavinMoble {
+        display: none;
+    }
+
+    .hmParent {
+        display: flex !important;
+
+    }
+
+    .navBarMenuWithSearch {
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 30px;
+    }
+
+    .textAlignStart {
+        text-align: start;
+    }
+
+    .firstNavOptions {
+        padding-left: 40px;
+        /* background-color: white; */
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+        width: 100%;
+
+    }
+
+
+
+    .firstNavOptions.active {
+        background-color: #5d9eff;
+    }
+
+    .computerLogo {
+        display: none;
+    }
+
+    .paraOfMsTopNav {
+        font-size: 9px;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@media(max-width:500px) {
+    .topNavbutton {
+        padding: 5px 2px !important;
+        width: 103px !important;
+    }
+}
+
+@media(max-width:400px) {
+    #topNum {
+        display: none;
+    }
+}
+
+/* hamburger  */
+.hamburgerFirstNav {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburgerFirstNav span {
+    display: block;
+    height: 3px;
+    background: black;
+    border-radius: 3px;
+    transition: 0.4s ease;
+}
+
+/* When active (clicked) */
+.hamburgerFirstNav.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburgerFirstNav.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburgerFirstNav.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.hmParent {
+    width: 100%;
+    padding: 0 25px;
+    justify-content: space-between;
+    display: none;
+    align-items: center;
+    background: #ffffff;
+}
+
+.hamburgerFirstNav {
+    float: right;
+}
+
+/* ------- */
+
+/* .hamburger.open span:nth-child(1) {
+transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+transform: rotate(-45deg) translate(10px, -10px);
+}
+*/
+.nestedUL,
+.nestedResourcesUl {
+    backdrop-filter: blur(16px);
+    /* background: linear-gradient(to right, #8dbaff, #ffffff) !important; */
+    background: #00000047 !important;
+    /* border-radius: 18px !important; */
+    width: 100%;
+    margin-top: -24px;
+
+}
+
+/* ------------------- */
+.AboutUsUl,
+.resourcesUl,
+.publicationUl {
+    background: #ffffff !important;
+    box-shadow: 0px 0px 6px -2px black;
+    display: flex;
+    padding: 11px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    width: 100%;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    padding: 50px !important;
+
+    background: #0e1827 !important;
+    /* background: linear-gradient(to right, #8dbaff, #003D96) !important; */
+    color: white;
+    font-weight: 600;
+}
+
+.whatWeDoUl {
+    /* background: linear-gradient(to right, #8dbaff, #003D96) !important; */
+    background: #0e1827 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    color: white;
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(204px, 100%), 1fr));
+    padding: 50px;
+}
+
+.whatWeDoUl li,
+.AboutUsUl li,
+.resourcesUl li,
+.publicationUl li {
+    padding: 13px 12px;
+    border: 1px solid #ffffff2b;
+    margin: 14px 7px;
+    border-radius: 6px;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.nestedResourcesUl {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+    width: 100% !important;
+}
+
+.llogo {
+    max-height: 4rem;
+}
