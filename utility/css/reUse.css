@@ -1,0 +1,26 @@
+:root {
+    /* COLOR  */
+    --AMDAprimary-color: #003D96;
+    --AMDAsecondary-color: #0391FF;
+
+    /* FONT SIZE  */
+    --fontSizeForFormTitle: 26px;
+    --fontSizeForFormLabel: 18px;
+    --fontSizeForFormOptions: 16px;
+    --fontSizePara:18px;
+}
+
+.min200dyWidthh {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)) !important;
+    place-items: center;
+    gap: 12px;
+}
+
+.noUserSelect {
+    user-select: none;
+}
+
+.ovrflowHidden{
+    overflow: hidden !important;
+}

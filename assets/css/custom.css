@@ -48,3 +48,23 @@
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
 }
+
+/* custom responsiveness  */
+
+@media(max-width:1000px) {
+    .tabAndSlider {
+        flex-direction: column;
+        max-height: 100%;
+        align-items: center;
+        justify-content: center;
+        max-height: 100vh;
+    }
+
+    .tabParent {
+        width: 100%;
+    }
+
+    .tabRightSideImage {
+        border-radius: 50%;
+    }
+}

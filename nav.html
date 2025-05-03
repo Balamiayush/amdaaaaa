@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        li {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            list-style: none;
+            font-size: 18px;
+            /* font-weight: 600; */
+        }
+
+        li a {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .aboutUsHovered,
+        .whatWeDoHovered {
+            background: blue;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+            width: 80%;
+            margin: 0 auto;
+            gap: 20px;
+            padding: 7px 12px;
+
+
+            position: absolute;
+            top: 29px;
+
+            max-height: 0;
+            overflow: hidden;
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hoveredMenu1 {
+            border: 1px solid;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding-left: 7px;
+            padding: 11px 4px;
+        }
+
+        #aboutOption:hover+.aboutUsHovered,
+        .aboutUsHovered:hover {
+            max-height: 500px;
+            /* Enough to show content */
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #whatWedo:hover+.whatWeDoHovered,
+        .whatWeDoHovered:hover {
+            max-height: 500px;
+            /* Enough to show content */
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <nav>
+        <div>
+            <div class="logo"></div>
+
+
+
+            <div class="NavMenu relative bg-[red] flex items-center justify-center">
+                <li id="homeOption">Home</li>
+                <li id="aboutOption">About</li>
+                <!-- when hover on aboutOption then show this aboutUsHovered -->
+                <div class="aboutUsHovered">
+                    <li class="aboutUsMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                    <li class="aboutUsMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                    <li class="aboutUsMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                    <li class="aboutUsMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                    <li class="aboutUsMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                    <li class="aboutUsMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                    <li class="aboutUsMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                    <li class="aboutUsMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                </div>
+
+
+                <li id="whatWedo">What We do</li>
+                <!-- when hover on whatwedo then show this -->
+                <div class="whatWeDoHovered">
+                    <li class="whatWeDoMenu hoveredMenu1 whatWeDo1st">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Loremw</a>
+                    </li>
+                    <li class="whatWeDoMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorewm</a>
+                    </li>
+                    <li class="whatWeDoMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Loremw</a>
+                    </li>
+                    <li class="whatWeDoMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Loremwf</a>
+                    </li>
+                    <li class="whatWeDoMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                    <li class="whatWeDoMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                    <li class="whatWeDoMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+                    <li class="whatWeDoMenu hoveredMenu1">
+                        <i class="ri-arrow-right-circle-line"></i>
+                        <a href=""> Lorem</a>
+                    </li>
+
+                    <div class="whatWeDo1stHovered">
+                        <li class="whatWeDoMenu hoveredMenu1">
+                            <i class="ri-arrow-right-circle-line"></i>
+                            <a href=""> Lorem</a>
+                        </li>
+                        <li class="whatWeDoMenu hoveredMenu1">
+                            <i class="ri-arrow-right-circle-line"></i>
+                            <a href=""> Lorem</a>
+                        </li>
+                        <li class="whatWeDoMenu hoveredMenu1">
+                            <i class="ri-arrow-right-circle-line"></i>
+                            <a href=""> Lorem</a>
+                        </li>
+                        <li class="whatWeDoMenu hoveredMenu1">
+                            <i class="ri-arrow-right-circle-line"></i>
+                            <a href=""> Lorem</a>
+                        </li>
+                    </div>
+                </div>
+
+
+
+
+                <li id="resources">Resources</li>
+                <li id="publication">Publication</li>
+                <li id="gallary">Gallary</li>
+                <li id="vacancy">Vacancy</li>
+                <div class="SearchBa"></div>
+            </div>
+
+
+    </nav>
+
+
+
+
+
+</body>
+
+</html>

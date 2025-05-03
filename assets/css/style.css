@@ -299,6 +299,7 @@ html {
     transform: perspective(1000px) rotateX(5deg) translateY(-5px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
+
 .gradient-text {
     background: linear-gradient(45deg, #574FCB, #8E2DE2);
     -webkit-background-clip: text;
@@ -347,23 +348,28 @@ input[type="number"]::-webkit-outer-spin-button {
 .group:hover .mega-menu {
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
-.hospitalUlLi{
+
+.hospitalUlLi {
     transition: all 0.3s ease;
 
 }
-.hospitalUl:hover  .hospitalUlLi{
+
+.hospitalUl:hover .hospitalUlLi {
     transform: translateY(0px);
     opacity: 1;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 
 }
-.whatwedo li:hover{
+
+.whatwedo li:hover {
     color: white;
     background: #2563EB;
 }
+
 .nav-link {
     position: relative;
 }
+
 .nav-link:after {
     content: '';
     position: absolute;
@@ -375,17 +381,19 @@ input[type="number"]::-webkit-outer-spin-button {
     transition: width 0.3s ease-in-out;
 
 }
+
 .nav-link:hover:after {
     width: 100%;
-   
+
 }
 
 /* Mobile menu animations */
 .mobile-menu {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: max-height 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
+
 .mobile-menu.open {
     max-height: 1000px;
 }
@@ -398,6 +406,7 @@ input[type="number"]::-webkit-outer-spin-button {
     transition: all 0.3s ease;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
+
 .mega-menu.active {
     opacity: 1;
     visibility: visible;
@@ -408,22 +417,29 @@ input[type="number"]::-webkit-outer-spin-button {
 .hamburger span {
     transition: all 0.3s ease;
 }
+
 .hamburger.active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
+
 .hamburger.active span:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-}     .marquee-wrapper {
+}
+
+.marquee-wrapper {
     overflow: hidden;
     white-space: nowrap;
 }
+
 .marquee-content {
     display: inline-flex;
     will-change: transform;
 }
+
 .marquee-item {
     padding: 0 1rem;
     white-space: nowrap;
@@ -490,17 +506,42 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-.delay-4 { animation-delay: 0.8s; }
-.delay-5 { animation-delay: 1s; }
-.delay-6 { animation-delay: 1.2s; }
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+.delay-5 {
+    animation-delay: 1s;
+}
+
+.delay-6 {
+    animation-delay: 1.2s;
+}
 
 
 .tab-pane {
@@ -510,17 +551,40 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 0;
     overflow: hidden;
 }
+
 .tab-pane.active {
     opacity: 1;
     transform: translateY(0);
     height: auto;
 }
+
 .tab-btn {
     transition: all 0.2s ease;
 }
+
 .tab-btn:hover {
     transform: translateY(-2px);
 }
+
 .tab-btn:active {
     transform: translateY(0);
+}
+
+/* HOMEPAGE TAB  */
+.homepageTabLink {
+    color: var(--AMDAprimary-color);
+    font-size: var(--fontSizePara);
+}
+
+.tabParent {
+    background: rgb(243 244 246);
+    padding: 12px;
+}
+
+
+/* PARAGRAPH AND HEADING  */
+.homePagePara {}
+
+.homePageHeading {
+    color: var(--AMDAprimary-color);
 }
