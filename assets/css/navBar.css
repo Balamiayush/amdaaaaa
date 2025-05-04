@@ -55,9 +55,6 @@ li:hover>button svg {
     transform: scale(0)
 }
 
-. {
-    min-width: 8rem
-}
 
 @keyframes slideDown {
     to {
@@ -133,72 +130,15 @@ ul {
 }
 
 .mobileLogo {
-    width: 30% !important;
+    width: 40% !important;
 }
 
-/* RESPONSIVENES  */
-
-
-/* MOBILE  */
-
-@media(max-width:1170px) {
-    .hideNavinMoble {
-        display: none;
-    }
-
-    .hmParent {
-        display: flex !important;
-
-    }
-
-    .navBarMenuWithSearch {
-        flex-direction: column;
-        gap: 6px;
-        margin-top: 30px;
-    }
-
-    .textAlignStart {
-        text-align: start;
-    }
-
-    .firstNavOptions {
-        padding-left: 40px;
-        /* background-color: white; */
-        cursor: pointer;
-        transition: background-color 0.5s ease;
-        width: 100%;
-
-    }
-
-
-
-    .firstNavOptions.active {
-        background-color: #5d9eff;
-    }
-
-    .computerLogo {
-        display: none;
-    }
-
-    .paraOfMsTopNav {
-        font-size: 9px;
-        display: flex;
-        align-items: center;
-    }
-
+.desktopLogo {
+    display: none;
 }
 
-@media(max-width:500px) {
-    .topNavbutton {
-        padding: 5px 2px !important;
-        width: 103px !important;
-    }
-}
-
-@media(max-width:400px) {
-    #topNum {
-        display: none;
-    }
+.homeLinkDiv {
+    padding-left: 1.75rem;
 }
 
 /* hamburger  */
@@ -221,6 +161,8 @@ ul {
 }
 
 /* When active (clicked) */
+
+/* When active (clicked) */
 .hamburgerFirstNav.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -232,6 +174,7 @@ ul {
 .hamburgerFirstNav.active span:nth-child(3) {
     transform: rotate(-45deg) translate(10px, -10px);
 }
+
 
 .hmParent {
     width: 100%;
@@ -260,70 +203,166 @@ opacity: 0;
 transform: rotate(-45deg) translate(10px, -10px);
 }
 */
-.nestedUL,
-.nestedResourcesUl {
-    backdrop-filter: blur(16px);
-    /* background: linear-gradient(to right, #8dbaff, #ffffff) !important; */
-    background: #00000047 !important;
-    /* border-radius: 18px !important; */
-    width: 100%;
-    margin-top: -24px;
+/* RESPONSIVENES  */
+
+
+/* MOBILE  */
+
+@media(max-width:1224px) {
+    .hideNavinMoble {
+        display: none;
+    }
+
+
+
+    .hmParent {
+        display: flex !important;
+
+    }
+
+    .navBarMenuWithSearch {
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 30px;
+    }
+
+    .textAlignStart {
+        text-align: start;
+    }
+
+    .firstNavOptions {
+        padding-left: 40px;
+        /* background-color: white; */
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+        width: 100%;
+
+    }
+
+    .whatWeDoUl,
+    .AboutUsUl,
+    .resourcesUl,
+    .publicationUl,
+    .nestedResourcesUl,
+    .nestedUL {
+        background: #ffffff;
+    }
+
+
+
+    .firstNavOptions.active {
+        background-color: #5d9eff;
+    }
+
+    .computerLogo {
+        display: none;
+    }
+
+    .paraOfMsTopNav {
+        font-size: 9px;
+        display: flex;
+        align-items: center;
+    }
 
 }
 
-/* ------------------- */
-.AboutUsUl,
-.resourcesUl,
-.publicationUl {
-    background: #ffffff !important;
-    box-shadow: 0px 0px 6px -2px black;
-    display: flex;
-    padding: 11px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
-    width: 100%;
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 auto !important;
-    padding: 50px !important;
+@media(max-width:500px) {
+    .topNavbutton {
+        padding: 5px 2px !important;
+        width: 103px !important;
+    }
 
-    background: #0e1827 !important;
-    /* background: linear-gradient(to right, #8dbaff, #003D96) !important; */
-    color: white;
-    font-weight: 600;
+    .mobileLogo {
+        width: 60% !important;
+    }
 }
 
-.whatWeDoUl {
-    /* background: linear-gradient(to right, #8dbaff, #003D96) !important; */
-    background: #0e1827 !important;
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 auto !important;
-    color: white;
-    width: 100% !important;
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(min(204px, 100%), 1fr));
-    padding: 50px;
+@media(max-width:400px) {
+    #topNum {
+        display: none;
+    }
 }
 
-.whatWeDoUl li,
-.AboutUsUl li,
-.resourcesUl li,
-.publicationUl li {
-    padding: 13px 12px;
-    border: 1px solid #ffffff2b;
-    margin: 14px 7px;
-    border-radius: 6px;
-    font-size: 19px;
-    cursor: pointer;
-}
 
-.nestedResourcesUl {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
-    width: 100% !important;
-}
+@media (min-width: 1225px) {
 
-.llogo {
-    max-height: 4rem;
+    .nestedUL,
+    .nestedResourcesUl {
+        backdrop-filter: blur(16px);
+        /* background: linear-gradient(to right, #8dbaff, #ffffff) !important; */
+        background: #00000047 !important;
+        /* border-radius: 18px !important; */
+        width: 100%;
+        margin-top: -24px;
+
+    }
+
+    .mobileLogo {
+        width: 30% !important;
+    }
+
+    .homeLinkDiv {
+        padding-left: 0;
+    }
+
+    .desktopLogo {
+        display: block !important;
+    }
+
+    /* ------------------- */
+    .AboutUsUl,
+    .resourcesUl,
+    .publicationUl {
+        background: #ffffff !important;
+        box-shadow: 0px 0px 6px -2px black;
+        display: flex;
+        padding: 11px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+        width: 80%;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important;
+        padding: 50px !important;
+
+        background: #0e1827 !important;
+        /* background: linear-gradient(to right, #8dbaff, #003D96) !important; */
+        color: white;
+        font-weight: 600;
+    }
+
+    .whatWeDoUl {
+        /* background: linear-gradient(to right, #8dbaff, #003D96) !important; */
+        background: #0e1827 !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important;
+        color: white;
+        width: 80% !important;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(min(204px, 100%), 1fr));
+        padding: 50px;
+    }
+
+    .whatWeDoUl li,
+    .AboutUsUl li,
+    .resourcesUl li,
+    .publicationUl li {
+        padding: 13px 12px;
+        border: 1px solid #ffffff2b;
+        margin: 14px 7px;
+        border-radius: 6px;
+        font-size: 19px;
+        cursor: pointer;
+    }
+
+    .nestedResourcesUl {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+        width: 100% !important;
+    }
+
+    .llogo {
+        max-height: 4rem;
+    }
 }

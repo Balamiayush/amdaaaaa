@@ -106,7 +106,16 @@ const closeAlert = () => {
 };
 
 closeBtn.addEventListener('click', closeAlert);
-
 // Auto-close after 20 seconds
 setTimeout(closeAlert, 20000);
 
+
+//# MEGAMENU NAVBAR | HAMBURGER 
+const hamburger = document.querySelector('.hamburgerFirstNav');
+const secondNav = document.querySelector('#navBarMain');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    secondNav.classList.toggle('hideNavinMoble');
+    // document.body.classList.toggle('activeHamburger');
+});
