@@ -2,12 +2,14 @@
     /* COLOR  */
     --AMDAprimary-color: #003D96;
     --AMDAsecondary-color: #0391FF;
+    --greyiesWhite: #e5e5e5db;
+    --lightBlue: #c4dbff;
 
     /* FONT SIZE  */
     --fontSizeForFormTitle: 26px;
     --fontSizeForFormLabel: 18px;
     --fontSizeForFormOptions: 16px;
-    --fontSizePara:18px;
+    --fontSizePara: 18px;
 }
 
 .min200dyWidthh {
@@ -21,6 +23,6 @@
     user-select: none;
 }
 
-.ovrflowHidden{
+.ovrflowHidden {
     overflow: hidden !important;
 }

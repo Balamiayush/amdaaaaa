@@ -1,0 +1,6 @@
+1.changed navbar.cs
+      1. in local: added a class called "navDiv" in the nav div.
+      2. added "fisrNavSvgParentbtn" class in button tag of first group class in nav
+2.changed slider.js 
+3.changesd reuse.css
+3.changesd style.css

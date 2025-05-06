@@ -224,6 +224,7 @@ transform: rotate(-45deg) translate(10px, -10px);
         flex-direction: column;
         gap: 6px;
         margin-top: 30px;
+        box-shadow: none;
     }
 
     .textAlignStart {
@@ -242,12 +243,40 @@ transform: rotate(-45deg) translate(10px, -10px);
     .whatWeDoUl,
     .AboutUsUl,
     .resourcesUl,
-    .publicationUl,
-    .nestedResourcesUl,
-    .nestedUL {
-        background: #ffffff;
+    .publicationUl {
+        background: rgb(236, 236, 236);
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: -2px 1px 3px 1px #c7c7c7e3;
+        align-items: center;
     }
 
+    .nestedResourcesUl,
+    .nestedUL {
+        background-color: white;
+        top: 31px !important;
+        /* left: -100% !important;
+        width: 100vw !important; */
+        /* right: 50% !important; */
+        /* translate: -50% !important; */
+        /* width: inherit !important; */
+        /* ------------------ */
+
+        width: 100vw !important;
+        right: 54% !important;
+        translate: -50% !important;
+        width: 95vw !important;
+        box-shadow: -2px 1px 3px 1px #c7c7c7e3;
+
+    }
+
+    .group ul button {
+        display: flex !important;
+        gap: 40% !important;
+    }
 
 
     .firstNavOptions.active {
@@ -264,6 +293,40 @@ transform: rotate(-45deg) translate(10px, -10px);
         align-items: center;
     }
 
+    .firstNavOptions {
+        padding-left: 0 !important;
+    }
+
+    .navDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    /* ---------------------------- */
+    .fisrNavSvgParentbtn {
+        min-width: 170px;
+        border-bottom: 1px solid var(--greyiesWhite);
+    }
+
+    .homeLinkDiv {
+        padding-left: 0 !important;
+
+    }
+
+    .homeLink {
+        border-bottom: 1px solid var(--greyiesWhite);
+
+    }
+
+    .fisrNavSvgParentbtn {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 @media(max-width:500px) {
@@ -294,6 +357,7 @@ transform: rotate(-45deg) translate(10px, -10px);
         /* border-radius: 18px !important; */
         width: 100%;
         margin-top: -24px;
+        right: 110px !important;
 
     }
 
