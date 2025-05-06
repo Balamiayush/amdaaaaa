@@ -4,3 +4,4 @@
 2.changed slider.js 
 3.changesd reuse.css
 3.changesd style.css
+4.changed index.html
