@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particular Member Details</title>
+    <link rel="stylesheet" href="../../css/reuse.css">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        .particularDoctorDetailsCardParent {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+            place-items: center;
+            gap: 12px;
+        }
+
+        .shedularAndDetail {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+
+        .particularDoctorDetailsCard {
+            background-color: white;
+            color: var(--AMDAprimary-color);
+        }
+
+        .scheduler {
+            /* max-width: 500px;
+            margin: auto; */
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(105, 105, 105, 0.051);
+            padding: 20px;
+            min-width: 40%;
+        }
+
+        .header {
+            background: var(--AMDAprimary-color);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .day-selector {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid var(--AMDAprimary-color);
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: white;
+            color: var(--AMDAprimary-color);
+            margin-bottom: 20px;
+        }
+
+        .slots-popup {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .time-group {
+            margin: 15px 0;
+        }
+
+        .time-group h4 {
+            margin: 10px 0;
+            color: var(--AMDAprimary-color);
+        }
+
+        .slot {
+            display: inline-block;
+            padding: 10px 14px;
+            margin: 6px;
+            border: 2px solid var(--AMDAprimary-color);
+            border-radius: 30px;
+            color: var(--AMDAprimary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .slot:hover {
+            background-color: var(--AMDAprimary-color);
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .order1InMobile {
+                order: 1 !important;
+            }
+
+            .order2InMobile {
+                order: 2 !important;
+            }
+
+            .shedularAndDetail {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .scheduler {
+                min-width: 100%;
+            }
+
+            .particularDoctorDetailsCard {
+                width: 100%;
+            }
+
+            .particularDoctorDetailsCardParent {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .slot {
+                font-size: 12px;
+                padding: 8px 10px;
+            }
+        }
+
+        /* -------- */
+        .typewriter {
+            border-right: 2px solid #60A5FA;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: #60A5FA;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-poppins relative">
+    <section id="home"
+        class="flex flex-col lg:flex-row items-center justify-center text-center py-16 px-6 bg-[#efefef] text-black min-h-screen">
+        <div class="w-full order2InMobile sm:w-full lg:w-1/2 flex flex-col justify-center items-center">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight mt-20 pb-4">
+                Hello!
+                <div class="py-2"></div>
+                <span class="text-blue-400 whitespace-nowrap">
+                    <span class="typewriter">Lorem Lorem </span>
+                </span>
+            </h1>
+
+            <p class=" text-black text-lg leading-relaxed text-left">
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, nisl sit amet convallis
+                gravida, lectus justo suscipit nulla, non ultrices purus nulla id ex. Nulla facilisi. Donec auctor urna
+                eu odio facilisis, nec fringilla metus facilisis. Proin et libero eu justo interdum sagittis vel id
+                arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos, nisi architecto, quam eaque non
+                quisquam odio consequuntur fuga aspernatur nobis? Aspernatur reprehenderit quaerat, cumque quae ad
+                molestiae! Praesentium, obcaecati! </p> <br>
+            <p class=" text-black text-lg leading-relaxed text-left">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Minima, dolor distinctio! Odit minus aut
+                temporibus fugit repellat est asperiores officiis perspiciatis atque earum doloribus assumenda corporis
+                deleniti debitis, optio aperiam.</p>
+
+
+            <div class="flex gap-6 mt-8">
+                <a href="https://wa.me/9123456789" target="_blank" rel="noopener noreferrer"
+                    class="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
+                    aria-label="Contact me on WhatsApp">
+
+                    <button
+                        class="flex items-center rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button">
+                        <i class="ri-phone-line"></i>
+
+
+                        Call
+                    </button>
+                </a>
+                <a href="https://wa.me/9123456789" target="_blank" rel="noopener noreferrer"
+                    class="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
+                    aria-label="Contact me on WhatsApp">
+
+                    <button
+                        class="flex items-center rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button">
+
+                        <i class="ri-phone-line"></i>
+                        Appointment
+                    </button>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="max-w-screen-xl pl-[12px] order1InMobile">
+
+            <div class="rounded overflow-hidden flex flex-col max-w-xl mx-auto">
+
+                <a href="#">
+                    <img class="w-full"
+                        src="https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg"
+                        alt="Sunset in the mountains">
+                </a>
+                <div class="relative -mt-16 px-10 pt-5 pb-16 bg-white m-10">
+                    <a href="#"
+                        class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    <p class="text-gray-500 text-sm">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, facilis minus.
+                    </p>
+                    <p class="mt-5 text-gray-600 text-xs">
+                        By
+                        <a href="#" class="text-xs text-indigo-600 transition duration-500 ease-in-out">
+                            Lorem
+                        </a> | in <a href="#" class="text-xs text-indigo-600 transition duration-500 ease-in-out">
+                            Lorem
+                        </a>, <a href="#" class="text-xs text-indigo-600 transition duration-500 ease-in-out">
+                            Lorem
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <div class="shedularAndDetail">
+        <!-- TIME CHOOSE FOR APPOINTMENT  -->
+        <div class="scheduler">
+            <div class="header">Book an Appointment</div>
+
+            <select class="day-selector" id="daySelector">
+                <option value="" disabled selected>Select a day</option>
+            </select>
+
+            <!-- <div class="slots-popup" id="slotsPopup"></div> -->
+            <a href="opd_form.html" class="slots-popup" id="slotsPopup"></a>
+        </div>
+
+        <!-- BELLOW CARD  -->
+        <div class="particularDoctorDetailsCardParent mt-10">
+            <div
+                class="block rounded-lg particularDoctorDetailsCard shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                <div class="border-b-2 text-xl border-[#0000002d] px-6 py-3 text-black">
+                    lorem Lorem
+                </div>
+                <div class="p-6">
+                    <!-- <p class="text-base text-black">
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                </p> -->
+                    <ul>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="block rounded-lg particularDoctorDetailsCard shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                <div class="border-b-2 text-xl border-[#0000002d] px-6 py-3 text-black">
+                    lorem Lorem
+                </div>
+                <div class="p-6">
+                    <!-- <p class="text-base text-black">
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                </p> -->
+                    <ul>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="block rounded-lg particularDoctorDetailsCard shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                <div class="border-b-2 text-xl border-[#0000002d] px-6 py-3 text-black">
+                    lorem Lorem
+                </div>
+                <div class="p-6">
+                    <!-- <p class="text-base text-black">
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                </p> -->
+                    <ul>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li><i class="ri-arrow-right-line"></i>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    const dayData = [
+        {
+            date: 'Sun 04-May',
+            slots: {
+                morning: ['10:00 AM', '10:30 AM'],
+                afternoon: ['12:00 PM'],
+                evening: ['05:00 PM', '05:30 PM']
+            }
+        },
+        {
+            date: 'Mon 05-May',
+            slots: {
+                morning: ['09:00 AM', '09:30 AM'],
+                afternoon: ['01:00 PM'],
+                evening: ['06:00 PM']
+            }
+        },
+        {
+            date: 'Tue 06-May',
+            slots: {
+                morning: ['11:00 AM'],
+                afternoon: ['02:00 PM'],
+                evening: []
+            }
+        },
+        {
+            date: 'Wed 07-May',
+            slots: {
+                morning: ['08:00 AM'],
+                afternoon: [],
+                evening: ['07:00 PM']
+            }
+        }
+    ];
+
+    const daySelector = document.getElementById('daySelector');
+    const slotsPopup = document.getElementById('slotsPopup');
+
+    function populateDays() {
+        dayData.forEach((day, index) => {
+            const opt = document.createElement('option');
+            opt.value = index;
+            opt.textContent = day.date;
+            daySelector.appendChild(opt);
+        });
+    }
+
+    function showSlots(index) {
+        const data = dayData[index];
+        let html = '';
+        for (const period in data.slots) {
+            if (data.slots[period].length > 0) {
+                html += `<div class="time-group">
+            <h4>${capitalize(period)}</h4>
+            ${data.slots[period].map(t => `<span class="slot">${t}</span>`).join('')}
+          </div>`;
+            }
+        }
+        slotsPopup.innerHTML = html;
+        slotsPopup.style.display = 'block';
+    }
+
+    function capitalize(s) {
+        return s.charAt(0).toUpperCase() + s.slice(1);
+    }
+
+    daySelector.addEventListener('change', (e) => {
+        showSlots(e.target.value);
+    });
+
+    populateDays();
+</script>
+
+</html>
