@@ -577,7 +577,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .tabParent {
-    background: rgb(243 244 246);
+    background: var(--lightBlue);
     padding: 12px;
 }
 
