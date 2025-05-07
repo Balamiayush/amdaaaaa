@@ -84,470 +84,231 @@
         <!-- xxxxxxxxxxxxxxxxxxxxxxx -->
 
         <!-- navbaar -->
-        <div class="megaMenu">
-            <div class="hmParent">
-                <img src="https://www.amda.org.np/image/logo.png" alt="" class="mobileLogo">
-                <div class="hamburgerFirstNav">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+        <div class="megaMenu bg-white shadow-md">
+            <!-- Mobile header -->
+            <div class="flex justify-between items-center p-4 lg:hidden">
+                <img src="https://www.amda.org.np/image/logo.png" alt="Logo" class="h-10">
+                <button class="hamburger focus:outline-none" id="mobileMenuButton">
+                    <span class="block w-6 h-0.5 bg-gray-800 mb-1.5 transition-all"></span>
+                    <span class="block w-6 h-0.5 bg-gray-800 mb-1.5 transition-all"></span>
+                    <span class="block w-6 h-0.5 bg-gray-800 transition-all"></span>
+                </button>
             </div>
-            <nav class="navBarMenuWithSearch hideNavinMoble pb-[9px]" id="navBarMain">
-                <a href=""><img src="https://www.amda.org.np/image/logo.png" alt="" class="llogo desktopLogo"></a>
-
-                <div class="navDiv">
-                    <a href="#" class="font-semibold homeLink firstNavOptions">
-                        <div class="group inline-block homeLinkDiv">
-
-                            <span class="pr-1 font-semibold  textAlignStart">Home</span>
-                        </div>
+    
+            <!-- Desktop Navbar -->
+            <nav class="hidden lg:flex items-center justify-between px-6 py-3" id="navBarMain">
+                <a href="/"><img src="https://www.amda.org.np/image/logo.png" alt="Logo" class="h-12"></a>
+    
+                <div class="flex items-center space-x-6">
+                    <!-- Home Link -->
+                    <a href="#" class="font-semibold text-gray-800 hover:text-blue-700 transition-colors">
+                        Home
                     </a>
-                    <!-- ABOUT US  -->
-                    <div class="group inline-block firstNavOptions">
-                        <button
-                            class="fisrNavSvgParentbtn outline-none focus:outline-none px-3 py-1 rounded-sm flex items-center ">
-                            <span class="pr-1 font-semibold ">About Us</span>
-                            <span>
-                                <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
-                  transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path
-                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <ul class="AboutUsUl  rounded-sm transform scale-0 group-hover:scale-100 absolute 
-            transition duration-150 ease-in-out origin-top ">
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                            </li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Testing</li>
-                        </ul>
-                    </div>
-                    <!-- WHAT WE DO  -->
-                    <div class="group inline-block firstNavOptions">
-                        <button
-                            class="fisrNavSvgParentbtn outline-none focus:outline-none  px-3 py-1 rounded-sm flex items-center ">
-                            <span class="pr-1 font-semibold ">What we do</span>
-                            <span>
-                                <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
-                      transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path
-                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <ul class=" whatWeDoUl  rounded-sm transform scale-0 group-hover:scale-100 absolute 
-                transition duration-150 ease-in-out origin-top ">
-
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
-                transition duration-150 ease-in-out origin-top-left
-                
-                ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
-                transition duration-150 ease-in-out origin-top-left
-                
-                ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
-                transition duration-150 ease-in-out origin-top-left
-                
-                ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
-                transition duration-150 ease-in-out origin-top-left
-                
-                ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
-                transition duration-150 ease-in-out origin-top-left
-                
-                ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
-                transition duration-150 ease-in-out origin-top-left
-                
-                ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
-                transition duration-150 ease-in-out origin-top-left
-                
-                ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
-                transition duration-150 ease-in-out origin-top-left
-                
-                ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- RESOURCES  -->
-                    <div class="group inline-block firstNavOptions">
-                        <button
-                            class="fisrNavSvgParentbtn outline-none focus:outline-none  px-3 py-1 rounded-sm flex items-center ">
-                            <span class="pr-1 font-semibold ">Resources</span>
-                            <span>
-                                <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
-                      transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path
-                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <ul class=" resourcesUl  rounded-sm transform scale-0 group-hover:scale-100 absolute 
-                transition duration-150 ease-in-out origin-top ">
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">DevOps</li>
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Testing</li>
-
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class=" nestedResourcesUl rounded-sm absolute top-0 right-0 
-                transition duration-150 ease-in-out origin-top-left
-                
-                ">
-                                    <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                        <button
-                                            class="w-full text-left flex items-center outline-none focus:outline-none">
-                                            <span class="pr-1 ">Python</span>
-                                            <span class="mr-auto">
-                                                <svg class="fill-current h-4 w-4
-                              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 20 20">
-                                                    <path
-                                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                                </svg>
-                                            </span>
-                                        </button>
-                                        <ul class="nestedUL rounded-sm absolute top-0 right-0 
-                    transition duration-150 ease-in-out origin-top-left
-                    
-                    ">
-                                            <li class="px-3 py-1 hover:bg-[#002d71a3]">2.7</li>
-                                            <li class="px-3 py-1 hover:bg-[#002d71a3]">2.7</li>
-                                            <li class="px-3 py-1 hover:bg-[#002d71a3]">2.7</li>
-                                            <li class="px-3 py-1 hover:bg-[#002d71a3]">3+</li>
-                                        </ul>
-                                    </li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- PUBLICATION -->
-                    <div class="group inline-block firstNavOptions">
-                        <button
-                            class="fisrNavSvgParentbtn outline-none focus:outline-none  px-3 py-1 rounded-sm flex items-center ">
-                            <span class="pr-1 font-semibold ">Publication</span>
-                            <span>
-                                <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
-          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path
-                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <ul class=" publicationUl  rounded-sm transform scale-0 group-hover:scale-100 absolute 
-    transition duration-150 ease-in-out origin-top ">
-
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL rounded-sm absolute top-0 right-0 
-    transition duration-150 ease-in-out origin-top-left
     
-    ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL rounded-sm absolute top-0 right-0 
-    transition duration-150 ease-in-out origin-top-left
-    
-    ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL rounded-sm absolute top-0 right-0 
-    transition duration-150 ease-in-out origin-top-left
-    
-    ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL rounded-sm absolute top-0 right-0 
-    transition duration-150 ease-in-out origin-top-left
-    
-    ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
-
-                            <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                            <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                        </ul>
-                    </div>
-
-                    <!-- VACANCY -->
-                    <div class="group inline-block firstNavOptions">
-                        <button
-                            class="fisrNavSvgParentbtn outline-none focus:outline-none px-3 py-1 rounded-sm flex items-center ">
-                            <span class="pr-1 font-semibold ">Vacancy</span>
-                            <span>
-                                <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
-                  transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path
-                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                </svg>
-                            </span>
+                    <!-- About Us Dropdown -->
+                    <div class="group relative">
+                        <button class="font-semibold text-gray-800 hover:text-blue-700 flex items-center focus:outline-none transition-colors">
+                            About Us
+                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
-                        <ul class="AboutUsUl  rounded-sm transform scale-0 group-hover:scale-100 absolute 
-            transition duration-150 ease-in-out origin-top ">
-                            <li class="rounded-sm px-3 py-1 hover:bg-[#002d71a3]">Programming</li>
-
+                        <ul class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Programming</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Programming</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Programming</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">DevOps</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Testing</a></li>
                         </ul>
                     </div>
-
+    
+                    <!-- What We Do Dropdown -->
+                    <div class="group relative">
+                        <button class="font-semibold text-gray-800 hover:text-blue-700 flex items-center focus:outline-none transition-colors">
+                            What we do
+                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                            <!-- Nested dropdown -->
+                            <li class="group relative">
+                                <button class="w-full text-left px-4 py-2 text-gray-800 hover-bg-custom rounded-sm flex justify-between items-center">
+                                    Languages
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu absolute left-full top-0 ml-1 w-48 bg-white rounded-md shadow-lg z-10">
+                                    <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Javascript</a></li>
+                                    <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Go</a></li>
+                                    <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Rust</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Service 1</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Service 2</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Resources Dropdown -->
+                    <div class="group relative">
+                        <button class="font-semibold text-gray-800 hover:text-blue-700 flex items-center focus:outline-none transition-colors">
+                            Resources
+                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Resource 1</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Resource 2</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Resource 3</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Publication Dropdown -->
+                    <div class="group relative">
+                        <button class="font-semibold text-gray-800 hover:text-blue-700 flex items-center focus:outline-none transition-colors">
+                            Publication
+                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Publication 1</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Publication 2</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Publication 3</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Vacancy Dropdown -->
+                    <div class="group relative">
+                        <button class="font-semibold text-gray-800 hover:text-blue-700 flex items-center focus:outline-none transition-colors">
+                            Vacancy
+                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Job 1</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover-bg-custom rounded-sm">Job 2</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- SEARCH  -->
-                <div class="flex SearchSecNav">
-                    <div
-                        class="flex w-10 searchhSecParent items-center justify-center rounded-tl-lg rounded-bl-lg -r -gray-200 p-5">
-                        <svg viewBox="0 0 20 20" aria-hidden="true"
-                            class="pointer-events-none absolute w-5 fill-gray-500 transition">
-                            <path
-                                d="M16.72 17.78a.75.75 0 1 0 1.06-1.06l-1.06 1.06ZM9 14.5A5.5 5.5 0 0 1 3.5 9H2a7 7 0 0 0 7 7v-1.5ZM3.5 9A5.5 5.5 0 0 1 9 3.5V2a7 7 0 0 0-7 7h1.5ZM9 3.5A5.5 5.5 0 0 1 14.5 9H16a7 7 0 0 0-7-7v1.5Zm3.89 10.45 3.83 3.83 1.06-1.06-3.83-3.83-1.06 1.06ZM14.5 9a5.48 5.48 0 0 1-1.61 3.89l1.06 1.06A6.98 6.98 0 0 0 16 9h-1.5Zm-1.61 3.89A5.48 5.48 0 0 1 9 14.5V16a6.98 6.98 0 0 0 4.95-2.05l-1.06-1.06Z">
-                            </path>
-                        </svg>
+    
+                <!-- Search Section -->
+                <div class="flex items-center">
+                    <div class="relative flex">
+                        <input type="text" placeholder="Search" class="border border-gray-300 rounded-l-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-40">
+                        <button class="bg-[#002d71] text-white rounded-r-lg px-4 py-2 hover:bg-blue-800 transition-colors">
+                            Search
+                        </button>
                     </div>
-                    <input type="text" class="w-full searchInput max-w-[160px] pl-2 text-base font-semibold outline-0"
-                        placeholder="Search" id="">
-                    <input type="button" value="Search"
-                        class="bg-[#002d71] p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 transition-colors">
                 </div>
             </nav>
+    
+            <!-- Mobile Menu -->
+            <div class="mobile-menu lg:hidden bg-white" id="mobileMenu">
+                <div class="px-4 py-2 space-y-2">
+                    <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Home</a>
+                    
+                    <!-- About Us Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="aboutDropdown">
+                            About Us
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content pl-4" id="aboutDropdown">
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">About Item 1</a>
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">About Item 2</a>
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">About Item 3</a>
+                        </div>
+                    </div>
+                    
+                    <!-- What We Do Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="whatWeDoDropdown">
+                            What we do
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content pl-4" id="whatWeDoDropdown">
+                            <!-- Nested dropdown for mobile -->
+                            <div class="mobile-dropdown">
+                                <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="languagesDropdown">
+                                    Languages
+                                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="mobile-dropdown-content pl-4" id="languagesDropdown">
+                                    <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">JavaScript</a>
+                                    <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Python</a>
+                                    <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Go</a>
+                                </div>
+                            </div>
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Service 1</a>
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Service 2</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Resources Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="resourcesDropdown">
+                            Resources
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content pl-4" id="resourcesDropdown">
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Resource 1</a>
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Resource 2</a>
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Resource 3</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Publication Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="publicationDropdown">
+                            Publication
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content pl-4" id="publicationDropdown">
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Publication 1</a>
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Publication 2</a>
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Publication 3</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Vacancy Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="vacancyDropdown">
+                            Vacancy
+                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content pl-4" id="vacancyDropdown">
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Job 1</a>
+                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Job 2</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Search -->
+                    <div class="pt-2 pb-4 px-4">
+                        <div class="relative flex">
+                            <input type="text" placeholder="Search" class="border border-gray-300 rounded-l-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full">
+                            <button class="bg-[#002d71] text-white rounded-r-lg px-4 py-2 hover:bg-blue-800 transition-colors">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="marquee-container relative overflow-hidden w-full bg-[#003D96] h-12 flex items-center group">
             <span
