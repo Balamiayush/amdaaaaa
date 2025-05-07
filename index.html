@@ -93,7 +93,8 @@
                     <span></span>
                 </div>
             </div>
-            <nav class="navBarMenuWithSearch hidden lg:flex items-center  hideNavinMoble pb-[9px]" id="navBarMain">
+            <!-- Desktop Navigation - Keep as is -->
+            <nav class="navBarMenuWithSearch hidden lg:flex items-center hideNavinMoble pb-[9px]" id="navBarMain">
                 <a href=""><img src="https://www.amda.org.np/image/logo.png" alt="" class="llogo desktopLogo"></a>
 
                 <div class="navDiv">
@@ -299,28 +300,6 @@
                                     <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
                                 </ul>
                             </li>
-                            <li class="rounded-sm relative px-3 py-1 hover:bg-[#002d71a3]">
-                                <button class="w-full text-left flex items-center outline-none focus:outline-none">
-                                    <span class="pr-1 ">Langauges</span>
-                                    <span class="mr-auto">
-                                        <svg class="fill-current h-4 w-4
-                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="nestedUL  rounded-sm absolute top-0 right-0 
-                transition duration-150 ease-in-out origin-top-left
-                
-                ">
-
-                                    <!-- D2 -->
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
-                                    <li class="px-3 py-1 hover:bg-[#002d71a3]">Rust</li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
 
@@ -430,7 +409,6 @@
     transition duration-150 ease-in-out origin-top-left
     
     ">
-
                                     <!-- D2 -->
                                     <li class="px-3 py-1 hover:bg-[#002d71a3]">Javascript</li>
                                     <li class="px-3 py-1 hover:bg-[#002d71a3]">Go</li>
@@ -547,105 +525,129 @@
                         class="bg-[#002d71] p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 transition-colors">
                 </div>
             </nav>
-            <!-- mobile nav bar -->
-            <div class="mobile-menu lg:hidden bg-white" id="mobileMenu">
-                <div class="px-4 py-2 space-y-2">
-                    <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Home</a>
-                    
-                    <!-- About Us Mobile Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="aboutDropdown">
-                            About Us
-                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+
+            <!-- Mobile Navigation -->
+            <div class="lg:hidden">
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="fixed top-4 right-4 z-50 p-2 rounded-md hover:bg-gray-100 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Mega Menu -->
+                <div id="mobileMegaMenu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+                    <!-- Mobile Menu Header -->
+                    <div class="flex items-center justify-between p-4 border-b">
+                        <img src="https://www.amda.org.np/image/logo.png" alt="Logo" class="h-8">
+                        <button id="closeMobileMenu" class="p-2 rounded-md hover:bg-gray-100">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                         </button>
-                        <div class="mobile-dropdown-content pl-4" id="aboutDropdown">
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">About Item 1</a>
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">About Item 2</a>
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">About Item 3</a>
-                        </div>
                     </div>
-                    
-                    <!-- What We Do Mobile Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="whatWeDoDropdown">
-                            What we do
-                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="mobile-dropdown-content pl-4" id="whatWeDoDropdown">
-                            <!-- Nested dropdown for mobile -->
-                            <div class="mobile-dropdown">
-                                <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="languagesDropdown">
-                                    Languages
-                                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </button>
-                                <div class="mobile-dropdown-content pl-4" id="languagesDropdown">
-                                    <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">JavaScript</a>
-                                    <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Python</a>
-                                    <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Go</a>
-                                </div>
-                            </div>
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Service 1</a>
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Service 2</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Resources Mobile Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="resourcesDropdown">
-                            Resources
-                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="mobile-dropdown-content pl-4" id="resourcesDropdown">
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Resource 1</a>
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Resource 2</a>
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Resource 3</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Publication Mobile Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="publicationDropdown">
-                            Publication
-                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="mobile-dropdown-content pl-4" id="publicationDropdown">
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Publication 1</a>
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Publication 2</a>
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Publication 3</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Vacancy Mobile Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button class="mobile-dropdown-btn w-full text-left py-2 px-4 text-gray-800 hover:bg-blue-50 rounded flex justify-between items-center" data-target="vacancyDropdown">
-                            Vacancy
-                            <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="mobile-dropdown-content pl-4" id="vacancyDropdown">
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Job 1</a>
-                            <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-blue-50 rounded">Job 2</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Mobile Search -->
-                    <div class="pt-2 pb-4 px-4">
-                        <div class="relative flex">
-                            <input type="text" placeholder="Search" class="border border-gray-300 rounded-l-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full">
-                            <button class="bg-blue-600 text-white rounded-r-lg px-4 py-2 hover:bg-blue-700 transition-colors">
-                                Search
+
+                    <!-- Mobile Menu Content -->
+                    <div class="overflow-y-auto h-[calc(100vh-64px)]">
+                        <!-- Home -->
+                        <a href="#" class="block px-4 py-3 text-lg font-semibold border-b hover:bg-gray-50">
+                            Home
+                        </a>
+
+                        <!-- About Us -->
+                        <div class="border-b">
+                            <button class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50" data-target="aboutMobile">
+                                About Us
+                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
                             </button>
+                            <div id="aboutMobile" class="hidden bg-gray-50">
+                                <a hr   ef="#" class="block px-8 py-2 hover:bg-gray-100">About Item 1</a>
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">About Item 2</a>
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">About Item 3</a>
+                            </div>
+                        </div>
+
+                        <!-- What We Do -->
+                        <div class="border-b">
+                            <button class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50" data-target="whatWeDoMobile">
+                                What We Do
+                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="whatWeDoMobile" class="hidden bg-gray-50">
+                                <div class="border-b">
+                                    <button class="mobile-submenu-item w-full px-8 py-2 flex justify-between items-center hover:bg-gray-100" data-target="languagesMobile">
+                                        Languages
+                                        <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="languagesMobile" class="hidden bg-gray-100">
+                                        <a href="#" class="block px-12 py-2 hover:bg-gray-200">JavaScript</a>
+                                        <a href="#" class="block px-12 py-2 hover:bg-gray-200">Python</a>
+                                        <a href="#" class="block px-12 py-2 hover:bg-gray-200">Go</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">Service 1</a>
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">Service 2</a>
+                            </div>
+                        </div>
+
+                        <!-- Resources -->
+                        <div class="border-b">
+                            <button class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50" data-target="resourcesMobile">
+                                Resources
+                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="resourcesMobile" class="hidden bg-gray-50">
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">Resource 1</a>
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">Resource 2</a>
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">Resource 3</a>
+                            </div>
+                        </div>
+
+                        <!-- Publication -->
+                        <div class="border-b">
+                            <button class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50" data-target="publicationMobile">
+                                Publication
+                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="publicationMobile" class="hidden bg-gray-50">
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">Publication 1</a>
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">Publication 2</a>
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">Publication 3</a>
+                            </div>
+                        </div>
+
+                        <!-- Vacancy -->
+                        <div class="border-b">
+                            <button class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50" data-target="vacancyMobile">
+                                Vacancy
+                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="vacancyMobile" class="hidden bg-gray-50">
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">Job 1</a>
+                                <a href="#" class="block px-8 py-2 hover:bg-gray-100">Job 2</a>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Search -->
+                        <div class="p-4 border-b">
+                            <div class="flex">
+                                <input type="text" placeholder="Search" class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <button class="px-4 py-2 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors">
+                                    Search
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -756,8 +758,8 @@
                     and
                     marginalized people under the slogan:
                     <br>
-                    <span class="italic font-medium text-[#003D96] block mt-2">“Better quality of life for better
-                        future”.</span>
+                    <span class="italic font-medium text-[#003D96] block mt-2">"Better quality of life for better
+                        future".</span>
                 </p>
 
             </div>
@@ -1451,5 +1453,54 @@
 <!-- JAVASCRITP FILES  -->
 <script src="assets/js/script.js"></script>
 <script src="assets/js/custom.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const mobileMegaMenu = document.getElementById('mobileMegaMenu');
+        const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
+        const mobileSubmenuItems = document.querySelectorAll('.mobile-submenu-item');
+
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMegaMenu.classList.remove('translate-x-full');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMegaMenu.classList.add('translate-x-full');
+        });
+
+        // Handle main menu items
+        mobileMenuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const targetId = item.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                const arrow = item.querySelector('svg');
+                
+                // Toggle content
+                targetContent.classList.toggle('hidden');
+                
+                // Rotate arrow
+                arrow.classList.toggle('rotate-180');
+            });
+        });
+
+        // Handle submenu items
+        mobileSubmenuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const targetId = item.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                const arrow = item.querySelector('svg');
+                
+                // Toggle content
+                targetContent.classList.toggle('hidden');
+                
+                // Rotate arrow
+                arrow.classList.toggle('rotate-180');
+            });
+        });
+    });
+</script>
 
 </html>
