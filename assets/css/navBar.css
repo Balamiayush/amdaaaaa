@@ -430,3 +430,44 @@ transform: rotate(-45deg) translate(10px, -10px);
         max-height: 4rem;
     }
 }
+
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.group:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.mobile-menu.open {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+}
+
+.mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.mobile-dropdown-content.open {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+}
+
+/* Custom hover colors */
+.hover-bg-custom:hover {
+    background-color: rgba(0, 45, 113, 0.64);
+}
