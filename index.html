@@ -36,7 +36,7 @@
         <i class="ri-close-line text-[37px] text-red-500 cursor-pointer leading-none" id="closeAlert"></i>
     </div>
 
-    <div class="loadinggg h-screen top-0  flex w-full fixed bottom-0 z-[20000] flex justify-center">
+    <!-- <div class="loadinggg h-screen top-0  flex w-full fixed bottom-0 z-[20000] flex justify-center">
         <div class="h-screen w-[25%] bg-blue-600 "></div>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
         <div class="h-screen w-[25%] bg-blue-600 "></div>
@@ -45,7 +45,7 @@
         <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
         <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
         <div class="h-screen w-[25%] bg-blue-600 hidden lg:block "></div>
-    </div>
+    </div> -->
     <!-- Top Bar (visible on all screens) -->
     <div class="heroSection">
         <div class="w-full bg-[#003D96] text-white text-xs lg:text-sm">
@@ -87,11 +87,6 @@
         <div class="megaMenu">
             <div class="hmParent">
                 <img src="https://www.amda.org.np/image/logo.png" alt="" class="mobileLogo">
-                <div class="hamburgerFirstNav">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
             <!-- Desktop Navigation ss- Keep as is -->
             <nav class="navBarMenuWithSearch hidden lg:flex items-center hideNavinMoble pb-[9px]" id="navBarMain">
@@ -529,20 +524,24 @@
             <!-- Mobile Navigation -->
             <div class="lg:hidden">
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="fixed top-4 right-4 z-50 p-2 rounded-md hover:bg-gray-100 focus:outline-none">
+                <button id="mobileMenuBtn"
+                    class="fixed flex items-center justify-center top-[9vw] right-4 z-50 p-2 rounded-md hover:bg-gray-100 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
 
                 <!-- Mobile Mega Menu -->
-                <div id="mobileMegaMenu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+                <div id="mobileMegaMenu"
+                    class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
                     <!-- Mobile Menu Header -->
                     <div class="flex items-center justify-between p-4 border-b">
                         <img src="https://www.amda.org.np/image/logo.png" alt="Logo" class="h-8">
-                        <button id="closeMobileMenu" class="p-2 rounded-md hover:bg-gray-100">
+                        <button id="closeMobileMenu" class="p-2 rounded-md hover:bg-gray-100 top-[9vw]">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                         </button>
                     </div>
@@ -556,14 +555,18 @@
 
                         <!-- About Us -->
                         <div class="border-b">
-                            <button class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50" data-target="aboutMobile">
+                            <button
+                                class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50"
+                                data-target="aboutMobile">
                                 About Us
-                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div id="aboutMobile" class="hidden bg-gray-50">
-                                <a hr   ef="#" class="block px-8 py-2 hover:bg-gray-100">About Item 1</a>
+                                <a hr ef="#" class="block px-8 py-2 hover:bg-gray-100">About Item 1</a>
                                 <a href="#" class="block px-8 py-2 hover:bg-gray-100">About Item 2</a>
                                 <a href="#" class="block px-8 py-2 hover:bg-gray-100">About Item 3</a>
                             </div>
@@ -571,18 +574,26 @@
 
                         <!-- What We Do -->
                         <div class="border-b">
-                            <button class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50" data-target="whatWeDoMobile">
+                            <button
+                                class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50"
+                                data-target="whatWeDoMobile">
                                 What We Do
-                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div id="whatWeDoMobile" class="hidden bg-gray-50">
                                 <div class="border-b">
-                                    <button class="mobile-submenu-item w-full px-8 py-2 flex justify-between items-center hover:bg-gray-100" data-target="languagesMobile">
+                                    <button
+                                        class="mobile-submenu-item w-full px-8 py-2 flex justify-between items-center hover:bg-gray-100"
+                                        data-target="languagesMobile">
                                         Languages
-                                        <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        <svg class="w-4 h-4 transform transition-transform" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
                                         </svg>
                                     </button>
                                     <div id="languagesMobile" class="hidden bg-gray-100">
@@ -598,10 +609,14 @@
 
                         <!-- Resources -->
                         <div class="border-b">
-                            <button class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50" data-target="resourcesMobile">
+                            <button
+                                class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50"
+                                data-target="resourcesMobile">
                                 Resources
-                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div id="resourcesMobile" class="hidden bg-gray-50">
@@ -613,10 +628,14 @@
 
                         <!-- Publication -->
                         <div class="border-b">
-                            <button class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50" data-target="publicationMobile">
+                            <button
+                                class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50"
+                                data-target="publicationMobile">
                                 Publication
-                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div id="publicationMobile" class="hidden bg-gray-50">
@@ -628,10 +647,14 @@
 
                         <!-- Vacancy -->
                         <div class="border-b">
-                            <button class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50" data-target="vacancyMobile">
+                            <button
+                                class="mobile-menu-item w-full px-4 py-3 text-lg font-semibold flex justify-between items-center hover:bg-gray-50"
+                                data-target="vacancyMobile">
                                 Vacancy
-                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div id="vacancyMobile" class="hidden bg-gray-50">
@@ -643,8 +666,10 @@
                         <!-- Mobile Search -->
                         <div class="p-4 border-b">
                             <div class="flex">
-                                <input type="text" placeholder="Search" class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <button class="px-4 py-2 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors">
+                                <input type="text" placeholder="Search"
+                                    class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <button
+                                    class="px-4 py-2 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors">
                                     Search
                                 </button>
                             </div>
@@ -1454,6 +1479,7 @@
 <script src="assets/js/script.js"></script>
 <script src="assets/js/custom.js"></script>
 
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1502,5 +1528,10 @@
         });
     });
 </script>
+<style>
+.hiddenn{
+    display: none !important;
+}
+</style>
 
 </html>
