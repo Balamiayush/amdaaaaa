@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const lenis = new Lenis({
                 lerp: 0.1,
                 smooth: true,
-                direction: 'vertical'
             });
 
             const raf = (time) => {
