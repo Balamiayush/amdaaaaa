@@ -84,7 +84,7 @@
         <!-- xxxxxxxxxxxxxxxxxxxxxxx -->
 
         <!-- navbaar -->
-        <div class="megaMenu">
+        <div class="megaMenu ">
             <div class="hmParent">
                 <img src="https://www.amda.org.np/image/logo.png" alt="" class="mobileLogo">
             </div>
@@ -1526,6 +1526,18 @@
                 arrow.classList.toggle('rotate-180');
             });
         });
+    });
+    window.addEventListener('scroll', function() {
+        const megaMenu = document.querySelector('.megaMenu');
+        if (window.scrollY > 300) {
+            megaMenu.style.position = 'fixed';
+            megaMenu.style.top = '0';
+            megaMenu.style.width = '100%';
+            megaMenu.style.zIndex = '1000';
+            megaMenu.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        } else {
+            megaMenu.style.position = 'relative';
+        }
     });
 </script>
 <style>

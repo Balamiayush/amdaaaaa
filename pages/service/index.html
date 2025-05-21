@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMDA Nepal - Association of Medical Doctors of Asia-Nepal</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'amda-primary': '#003D96',
+                        'amda-secondary': '#0391FF',
+                        'greyies-white': '#e5e5e5db',
+                        'light-blue': '#c4dbff',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .animate-delay-100 { animation-delay: 0.1s; }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-300 { animation-delay: 0.3s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .hover-pulse:hover {
+            animation: pulse 1s infinite;
+        }
+    </style>
+</head>
+<body class="">
+<section class="relative bg-white">
+    <div class="absolute inset-0 bg-gradient-to-r from-amda-primary/80 via-amda-secondary/60 to-transparent z-10"></div>
+    <div class="container mx-auto px-4 py-12 md:py-24 relative z-20 flex flex-col md:flex-row items-center">
+        <!-- Left: Text Content -->
+        <div class="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 animate-fade-in drop-shadow-lg">
+                Dedicated to Healthcare Excellence
+            </h2>
+            <p class="text-lg md:text-2xl text-white mb-8 max-w-xl animate-fade-in animate-delay-100 drop-shadow">
+                Providing quality healthcare services through dedicated medical professionals across Nepal.
+            </p>
+            <a href="#" class="bg-white text-amda-primary font-bold py-3 px-8 rounded-full shadow-lg hover:bg-amda-secondary hover:text-white transition duration-300 animate-fade-in animate-delay-200">
+                Learn More
+            </a>
+        </div>
+        <!-- Right: Image -->
+        <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white animate-fade-in animate-delay-300">
+                <img src="/api/placeholder/600/400" alt="AMDA Conference" class="w-full h-72 md:h-96 object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Quick Info Cards -->
+   <!-- Quick Info Cards -->
+<section class="py-16 bg-gradient-to-br from-amda-primary/10 via-white to-amda-secondary/10">
+    <div class="container mx-auto px-4">
+        <div class="mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-amda-primary mb-2 animate-fade-in">Quick Info</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in animate-delay-100">
+                Explore our services, connect with our team, and find the right healthcare professional for you.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="group relative bg-white rounded-2xl shadow-lg p-8 overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] animate-fade-in">
+                <span class="absolute -top-8 -right-8 bg-amda-primary/10 rounded-full w-32 h-32 z-0 group-hover:scale-[1.2] group-hover:opacity-80 transition-all duration-700"></span>
+                <div class="relative z-10 flex items-center justify-center mb-6">
+                    <div class="bg-amda-primary p-4 rounded-full text-white shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
+                        <i class="fas fa-calendar-alt text-2xl"></i>
+                    </div>
+                </div>
+                <h3 class="text-xl font-semibold text-amda-primary mb-3 text-center group-hover:text-amda-secondary transition-colors duration-300">Our Events</h3>
+                <p class="text-gray-600 mb-6 text-center group-hover:text-gray-800 transition-colors duration-300">Join our upcoming medical camps, conferences, and community health initiatives throughout Nepal.</p>
+                <div class="flex justify-center">
+                    <a href="#" class="inline-flex items-center px-5 py-2 bg-amda-secondary text-white rounded-full font-semibold shadow hover:bg-amda-primary transition-all duration-300 group-hover:scale-105 group-hover:shadow-md">
+                        View Calendar
+                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="group relative bg-white rounded-2xl shadow-lg p-8 overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] animate-fade-in animate-delay-100">
+                <span class="absolute -top-8 -right-8 bg-amda-secondary/10 rounded-full w-32 h-32 z-0 group-hover:scale-[1.2] group-hover:opacity-80 transition-all duration-700"></span>
+                <div class="relative z-10 flex items-center justify-center mb-6">
+                    <div class="bg-amda-primary p-4 rounded-full text-white shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
+                        <i class="fas fa-phone-alt text-2xl"></i>
+                    </div>
+                </div>
+                <h3 class="text-xl font-semibold text-amda-primary mb-3 text-center group-hover:text-amda-secondary transition-colors duration-300">Contact Us</h3>
+                <p class="text-gray-600 mb-6 text-center group-hover:text-gray-800 transition-colors duration-300">Have questions or need assistance? Our team is ready to help you with any inquiries.</p>
+                <div class="flex justify-center">
+                    <a href="#" class="inline-flex items-center px-5 py-2 bg-amda-secondary text-white rounded-full font-semibold shadow hover:bg-amda-primary transition-all duration-300 group-hover:scale-105 group-hover:shadow-md">
+                        Get in Touch
+                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="group relative bg-white rounded-2xl shadow-lg p-8 overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] animate-fade-in animate-delay-200">
+                <span class="absolute -top-8 -right-8 bg-amda-primary/10 rounded-full w-32 h-32 z-0 group-hover:scale-[1.2] group-hover:opacity-80 transition-all duration-700"></span>
+                <div class="relative z-10 flex items-center justify-center mb-6">
+                    <div class="bg-amda-primary p-4 rounded-full text-white shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
+                        <i class="fas fa-user-md text-2xl"></i>
+                    </div>
+                </div>
+                <h3 class="text-xl font-semibold text-amda-primary mb-3 text-center group-hover:text-amda-secondary transition-colors duration-300">Find a Doctor</h3>
+                <p class="text-gray-600 mb-6 text-center group-hover:text-gray-800 transition-colors duration-300">Connect with our network of specialized healthcare professionals across various disciplines.</p>
+                <div class="flex justify-center">
+                    <a href="#" class="inline-flex items-center px-5 py-2 bg-amda-secondary text-white rounded-full font-semibold shadow hover:bg-amda-primary transition-all duration-300 group-hover:scale-105 group-hover:shadow-md">
+                        Search Specialists
+                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- About Us Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amda-primary">About AMDA Nepal</h2>
+                <div class="w-24 h-1 bg-amda-secondary mx-auto mt-4 mb-6"></div>
+                <p class="max-w-3xl mx-auto text-gray-600">The Association of Medical Doctors of Asia-Nepal (AMDA Nepal) is dedicated to providing quality healthcare services and medical assistance throughout Nepal.</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-8 animate-fade-in">
+                <div class="prose max-w-none text-gray-700">
+                    <p>AMDA Nepal was established with the mission to improve healthcare access and quality across Nepal, especially in underserved and remote areas. Our network of dedicated medical professionals works tirelessly to bring essential healthcare services to communities in need.</p>
+                    <p class="mt-4">Through our various centers of excellence and specialized programs, we aim to address key healthcare challenges facing Nepal today. From disaster response to preventive care initiatives, AMDA Nepal is at the forefront of healthcare innovation and service delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Centers of Excellence -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amda-primary">Centers Of Excellence</h2>
+                <div class="w-24 h-1 bg-amda-secondary mx-auto mt-4 mb-6"></div>
+                <p class="max-w-3xl mx-auto text-gray-600">Our specialized centers provide targeted healthcare services with the highest standards of quality and care.</p>
+            </div>
+            
+            <div x-data="{activeSlide: 0}" class="relative">
+                <!-- Previous button -->
+                <button @click="activeSlide = activeSlide === 0 ? 2 : activeSlide - 1" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-10 text-amda-primary hover:text-amda-secondary transition duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                
+                <div class="overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${activeSlide * 100}%)`">
+                        <!-- Center 1 -->
+                        <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+                            <div class="bg-gray-100 rounded-lg p-6 hover:shadow-md transition duration-300 hover-pulse">
+                                <div class="mb-4 flex justify-center">
+                                    <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Primary Care" class="rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-amda-primary mb-2">Primary Care Center</h3>
+                                <p class="text-gray-600 text-center">Comprehensive primary healthcare services for patients of all ages.</p>
+                            </div>
+                            
+                            <div class="bg-gray-100 rounded-lg p-6 hover:shadow-md transition duration-300 hover-pulse">
+                                <div class="mb-4 flex justify-center">
+                                    <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Maternal Health" class="rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-amda-primary mb-2">Maternal Health Center</h3>
+                                <p class="text-gray-600 text-center">Specialized care for mothers and newborns throughout pregnancy and beyond.</p>
+                            </div>
+                            
+                            <div class="bg-gray-100 rounded-lg p-6 hover:shadow-md transition duration-300 hover-pulse">
+                                <div class="mb-4 flex justify-center">
+                                    <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Emergency Response" class="rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-amda-primary mb-2">Emergency Response Unit</h3>
+                                <p class="text-gray-600 text-center">Rapid medical response for disasters and emergencies throughout Nepal.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Center 2 -->
+                        <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+                            <div class="bg-gray-100 rounded-lg p-6 hover:shadow-md transition duration-300 hover-pulse">
+                                <div class="mb-4 flex justify-center">
+                                    <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Pediatric Care" class="rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-amda-primary mb-2">Pediatric Care Center</h3>
+                                <p class="text-gray-600 text-center">Dedicated healthcare services for infants, children and adolescents.</p>
+                            </div>
+                            
+                            <div class="bg-gray-100 rounded-lg p-6 hover:shadow-md transition duration-300 hover-pulse">
+                                <div class="mb-4 flex justify-center">
+                                    <img src="/api/placeholder/200/200" alt="Rehabilitation" class="rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-amda-primary mb-2">Rehabilitation Center</h3>
+                                <p class="text-gray-600 text-center">Physical therapy and rehabilitation services for recovery and mobility.</p>
+                            </div>
+                            
+                            <div class="bg-gray-100 rounded-lg p-6 hover:shadow-md transition duration-300 hover-pulse">
+                                <div class="mb-4 flex justify-center">
+                                    <img src="/api/placeholder/200/200" alt="Mental Health" class="rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-amda-primary mb-2">Mental Health Services</h3>
+                                <p class="text-gray-600 text-center">Professional mental health support and counseling for all age groups.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Center 3 -->
+                        <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+                            <div class="bg-gray-100 rounded-lg p-6 hover:shadow-md transition duration-300 hover-pulse">
+                                <div class="mb-4 flex justify-center">
+                                    <img src="/api/placeholder/200/200" alt="Diagnostic" class="rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-amda-primary mb-2">Diagnostic Center</h3>
+                                <p class="text-gray-600 text-center">Advanced diagnostic technologies and laboratory services.</p>
+                            </div>
+                            
+                            <div class="bg-gray-100 rounded-lg p-6 hover:shadow-md transition duration-300 hover-pulse">
+                                <div class="mb-4 flex justify-center">
+                                    <img src="/api/placeholder/200/200" alt="Public Health" class="rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-amda-primary mb-2">Public Health Center</h3>
+                                <p class="text-gray-600 text-center">Community health initiatives and preventive healthcare programs.</p>
+                            </div>
+                            
+                            <div class="bg-gray-100 rounded-lg p-6 hover:shadow-md transition duration-300 hover-pulse">
+                                <div class="mb-4 flex justify-center">
+                                    <img src="/api/placeholder/200/200" alt="Research" class="rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-amda-primary mb-2">Research & Training</h3>
+                                <p class="text-gray-600 text-center">Medical research and professional training for healthcare providers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Next button -->
+                <button @click="activeSlide = activeSlide === 2 ? 0 : activeSlide + 1" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-10 text-amda-primary hover:text-amda-secondary transition duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                
+                <!-- Indicators -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button @click="activeSlide = 0" :class="{'bg-amda-primary': activeSlide === 0, 'bg-gray-300': activeSlide !== 0}" class="w-3 h-3 rounded-full transition duration-300"></button>
+                    <button @click="activeSlide = 1" :class="{'bg-amda-primary': activeSlide === 1, 'bg-gray-300': activeSlide !== 1}" class="w-3 h-3 rounded-full transition duration-300"></button>
+                    <button @click="activeSlide = 2" :class="{'bg-amda-primary': activeSlide === 2, 'bg-gray-300': activeSlide !== 2}" class="w-3 h-3 rounded-full transition duration-300"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Stories -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amda-primary">Real Patients, Real Stories</h2>
+                <div class="w-24 h-1 bg-amda-secondary mx-auto mt-4 mb-6"></div>
+                <p class="max-w-3xl mx-auto text-gray-600">Hear from patients whose lives have been impacted by the care they received at AMDA Nepal.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Left side: Large testimonial -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden animate-fade-in">
+                    <div class="h-56 bg-gray-200">
+                        <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Patient Story" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-amda-primary mb-2">A Journey to Recovery</h3>
+                        <p class="text-gray-600 mb-4">After struggling with a chronic condition for years, I found hope and healing at AMDA Nepal's Rehabilitation Center. The dedicated team provided not just medical care, but compassion and support throughout my journey.</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 mr-4">
+                                <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Patient" class="w-full h-full rounded-full object-cover">
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Aarav Sharma</p>
+                                <p class="text-gray-500 text-sm">Kathmandu, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right side: Multiple smaller testimonials -->
+                <div class="space-y-4 animate-fade-in animate-delay-100">
+                    <div class="bg-white rounded-lg shadow-md p-4 flex">
+                        <div class="flex-shrink-0 w-1/3">
+                            <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Patient Story" class="w-full h-32 object-cover rounded-lg">
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <q class="text-gray-600 italic text-sm">The maternal care I received during my pregnancy was exceptional. The doctors and nurses were knowledgeable, attentive, and made me feel safe.</q>
+                            <div class="mt-2">
+                                <p class="font-semibold text-gray-800">Priya Thapa</p>
+                                <p class="text-gray-500 text-xs">Pokhara, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-4 flex">
+                        <div class="flex-shrink-0 w-1/3">
+                            <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Patient Story" class="w-full h-32 object-cover rounded-lg">
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <q class="text-gray-600 italic text-sm">Following the earthquake, AMDA's emergency response team was the first to reach our village. They provided immediate medical attention that saved many lives.</q>
+                            <div class="mt-2">
+                                <p class="font-semibold text-gray-800">Bikram Gurung</p>
+                                <p class="text-gray-500 text-xs">Sindhupalchok, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-4 flex">
+                        <div class="flex-shrink-0 w-1/3">
+                            <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.pnghttps://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Patient Story" class="w-full h-32 object-cover rounded-lg">
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <q class="text-gray-600 italic text-sm">The pediatric care center provided excellent treatment for my daughter's chronic condition. Their child-friendly approach made a difficult time much easier.</q>
+                            <div class="mt-2">
+                                <p class="font-semibold text-gray-800">Suman Poudel</p>
+                                <p class="text-gray-500 text-xs">Butwal, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Packages -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amda-primary">Recommended Packages</h2>
+                <div class="w-24 h-1 bg-amda-secondary mx-auto mt-4 mb-6"></div>
+                <p class="max-w-3xl mx-auto text-gray-600">Comprehensive healthcare packages designed to meet your specific needs.</p>
+            </div>
+            
+            <div x-data="{activeSlide: 0}" class="relative">
+                <!-- Previous button -->
+                <button @click="activeSlide = activeSlide === 0 ? 2 : activeSlide - 1" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-10 text-amda-primary hover:text-amda-secondary transition duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                
+                <div class="overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${activeSlide * 100}%)`">
+                        <!-- Package Set 1 -->
+                        <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+                            <div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                                <div class="h-48 bg-gray-200">
+                                    <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Comprehensive Health Check" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold text-amda-primary mb-2">Comprehensive Health Check</h3>
+                                    <p class="text-gray-600 mb-4">Complete physical examination with advanced diagnostic tests for early detection and prevention.</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-amda-secondary font-bold text-lg">NPR 5,000</span>
+                                        <a href="#" class="bg-amda-primary hover:bg-amda-secondary text-white py-2 px-4 rounded-md transition duration-300">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                                <div class="h-48 bg-gray-200">
+                                    <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Maternal Care Package" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold text-amda-primary mb-2">Maternal Care Package</h3>
+                                    <p class="text-gray-600 mb-4">Complete prenatal and postnatal care with regular check-ups and specialized services.</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-amda-secondary font-bold text-lg">NPR 15,000</span>
+                                        <a href="#" class="bg-amda-primary hover:bg-amda-secondary text-white py-2 px-4 rounded-md transition duration-300">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                                <div class="h-48 bg-gray-200">
+                                    <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Emergency Response Package" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold text-amda-primary mb-2">Emergency Response Package</h3>
+                                    <p class="text-gray-600 mb-4">Rapid response services for emergencies, including transportation and immediate care.</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-amda-secondary font-bold text-lg">NPR 10,000</span>
+                                        <a href="#" class="bg-amda-primary hover:bg-amda-secondary text-white py-2 px-4 rounded-md transition duration-300">Learn More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <!-- Package Set 2 -->
+                        <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+                            <div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                                <div class="h-48 bg-gray-200">
+                                    <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Advanced Care Package" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold text-amda-primary mb-2">Advanced Care Package</h3>
+                                    <p class="text-gray-600 mb-4">Advanced medical care for advanced illnesses and conditions, including advanced diagnostic tests.</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-amda-secondary font-bold text-lg">NPR 20,000</span>
+                                        <a href="#" class="bg-amda-primary hover:bg-amda-secondary text-white py-2 px-4 rounded-md transition duration-300">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                                <div class="h-48 bg-gray-200">
+                                    <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Rehabilitation Package" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold text-amda-primary mb-2">Rehabilitation Package</h3>
+                                    <p class="text-gray-600 mb-4">Comprehensive rehabilitation services tailored to individual recovery needs.</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-amda-secondary font-bold text-lg">NPR 18,000</span>
+                                        <a href="#" class="bg-amda-primary hover:bg-amda-secondary text-white py-2 px-4 rounded-md transition duration-300">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                                <div class="h-48 bg-gray-200">
+                                    <img src="https://www.amda.org.np/files/pics/ReliefMaterialsToEarthquakeVictims_Jajarkor-Rukum%20Paschim_20800723.png" alt="Chronic Care Package" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold text-amda-primary mb-2">Chronic Care Package</h3>
+                                    <p class="text-gray-600 mb-4">Long-term care and management for chronic conditions with specialized support.</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-amda-secondary font-bold text-lg">NPR 22,000</span>
+                                        <a href="#" class="bg-amda-primary hover:bg-amda-secondary text-white py-2 px-4 rounded-md transition duration-300">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
