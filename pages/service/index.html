@@ -42,38 +42,34 @@
         .hover-pulse:hover {
             animation: pulse 1s infinite;
         }
+        .stickyCard {
+            width: 100%;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
     </style>
 </head>
-<body class="">
-<section class="relative bg-white">
-    <div class="absolute inset-0 bg-gradient-to-r from-amda-primary/80 via-amda-secondary/60 to-transparent z-10"></div>
-    <div class="container mx-auto px-4 py-12 md:py-24 relative z-20 flex flex-col md:flex-row items-center">
+<body class="relative bg-white ">
+<section class="stickyCard ">
+    <div class="    w-full h-screen relative mx-auto px-4 py-12   z-20 flex flex-col md:flex-row items-center bg-[url('https://www.amda.org.np/files/pics/25th%20Anniversary%20of%20SCWH.jpg')] bg-cover bg-center bg-no-repeat">
         <!-- Left: Text Content -->
         <div class="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 animate-fade-in drop-shadow-lg">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-6 animate-fade-in drop-shadow-lg">
                 Dedicated to Healthcare Excellence
             </h2>
-            <p class="text-lg md:text-2xl text-white mb-8 max-w-xl animate-fade-in animate-delay-100 drop-shadow">
+            <p class="text-lg md:text-2xl text-blue-800 mb-8 max-w-xl animate-fade-in animate-delay-100 drop-shadow">
                 Providing quality healthcare services through dedicated medical professionals across Nepal.
             </p>
-            <a href="#" class="bg-white text-amda-primary font-bold py-3 px-8 rounded-full shadow-lg hover:bg-amda-secondary hover:text-white transition duration-300 animate-fade-in animate-delay-200">
+            <a href="#" class="bg-blue-800 text-red-500 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-amda-secondary hover:text-red-800 transition duration-300 animate-fade-in animate-delay-200">
                 Learn More
             </a>
         </div>
-        <!-- Right: Image -->
-        <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white animate-fade-in animate-delay-300">
-                <img src="/api/placeholder/600/400" alt="AMDA Conference" class="w-full h-72 md:h-96 object-cover">
-            </div>
-        </div>
     </div>
 </section>
-
-    <!-- Quick Info Cards -->
-   <!-- Quick Info Cards -->
 <!-- Quick Info Cards -->
-<section class="py-16 bg-gradient-to-br from-amda-primary/10 via-white to-amda-secondary/10">
-    <div class="container mx-auto px-4">
+<section class=" bg-gray-100 relative z-10">
+    <div class=" mx-auto px-4">
         <div class="mb-12 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-amda-primary mb-2 animate-fade-in">Quick Info</h2>
             <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in animate-delay-100">
@@ -143,7 +139,7 @@
 </section>
 
     <!-- About Us Section -->
-    <section class=" bg-gray-50">
+    <section class="  relative z-10 py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-amda-primary">About AMDA Nepal</h2>
@@ -161,7 +157,7 @@
     </section>
 
     <!-- Centers of Excellence -->
-    <section class="py-16 bg-white">
+    <section class="py-16 relative z-10 py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-amda-primary">Centers Of Excellence</h2>
@@ -280,7 +276,8 @@
     </section>
 
     <!-- Patient Stories -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 relative z-10 py-16 bg-gray-50">
+        
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-amda-primary">Real Patients, Real Stories</h2>
@@ -355,7 +352,7 @@
     </section>
 
     <!-- Recommended Packages -->
-    <section class="py-16 bg-white">
+    <section class="py-16 relative z-10 py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-amda-primary">Recommended Packages</h2>
